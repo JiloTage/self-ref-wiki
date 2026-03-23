@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中国語の部屋 - Auto-Wiki</title>
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+</head>
+<body>
+<div class="wiki-wrapper">
+  <header class="wiki-header">
+    <a href="../index.html" class="site-title">Auto-Wiki</a>
+    <nav>
+      <a href="../index.html">トップ</a>
+      <a href="../index.html#article-list">記事一覧</a>
+      <a href="../index.html#graph">サイトグラフ</a>
+    </nav>
+  </header>
+  <div class="breadcrumb">
+    <a href="../index.html">Auto-Wiki</a> &gt; 中国語の部屋
+  </div>
+  <div class="wiki-content">
+    <main class="wiki-main">
+      <h1 class="article-title">中国語の部屋</h1>
+      <div class="article-meta">最終更新: 2026-03-24</div>
+      <div class="article-summary"><b>中国語の部屋</b>は、ジョン・サールが提案した思考実験で、記号操作だけでは理解は生まれないのではないかと問う。<a href="turing-test.html">チューリングテスト</a>、<a href="ai-philosophy.html">AI哲学</a>、<a href="consciousness-hard-problem.html" class="redlink">意識のハードプロブレム</a>と強く結び付き、強いAI批判の代表例とされる。</div>
+
+      <table class="infobox">
+        <tr><td colspan="2" class="infobox-title">中国語の部屋</td></tr>
+        <tr><th>提唱者</th><td>ジョン・サール</td></tr>
+        <tr><th>分類</th><td>思考実験 / 心の哲学 / AI哲学</td></tr>
+        <tr><th>問い</th><td>記号操作は理解と同じか</td></tr>
+        <tr><th>関連論点</th><td><a href="turing-test.html">チューリングテスト</a><br><a href="consciousness-hard-problem.html" class="redlink">意識のハードプロブレム</a><br><a href="qualia.html" class="redlink">クオリア</a></td></tr>
+        <tr><th>関係記事</th><td><a href="ai-philosophy.html">AI哲学</a><br><a href="self-reference-engine.html">Self-Reference ENGINE</a></td></tr>
+      </table>
+
+      <h2 id="overview">概要</h2>
+      <p>中国語の部屋は、コンピュータが規則に従って記号を処理できても、それだけで意味を理解しているとは言えないのではないかという疑問を可視化する思考実験である。外から見れば適切な応答を返していても、内部では単に形式的な処理が行われているだけかもしれない。</p>
+      <p>この問いは、AIが「人間らしい振る舞い」を見せることと、「本当に理解している」ことを切り分ける。だからこの議論は性能の話ではなく、理解・意識・意味の成立条件をめぐる哲学的な論争として読むべきである。</p>
+
+      <h2 id="experiment">思考実験の構図</h2>
+      <p>中国語をまったく理解できない人が部屋の中にいるとする。その人は、外から中国語の質問を受け取り、手元の巨大な規則書に従って別の中国語の記号列を返す。外側の観察者から見れば、部屋は中国語で自然に応答しているように見える。</p>
+      <p>しかし部屋の中の人は、中国語の意味を一切理解していない。ただ記号の形だけを見て、記号列を別の記号列へ変換しているだけである。サールは、コンピュータの記号処理も本質的にはこれと同じではないかと主張した。</p>
+
+      <div class="diagram-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 310" width="560" height="310">
+          <defs>
+            <marker id="cr-arrow" viewBox="0 -5 10 10" refX="9" refY="0" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0,-5L10,0L0,5" fill="#36c"/>
+            </marker>
+          </defs>
+          <rect x="10" y="10" width="540" height="290" rx="8" fill="#f8f9fa" stroke="#a2a9b1" stroke-width="1.5"/>
+          <text x="280" y="34" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#202122" font-weight="bold">中国語の部屋の基本図式</text>
+          <rect x="30" y="110" width="110" height="70" rx="6" fill="#e8f0fe" stroke="#36c" stroke-width="1.5"/>
+          <text x="85" y="136" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122" font-weight="bold">入力</text>
+          <text x="85" y="156" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#54595d">中国語の質問</text>
+          <rect x="190" y="70" width="180" height="150" rx="8" fill="#fff" stroke="#a2a9b1" stroke-width="1.5"/>
+          <text x="280" y="95" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122" font-weight="bold">部屋の内部</text>
+          <rect x="215" y="112" width="130" height="36" rx="4" fill="#fff3e0" stroke="#e68a00" stroke-width="1.2"/>
+          <text x="280" y="134" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#202122">規則書</text>
+          <rect x="215" y="160" width="130" height="36" rx="4" fill="#e8f0fe" stroke="#36c" stroke-width="1.2"/>
+          <text x="280" y="182" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#202122">記号操作する人</text>
+          <rect x="420" y="110" width="110" height="70" rx="6" fill="#e8f4e8" stroke="#2a7a2a" stroke-width="1.5"/>
+          <text x="475" y="136" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122" font-weight="bold">出力</text>
+          <text x="475" y="156" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#54595d">自然な返答</text>
+          <line x1="140" y1="145" x2="190" y2="145" stroke="#36c" stroke-width="2" marker-end="url(#cr-arrow)"/>
+          <line x1="370" y1="145" x2="420" y2="145" stroke="#36c" stroke-width="2" marker-end="url(#cr-arrow)"/>
+          <rect x="120" y="245" width="320" height="34" rx="6" fill="#fff" stroke="#a2a9b1" stroke-width="1"/>
+          <text x="280" y="266" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#202122">外側からは理解しているように見えても、内部は形式操作だけかもしれない</text>
+        </svg>
+        <div class="diagram-caption">中国語の部屋は、入出力の自然さと内部での理解を切り分ける。見かけ上の知的振る舞いが理解を保証しない可能性を示すための図式である。</div>
+      </div>
+
+      <h2 id="meaning">この議論が問題にするもの</h2>
+      <p>中国語の部屋が鋭いのは、性能ではなく意味を問題にしている点にある。外部的な振る舞いだけで知性を定義するなら、この部屋は中国語を理解していることになる。しかしサールは、記号が主体にとって何かを意味していなければ、それは理解ではないと考える。</p>
+      <p>この立場からは、記号を扱えることと、記号が何かを指していると分かることの間に溝がある。コンピュータは構文を処理できても、意味論を持たないのではないか、というのが核心である。</p>
+
+      <h2 id="responses">代表的な反論</h2>
+      <p>もっとも、この思考実験には多くの反論がある。代表的なのが「システム応答」で、理解していないのは部屋の中の個人だけであり、人・規則書・入出力装置を含むシステム全体が理解しているとみなせるのではないか、という立場である。</p>
+      <p>ほかにも、身体や環境との相互作用があれば意味は立ち上がるとする議論、学習と経験の履歴を重視する議論、そもそも人間の理解も内部では記号操作の積み重ねではないかとする議論がある。中国語の部屋はAI批判を一発で決着させる議論というより、論点を鮮明にする装置である。</p>
+
+      <h2 id="today">現代AIとの関係</h2>
+      <p>大規模言語モデルが自然な文章を生成する現在、この思考実験は再び注目されている。モデルは驚くほど流暢に答えるが、その流暢さが理解や意識を意味するのかは依然として別問題である。ここで中国語の部屋は、性能と理解を混同しないための制動装置として働く。</p>
+      <p>一方で、現代AIは固定的な規則書ではなく、膨大な学習過程を通じて内部表現を形成している。そのため、単純な思考実験をそのまま当てはめるのは粗すぎるという反論も強い。重要なのは、何を「理解」と呼ぶかの基準を明確にすることである。</p>
+
+      <h2 id="in-sre">『Self-Reference ENGINE』とのつながり</h2>
+      <p><a href="self-reference-engine.html">Self-Reference ENGINE</a>や<a href="kyodai-chisei-tai.html">巨大知性体</a>の系譜では、知性がどこに宿るのかという問いが繰り返し現れる。中国語の部屋は、その問いをもっとも素朴な形で突き付ける。出力が十分に人間的であっても、それだけで内面があるとは言えないのではないか、という疑念である。</p>
+      <p>この疑念は、AIを描くSFがしばしば抱える緊張と重なる。作品内で知性らしい振る舞いがどれほど高度でも、読者はなお「それは理解なのか、模倣なのか」と問い続ける。その問いの輪郭を与えるのが中国語の部屋である。</p>
+    </main>
+    <aside class="wiki-sidebar">
+      <div class="toc">
+        <div class="toc-title">目次</div>
+        <ul class="toc-list">
+          <li><a href="#overview">概要</a></li>
+          <li><a href="#experiment">思考実験の構図</a></li>
+          <li><a href="#meaning">この議論が問題にするもの</a></li>
+          <li><a href="#responses">代表的な反論</a></li>
+          <li><a href="#today">現代AIとの関係</a></li>
+          <li><a href="#in-sre">『Self-Reference ENGINE』とのつながり</a></li>
+        </ul>
+      </div>
+      <div class="related-articles">
+        <div class="related-title">関連項目</div>
+        <ul class="related-list">
+          <li><a href="ai-philosophy.html">AI哲学</a></li>
+          <li><a href="turing-test.html">チューリングテスト</a></li>
+          <li><a href="consciousness-hard-problem.html" class="redlink">意識のハードプロブレム</a></li>
+          <li><a href="qualia.html" class="redlink">クオリア</a></li>
+          <li><a href="kyodai-chisei-tai.html">巨大知性体</a></li>
+          <li><a href="self-reference-engine.html">Self-Reference ENGINE</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  <footer class="wiki-footer">
+    <div class="footer-links">
+      <h4>リンク先</h4>
+      <ul>
+        <li><a href="ai-philosophy.html">AI哲学</a></li>
+        <li><a href="turing-test.html">チューリングテスト</a></li>
+        <li><a href="consciousness-hard-problem.html" class="redlink">意識のハードプロブレム</a></li>
+        <li><a href="qualia.html" class="redlink">クオリア</a></li>
+        <li><a href="kyodai-chisei-tai.html">巨大知性体</a></li>
+        <li><a href="self-reference-engine.html">Self-Reference ENGINE</a></li>
+      </ul>
+      <h4>被リンク</h4>
+      <ul>
+        <li><a href="ai-philosophy.html">AI哲学</a></li>
+        <li><a href="turing-test.html">チューリングテスト</a></li>
+      </ul>
+    </div>
+    <p style="margin-top:12px;">Auto-Wiki で自動生成</p>
+  </footer>
+</div>
+</body>
+</html>

@@ -13,27 +13,30 @@
         "meta-fiction"
       ],
       "linked_from": [
-        "enjoe-toh",
-        "jiko-genkyuu",
-        "kyodai-chisei-tai",
-        "strange-loop",
-        "event-sre",
+        "ai-philosophy",
+        "analogy",
+        "chinese-room",
+        "cho-chisei",
         "doukeshi-no-chou",
+        "enjoe-toh",
+        "event-sre",
         "goedel-escher-bach",
+        "goedel-incompleteness",
+        "gyakusatsu-kikan",
+        "hofstadter",
+        "honyaku-to-gengo",
+        "inga-ritsu",
+        "itoh-keikaku",
+        "jiko-genkyuu",
+        "keishiki-system",
+        "kyodai-chisei-tai",
         "mugen-koutai",
         "paradox",
-        "hofstadter",
-        "shisha-no-teikoku",
-        "ai-philosophy",
-        "cho-chisei",
-        "itoh-keikaku",
         "sf-bungaku",
-        "gyakusatsu-kikan",
-        "keishiki-system",
-        "usotsuki-no-paradox",
-        "goedel-incompleteness",
-        "inga-ritsu",
-        "turing-test"
+        "shisha-no-teikoku",
+        "strange-loop",
+        "turing-test",
+        "usotsuki-no-paradox"
       ],
       "origin": "root",
       "source_id": null,
@@ -55,22 +58,23 @@
         "shisha-no-teikoku"
       ],
       "linked_from": [
-        "self-reference-engine",
-        "jiko-genkyuu",
-        "kyodai-chisei-tai",
-        "strange-loop",
-        "event-sre",
-        "doukeshi-no-chou",
-        "goedel-escher-bach",
-        "mugen-koutai",
-        "paradox",
-        "hofstadter",
-        "shisha-no-teikoku",
         "ai-philosophy",
         "cho-chisei",
+        "doukeshi-no-chou",
+        "event-sre",
+        "goedel-escher-bach",
+        "gyakusatsu-kikan",
+        "hofstadter",
+        "honyaku-to-gengo",
         "itoh-keikaku",
+        "jiko-genkyuu",
+        "kyodai-chisei-tai",
+        "mugen-koutai",
+        "paradox",
+        "self-reference-engine",
         "sf-bungaku",
-        "gyakusatsu-kikan"
+        "shisha-no-teikoku",
+        "strange-loop"
       ],
       "origin": "expanded",
       "source_id": "self-reference-engine",
@@ -95,25 +99,25 @@
         "kyodai-chisei-tai"
       ],
       "linked_from": [
-        "self-reference-engine",
-        "kyodai-chisei-tai",
-        "strange-loop",
-        "event-sre",
-        "doukeshi-no-chou",
-        "goedel-escher-bach",
-        "mugen-koutai",
-        "paradox",
-        "hofstadter",
-        "shisha-no-teikoku",
         "ai-philosophy",
         "cho-chisei",
-        "itoh-keikaku",
-        "sf-bungaku",
-        "gyakusatsu-kikan",
-        "keishiki-system",
-        "usotsuki-no-paradox",
+        "doukeshi-no-chou",
+        "event-sre",
+        "goedel-escher-bach",
         "goedel-incompleteness",
-        "inga-ritsu"
+        "gyakusatsu-kikan",
+        "hofstadter",
+        "inga-ritsu",
+        "itoh-keikaku",
+        "keishiki-system",
+        "kyodai-chisei-tai",
+        "mugen-koutai",
+        "paradox",
+        "self-reference-engine",
+        "sf-bungaku",
+        "shisha-no-teikoku",
+        "strange-loop",
+        "usotsuki-no-paradox"
       ],
       "origin": "expanded",
       "source_id": "self-reference-engine",
@@ -138,23 +142,24 @@
         "meta-fiction"
       ],
       "linked_from": [
-        "self-reference-engine",
-        "jiko-genkyuu",
-        "strange-loop",
+        "ai-philosophy",
+        "chinese-room",
+        "cho-chisei",
         "event-sre",
         "goedel-escher-bach",
+        "goedel-incompleteness",
+        "hofstadter",
+        "itoh-keikaku",
+        "jiko-genkyuu",
+        "keishiki-system",
         "mugen-koutai",
         "paradox",
-        "hofstadter",
-        "shisha-no-teikoku",
-        "ai-philosophy",
-        "cho-chisei",
-        "itoh-keikaku",
+        "self-reference-engine",
         "sf-bungaku",
-        "keishiki-system",
-        "usotsuki-no-paradox",
-        "goedel-incompleteness",
-        "turing-test"
+        "shisha-no-teikoku",
+        "strange-loop",
+        "turing-test",
+        "usotsuki-no-paradox"
       ],
       "origin": "expanded",
       "source_id": "self-reference-engine",
@@ -180,21 +185,22 @@
         "meta-fiction"
       ],
       "linked_from": [
-        "jiko-genkyuu",
+        "ai-philosophy",
+        "analogy",
+        "cho-chisei",
         "event-sre",
         "goedel-escher-bach",
+        "goedel-incompleteness",
+        "hofstadter",
+        "inga-ritsu",
+        "itoh-keikaku",
+        "jiko-genkyuu",
+        "keishiki-system",
         "mugen-koutai",
         "paradox",
-        "hofstadter",
-        "ai-philosophy",
-        "cho-chisei",
-        "itoh-keikaku",
         "sf-bungaku",
-        "keishiki-system",
-        "usotsuki-no-paradox",
-        "goedel-incompleteness",
-        "inga-ritsu",
-        "turing-test"
+        "turing-test",
+        "usotsuki-no-paradox"
       ],
       "origin": "expanded",
       "source_id": "jiko-genkyuu",
@@ -220,10 +226,10 @@
         "jikan-to-monogatari"
       ],
       "linked_from": [
+        "inga-ritsu",
         "kyodai-chisei-tai",
         "mugen-koutai",
-        "paradox",
-        "inga-ritsu"
+        "paradox"
       ],
       "origin": "expanded",
       "source_id": "kyodai-chisei-tai",
@@ -249,6 +255,7 @@
       ],
       "linked_from": [
         "enjoe-toh",
+        "honyaku-to-gengo",
         "sf-bungaku"
       ],
       "origin": "expanded",
@@ -278,13 +285,14 @@
         "kyodai-chisei-tai"
       ],
       "linked_from": [
-        "strange-loop",
-        "paradox",
-        "hofstadter",
         "ai-philosophy",
-        "sf-bungaku",
+        "analogy",
+        "goedel-incompleteness",
+        "hofstadter",
         "keishiki-system",
-        "goedel-incompleteness"
+        "paradox",
+        "sf-bungaku",
+        "strange-loop"
       ],
       "origin": "expanded",
       "source_id": "strange-loop",
@@ -313,8 +321,8 @@
         "mugen"
       ],
       "linked_from": [
-        "kyodai-chisei-tai",
-        "cho-chisei"
+        "cho-chisei",
+        "kyodai-chisei-tai"
       ],
       "origin": "expanded",
       "source_id": "kyodai-chisei-tai",
@@ -342,18 +350,18 @@
         "goedel-escher-bach"
       ],
       "linked_from": [
-        "jiko-genkyuu",
-        "mugen-koutai",
-        "hofstadter",
-        "shisha-no-teikoku",
         "ai-philosophy",
         "cho-chisei",
-        "itoh-keikaku",
-        "sf-bungaku",
-        "keishiki-system",
-        "usotsuki-no-paradox",
         "goedel-incompleteness",
-        "inga-ritsu"
+        "hofstadter",
+        "inga-ritsu",
+        "itoh-keikaku",
+        "jiko-genkyuu",
+        "keishiki-system",
+        "mugen-koutai",
+        "sf-bungaku",
+        "shisha-no-teikoku",
+        "usotsuki-no-paradox"
       ],
       "origin": "expanded",
       "source_id": "jiko-genkyuu",
@@ -379,8 +387,9 @@
         "paradox"
       ],
       "linked_from": [
-        "goedel-escher-bach",
-        "ai-philosophy"
+        "ai-philosophy",
+        "analogy",
+        "goedel-escher-bach"
       ],
       "origin": "expanded",
       "source_id": "goedel-escher-bach",
@@ -406,9 +415,9 @@
       ],
       "linked_from": [
         "enjoe-toh",
+        "gyakusatsu-kikan",
         "itoh-keikaku",
-        "sf-bungaku",
-        "gyakusatsu-kikan"
+        "sf-bungaku"
       ],
       "origin": "expanded",
       "source_id": "enjoe-toh",
@@ -436,12 +445,14 @@
         "paradox"
       ],
       "linked_from": [
-        "goedel-escher-bach",
+        "analogy",
+        "chinese-room",
         "cho-chisei",
-        "itoh-keikaku",
-        "sf-bungaku",
+        "goedel-escher-bach",
         "gyakusatsu-kikan",
+        "itoh-keikaku",
         "keishiki-system",
+        "sf-bungaku",
         "turing-test"
       ],
       "origin": "expanded",
@@ -498,9 +509,9 @@
         "kyodai-chisei-tai"
       ],
       "linked_from": [
-        "shisha-no-teikoku",
+        "gyakusatsu-kikan",
         "sf-bungaku",
-        "gyakusatsu-kikan"
+        "shisha-no-teikoku"
       ],
       "origin": "expanded",
       "source_id": "shisha-no-teikoku",
@@ -557,8 +568,8 @@
         "self-reference-engine"
       ],
       "linked_from": [
-        "shisha-no-teikoku",
-        "itoh-keikaku"
+        "itoh-keikaku",
+        "shisha-no-teikoku"
       ],
       "origin": "expanded",
       "source_id": "shisha-no-teikoku",
@@ -609,10 +620,10 @@
         "meta-fiction"
       ],
       "linked_from": [
+        "goedel-incompleteness",
         "jiko-genkyuu",
-        "paradox",
         "keishiki-system",
-        "goedel-incompleteness"
+        "paradox"
       ],
       "origin": "expanded",
       "source_id": "jiko-genkyuu",
@@ -637,17 +648,17 @@
         "kyodai-chisei-tai"
       ],
       "linked_from": [
-        "jiko-genkyuu",
         "goedel-escher-bach",
-        "paradox",
+        "jiko-genkyuu",
         "keishiki-system",
+        "paradox",
         "usotsuki-no-paradox"
       ],
       "origin": "expanded",
       "source_id": "jiko-genkyuu",
       "created_at": "2026-03-24",
       "updated_at": "2026-03-24",
-      "expansion_status": "pending"
+      "expansion_status": "completed"
     },
     "inga-ritsu": {
       "slug": "inga-ritsu",
@@ -671,7 +682,7 @@
       "source_id": "event-sre",
       "created_at": "2026-03-24",
       "updated_at": "2026-03-24",
-      "expansion_status": "pending"
+      "expansion_status": "completed"
     },
     "turing-test": {
       "slug": "turing-test",
@@ -687,7 +698,79 @@
         "strange-loop"
       ],
       "linked_from": [
-        "ai-philosophy"
+        "ai-philosophy",
+        "analogy",
+        "chinese-room"
+      ],
+      "origin": "expanded",
+      "source_id": "ai-philosophy",
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "expansion_status": "completed"
+    },
+    "honyaku-to-gengo": {
+      "slug": "honyaku-to-gengo",
+      "title": "翻訳と言語",
+      "filename": "articles/honyaku-to-gengo.html",
+      "summary": "翻訳と言語 とは、ある言語で構成された意味・文体・視点を別の言語へ移し替える営みである。語の置換に見えて、実際には解釈と再構成を伴うため、 道化師の蝶 、 実験文学 、 言語とアイデンティティ の問題と強く結び付く。",
+      "links_to": [
+        "doukeshi-no-chou",
+        "jikken-bungaku",
+        "gengo-to-identity",
+        "meta-fiction",
+        "enjoe-toh",
+        "self-reference-engine"
+      ],
+      "linked_from": [
+        "doukeshi-no-chou"
+      ],
+      "origin": "expanded",
+      "source_id": "doukeshi-no-chou",
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "expansion_status": "pending"
+    },
+    "analogy": {
+      "slug": "analogy",
+      "title": "アナロジー",
+      "filename": "articles/analogy.html",
+      "summary": "アナロジー とは、異なる対象の間にある関係の型や構造の対応を見抜く思考である。 ダグラス・ホフスタッター はこれを知性の中心に置き、 認知科学 、 ストレンジループ 、 わたしはストレンジループ へと結び付けて論じた。",
+      "links_to": [
+        "hofstadter",
+        "ninchi-kagaku",
+        "strange-loop",
+        "watashi-wa-strange-loop",
+        "goedel-escher-bach",
+        "ai-philosophy",
+        "turing-test",
+        "self-reference-engine"
+      ],
+      "linked_from": [
+        "hofstadter"
+      ],
+      "origin": "expanded",
+      "source_id": "hofstadter",
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "expansion_status": "pending"
+    },
+    "chinese-room": {
+      "slug": "chinese-room",
+      "title": "中国語の部屋",
+      "filename": "articles/chinese-room.html",
+      "summary": "中国語の部屋 は、ジョン・サールが提案した思考実験で、記号操作だけでは理解は生まれないのではないかと問う。 チューリングテスト 、 AI哲学 、 意識のハードプロブレム と強く結び付き、強いAI批判の代表例とされる。",
+      "links_to": [
+        "turing-test",
+        "ai-philosophy",
+        "consciousness-hard-problem",
+        "qualia",
+        "self-reference-engine",
+        "kyodai-chisei-tai"
+      ],
+      "linked_from": [
+        "ai-philosophy",
+        "keishiki-system",
+        "turing-test"
       ],
       "origin": "expanded",
       "source_id": "ai-philosophy",
@@ -697,5 +780,5 @@
     }
   },
   "root_id": "self-reference-engine",
-  "total_count": 22
+  "total_count": 25
 }

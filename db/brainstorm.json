@@ -1,27 +1,6 @@
 {
   "queue": [
     {
-      "proposed_slug": "honyaku-to-gengo",
-      "proposed_title": "翻訳と言語",
-      "rationale": "道化師の蝶の中心テーマ。",
-      "interestingness_score": 0.8,
-      "source_slug": "doukeshi-no-chou"
-    },
-    {
-      "proposed_slug": "analogy",
-      "proposed_title": "アナロジー",
-      "rationale": "ホフスタッターが認知の核心と位置づけた類推の概念。",
-      "interestingness_score": 0.8,
-      "source_slug": "hofstadter"
-    },
-    {
-      "proposed_slug": "chinese-room",
-      "proposed_title": "中国語の部屋",
-      "rationale": "サールの思考実験。理解とは何かを問う。",
-      "interestingness_score": 0.8,
-      "source_slug": "ai-philosophy"
-    },
-    {
       "proposed_slug": "postmodern-bungaku",
       "proposed_title": "ポストモダン文学",
       "rationale": "円城塔の作風を位置づける文学的潮流。",
@@ -314,6 +293,21 @@
     },
     {
       "slug": "turing-test",
+      "completed_at": "2026-03-24",
+      "source": "ai-philosophy"
+    },
+    {
+      "slug": "honyaku-to-gengo",
+      "completed_at": "2026-03-24",
+      "source": "doukeshi-no-chou"
+    },
+    {
+      "slug": "analogy",
+      "completed_at": "2026-03-24",
+      "source": "hofstadter"
+    },
+    {
+      "slug": "chinese-room",
       "completed_at": "2026-03-24",
       "source": "ai-philosophy"
     }
