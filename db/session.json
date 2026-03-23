@@ -1,16 +1,14 @@
 {
-  "last_phase": "phase_2",
+  "last_phase": "phase_3",
   "expansion_frontier": [
-    "goedel-escher-bach",
-    "diagonal-argument",
     "metacircular-evaluator",
-    "lambda-calculus",
     "halting-problem",
     "transformer-architecture",
     "autopoiesis",
     "reflection-programming",
     "type-theory",
-    "category-theory"
+    "category-theory",
+    "peano-arithmetic"
   ],
   "settings": {
     "max_agents": 3,

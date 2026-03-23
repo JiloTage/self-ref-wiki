@@ -23,8 +23,8 @@
   </div>
 
   <div class="stats-bar">
-    <span>記事数: <span class="stat-value" id="stat-articles">4</span></span>
-    <span>リンク数: <span class="stat-value" id="stat-links">12</span></span>
+    <span>記事数: <span class="stat-value" id="stat-articles">7</span></span>
+    <span>リンク数: <span class="stat-value" id="stat-links">38</span></span>
   </div>
 
   <div class="search-container">
@@ -70,6 +70,24 @@
           <td>2026-03-23</td>
           <td>7</td>
         </tr>
+        <tr>
+          <td><a href="articles/goedel-escher-bach.html">ゲーデル、エッシャー、バッハ</a></td>
+          <td>ストレンジ・ループと自己参照が意識の根源であるというテーゼを多分野横断で展開した名著。</td>
+          <td>2026-03-23</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td><a href="articles/diagonal-argument.html">対角線論法</a></td>
+          <td>仮定された列挙の対角線上の要素を反転させることで不可能性を証明する技法。</td>
+          <td>2026-03-23</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td><a href="articles/lambda-calculus.html">ラムダ計算</a></td>
+          <td>関数の定義・適用・抽象化のみで計算を表現する形式体系。不動点コンビネータの母体。</td>
+          <td>2026-03-23</td>
+          <td>6</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -85,21 +103,50 @@
     {"id": "self-reference-engine", "title": "Self-Reference Engine", "summary": "自己参照エンジン — 再帰的計算機構の総称", "url": "articles/self-reference-engine.html", "is_root": true},
     {"id": "goedel-incompleteness-theorems", "title": "ゲーデルの不完全性定理", "summary": "形式体系の限界を示す数理論理学の基本定理", "url": "articles/goedel-incompleteness-theorems.html", "is_root": false},
     {"id": "quine", "title": "クワイン", "summary": "自分自身のソースコードを出力するプログラム", "url": "articles/quine.html", "is_root": false},
-    {"id": "fixed-point-combinator", "title": "不動点コンビネータ", "summary": "関数の不動点を計算する高階関数", "url": "articles/fixed-point-combinator.html", "is_root": false}
+    {"id": "fixed-point-combinator", "title": "不動点コンビネータ", "summary": "関数の不動点を計算する高階関数", "url": "articles/fixed-point-combinator.html", "is_root": false},
+    {"id": "goedel-escher-bach", "title": "ゲーデル、エッシャー、バッハ", "summary": "ストレンジ・ループと自己参照を論じた学際的名著", "url": "articles/goedel-escher-bach.html", "is_root": false},
+    {"id": "diagonal-argument", "title": "対角線論法", "summary": "自己参照的反転による不可能性証明の技法", "url": "articles/diagonal-argument.html", "is_root": false},
+    {"id": "lambda-calculus", "title": "ラムダ計算", "summary": "関数の抽象化と適用による計算体系", "url": "articles/lambda-calculus.html", "is_root": false}
   ],
   "links": [
     {"source": "self-reference-engine", "target": "goedel-incompleteness-theorems"},
     {"source": "self-reference-engine", "target": "quine"},
     {"source": "self-reference-engine", "target": "fixed-point-combinator"},
+    {"source": "self-reference-engine", "target": "diagonal-argument"},
+    {"source": "self-reference-engine", "target": "goedel-escher-bach"},
     {"source": "goedel-incompleteness-theorems", "target": "self-reference-engine"},
+    {"source": "goedel-incompleteness-theorems", "target": "diagonal-argument"},
     {"source": "goedel-incompleteness-theorems", "target": "fixed-point-combinator"},
     {"source": "goedel-incompleteness-theorems", "target": "quine"},
+    {"source": "goedel-incompleteness-theorems", "target": "goedel-escher-bach"},
     {"source": "quine", "target": "self-reference-engine"},
     {"source": "quine", "target": "fixed-point-combinator"},
     {"source": "quine", "target": "goedel-incompleteness-theorems"},
+    {"source": "quine", "target": "diagonal-argument"},
+    {"source": "quine", "target": "goedel-escher-bach"},
     {"source": "fixed-point-combinator", "target": "self-reference-engine"},
     {"source": "fixed-point-combinator", "target": "quine"},
-    {"source": "fixed-point-combinator", "target": "goedel-incompleteness-theorems"}
+    {"source": "fixed-point-combinator", "target": "goedel-incompleteness-theorems"},
+    {"source": "fixed-point-combinator", "target": "lambda-calculus"},
+    {"source": "fixed-point-combinator", "target": "diagonal-argument"},
+    {"source": "goedel-escher-bach", "target": "self-reference-engine"},
+    {"source": "goedel-escher-bach", "target": "goedel-incompleteness-theorems"},
+    {"source": "goedel-escher-bach", "target": "quine"},
+    {"source": "goedel-escher-bach", "target": "fixed-point-combinator"},
+    {"source": "goedel-escher-bach", "target": "diagonal-argument"},
+    {"source": "goedel-escher-bach", "target": "lambda-calculus"},
+    {"source": "diagonal-argument", "target": "self-reference-engine"},
+    {"source": "diagonal-argument", "target": "goedel-incompleteness-theorems"},
+    {"source": "diagonal-argument", "target": "quine"},
+    {"source": "diagonal-argument", "target": "fixed-point-combinator"},
+    {"source": "diagonal-argument", "target": "goedel-escher-bach"},
+    {"source": "diagonal-argument", "target": "lambda-calculus"},
+    {"source": "lambda-calculus", "target": "self-reference-engine"},
+    {"source": "lambda-calculus", "target": "fixed-point-combinator"},
+    {"source": "lambda-calculus", "target": "quine"},
+    {"source": "lambda-calculus", "target": "diagonal-argument"},
+    {"source": "lambda-calculus", "target": "goedel-incompleteness-theorems"},
+    {"source": "lambda-calculus", "target": "goedel-escher-bach"}
   ]
 };
 </script>

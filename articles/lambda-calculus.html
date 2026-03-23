@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ラムダ計算 - Auto-Wiki</title>
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+</head>
+<body>
+<div class="wiki-wrapper">
+  <header class="wiki-header">
+    <a href="../index.html" class="site-title">Auto-Wiki</a>
+    <nav>
+      <a href="../index.html">トップ</a>
+      <a href="../index.html#article-list">記事一覧</a>
+      <a href="../index.html#graph">サイトグラフ</a>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Auto-Wiki</a> &gt; ラムダ計算
+  </div>
+
+  <div class="wiki-content">
+    <main class="wiki-main">
+      <h1 class="article-title">ラムダ計算</h1>
+      <div class="article-meta">最終更新: 2026-03-23</div>
+      <div class="article-summary"><strong>ラムダ計算</strong>（λ-calculus）は、1930年代にアロンゾ・チャーチが考案した形式体系であり、関数の定義・適用・抽象化のみによって計算を表現する。チューリングマシンと同等の計算能力を持ち、関数型プログラミングの理論的基盤をなす。<a href="fixed-point-combinator.html">不動点コンビネータ</a>（Yコンビネータ）の母体であり、<a href="self-reference-engine.html">自己参照</a>を<strong>自己適用</strong>（λx. x x）という形で最も純粋に表現する計算体系である。</div>
+
+      <table class="infobox">
+        <tr><td class="infobox-title" colspan="2">ラムダ計算 (λ-calculus)</td></tr>
+        <tr><th>考案者</th><td>アロンゾ・チャーチ（1930年代）</td></tr>
+        <tr><th>分類</th><td>形式的計算体系</td></tr>
+        <tr><th>計算能力</th><td>チューリング完全</td></tr>
+        <tr><th>基本操作</th><td>抽象化 (λ)、適用、変数</td></tr>
+        <tr><th>主要規則</th><td>α変換、β簡約、η変換</td></tr>
+      </table>
+
+      <h2 id="syntax">構文</h2>
+      <p>ラムダ計算の項（ラムダ項）は以下の3つの構成要素のみから成る：</p>
+      <ul>
+        <li><strong>変数</strong>：<em>x</em>, <em>y</em>, <em>z</em>, …</li>
+        <li><strong>抽象化</strong>（関数定義）：<em>λx. M</em> — 変数 <em>x</em> を束縛し本体 <em>M</em> を持つ関数</li>
+        <li><strong>適用</strong>（関数呼び出し）：<em>M N</em> — 関数 <em>M</em> に引数 <em>N</em> を適用</li>
+      </ul>
+      <p>この極めて単純な構文から、自然数、論理値、データ構造、制御フロー、そして再帰のすべてが表現可能である。</p>
+
+      <h2 id="reduction">簡約規則</h2>
+      <p>ラムダ計算の計算は以下の規則に従う：</p>
+
+      <h3 id="alpha">α変換（α-conversion）</h3>
+      <p>束縛変数の名前を変更する。<em>λx. M</em> ≡<sub>α</sub> <em>λy. M[x:=y]</em>（<em>y</em> が <em>M</em> 中で自由でない場合）。変数名は本質的でないことを保証する。</p>
+
+      <h3 id="beta">β簡約（β-reduction）</h3>
+      <p>関数適用の計算規則。<em>(λx. M) N</em> →<sub>β</sub> <em>M[x:=N]</em>。これがラムダ計算における唯一の本質的な計算ステップである。</p>
+
+      <h3 id="eta">η変換（η-conversion）</h3>
+      <p>関数の外延的等価性。<em>λx. M x</em> ≡<sub>η</sub> <em>M</em>（<em>x</em> が <em>M</em> 中で自由でない場合）。</p>
+
+      <h2 id="self-application">自己適用</h2>
+      <p>ラムダ計算における<a href="self-reference-engine.html">自己参照</a>の最も直接的な表現は<strong>自己適用</strong>——関数を自分自身に適用すること——である：</p>
+      <pre><code>ω = λx. x x
+Ω = ω ω = (λx. x x)(λx. x x)</code></pre>
+      <p><em>Ω</em> は自分自身にβ簡約される（<em>Ω</em> →<sub>β</sub> <em>Ω</em>）。これは停止しない計算を表し、ラムダ計算が<a href="halting-problem.html">停止問題</a>を含意することの直接的な証拠でもある。</p>
+
+      <div class="diagram-container">
+        <svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="500" height="200" fill="#f8f9fa" rx="4"/>
+          <text x="250" y="25" text-anchor="middle" font-size="13" fill="#333" font-family="sans-serif" font-weight="bold">Ω コンビネータの自己適用ループ</text>
+          <!-- omega 1 -->
+          <rect x="40" y="60" width="140" height="50" rx="6" fill="#e8f0fe" stroke="#0645ad" stroke-width="2"/>
+          <text x="110" y="82" text-anchor="middle" font-size="13" fill="#0645ad" font-family="monospace">ω = λx. x x</text>
+          <text x="110" y="100" text-anchor="middle" font-size="10" fill="#54595d" font-family="sans-serif">関数として</text>
+          <!-- omega 2 -->
+          <rect x="320" y="60" width="140" height="50" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+          <text x="390" y="82" text-anchor="middle" font-size="13" fill="#e65100" font-family="monospace">ω = λx. x x</text>
+          <text x="390" y="100" text-anchor="middle" font-size="10" fill="#54595d" font-family="sans-serif">引数として</text>
+          <!-- Arrow right -->
+          <path d="M 180 75 L 320 75" stroke="#36c" stroke-width="2" marker-end="url(#la)"/>
+          <text x="250" y="68" text-anchor="middle" font-size="10" fill="#36c" font-family="sans-serif">適用</text>
+          <!-- Result -->
+          <rect x="150" y="140" width="200" height="40" rx="6" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+          <text x="250" y="165" text-anchor="middle" font-size="12" fill="#c62828" font-family="monospace">Ω = ω ω → ω ω = Ω</text>
+          <!-- Circular arrow -->
+          <path d="M 350 160 C 400 160, 420 140, 420 120 C 420 100, 400 85, 390 85" stroke="#c62828" stroke-width="1.5" stroke-dasharray="4,3" fill="none" marker-end="url(#lb)"/>
+          <text x="430" y="130" text-anchor="start" font-size="10" fill="#c62828" font-family="sans-serif">無限ループ</text>
+          <path d="M 250 110 L 250 140" stroke="#54595d" stroke-width="1.5" marker-end="url(#la)"/>
+          <defs>
+            <marker id="la" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#54595d"/></marker>
+            <marker id="lb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#c62828"/></marker>
+          </defs>
+        </svg>
+        <div class="diagram-caption">図1: Ω コンビネータ — 自己適用による無限ループの最小表現</div>
+      </div>
+
+      <h2 id="y-combinator">Yコンビネータと不動点</h2>
+      <p><a href="fixed-point-combinator.html">不動点コンビネータ</a>の最も有名な形である<strong>Yコンビネータ</strong>は、自己適用を制御された形で利用して再帰を実現する：</p>
+      <pre><code>Y = λf. (λx. f (x x))(λx. f (x x))</code></pre>
+      <p>任意の関数 <em>f</em> に対して <em>Y f = f (Y f)</em> が成り立つ。つまり <em>Y f</em> は <em>f</em> の不動点である。これにより、ラムダ計算のように名前付き定義を持たない体系でも再帰的関数を定義できる。</p>
+      <p>この構造は<a href="diagonal-argument.html">対角線論法</a>と同型であり、<a href="quine.html">クワイン</a>の構成原理とも直結する。</p>
+
+      <h2 id="church-encoding">チャーチ・エンコーディング</h2>
+      <p>ラムダ計算では純粋な関数のみでデータを表現する：</p>
+      <ul>
+        <li><strong>チャーチ数</strong>：<em>0</em> = <em>λf.λx. x</em>、<em>1</em> = <em>λf.λx. f x</em>、<em>n</em> = <em>λf.λx. f<sup>n</sup> x</em></li>
+        <li><strong>論理値</strong>：<em>true</em> = <em>λa.λb. a</em>、<em>false</em> = <em>λa.λb. b</em></li>
+        <li><strong>ペア</strong>：<em>pair</em> = <em>λa.λb.λf. f a b</em></li>
+      </ul>
+      <p>チャーチ数 <em>n</em> は「関数を <em>n</em> 回適用する」という操作そのものを関数として捉えるものであり、データと操作の区別を消去するという点で、<a href="self-reference-engine.html">自己参照エンジン</a>の原理と深く通じる。</p>
+
+      <h2 id="church-turing">チャーチ＝チューリングのテーゼ</h2>
+      <p>1936年、チャーチはラムダ計算で計算不可能な関数の存在を証明し、同時期にチューリングがチューリングマシンで同等の結果を示した。両者の計算能力が等価であることが証明され、<strong>チャーチ＝チューリングのテーゼ</strong>——「実効的に計算可能な関数」の概念はこれらの形式化と一致する——が提唱された。</p>
+
+      <h2 id="typed-lambda">型付きラムダ計算</h2>
+      <p>型なしラムダ計算では自己適用 <em>ω = λx. x x</em> が自由に書けるが、<strong>単純型付きラムダ計算</strong>では <em>x x</em> に型を付けることができず、自己適用が禁止される。これにより Ω のような発散する項が排除され、すべての計算が停止する（強正規化定理）。</p>
+      <p>しかし、これは同時に再帰を直接表現する能力を失うことを意味する。<a href="type-theory.html">型理論</a>はこの緊張——自己参照の表現力と体系の安全性のトレードオフ——を精密に扱う分野である。</p>
+
+      <h2 id="influence">影響</h2>
+      <ul>
+        <li><strong>Lisp</strong>（1958年）：ジョン・マッカーシーがラムダ計算を基に設計した最初の関数型言語</li>
+        <li><strong>ML / Haskell / OCaml</strong>：型付きラムダ計算を基盤とする現代の関数型言語群</li>
+        <li><strong>カリー＝ハワード対応</strong>：型付きラムダ計算の型が論理の命題に、項が証明に対応するという同型性</li>
+        <li><strong><a href="goedel-escher-bach.html">GEB</a></strong>：ホフスタッターがラムダ計算と自己参照の関係を一般読者に紹介</li>
+      </ul>
+
+      <h2 id="see-also">関連項目</h2>
+      <ul>
+        <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+        <li><a href="fixed-point-combinator.html">不動点コンビネータ</a></li>
+        <li><a href="quine.html">クワイン（自己複製プログラム）</a></li>
+        <li><a href="diagonal-argument.html">対角線論法</a></li>
+        <li><a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a></li>
+        <li><a href="goedel-escher-bach.html">ゲーデル、エッシャー、バッハ</a></li>
+      </ul>
+
+    </main>
+
+    <aside class="wiki-sidebar">
+      <div class="toc">
+        <div class="toc-title">目次</div>
+        <ul class="toc-list">
+          <li><a href="#syntax">構文</a></li>
+          <li><a href="#reduction">簡約規則</a></li>
+          <li class="toc-h3"><a href="#alpha">α変換</a></li>
+          <li class="toc-h3"><a href="#beta">β簡約</a></li>
+          <li class="toc-h3"><a href="#eta">η変換</a></li>
+          <li><a href="#self-application">自己適用</a></li>
+          <li><a href="#y-combinator">Yコンビネータと不動点</a></li>
+          <li><a href="#church-encoding">チャーチ・エンコーディング</a></li>
+          <li><a href="#church-turing">チャーチ＝チューリングのテーゼ</a></li>
+          <li><a href="#typed-lambda">型付きラムダ計算</a></li>
+          <li><a href="#influence">影響</a></li>
+          <li><a href="#see-also">関連項目</a></li>
+        </ul>
+      </div>
+
+      <div class="related-articles">
+        <div class="related-title">関連記事</div>
+        <ul class="related-list">
+          <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+          <li><a href="fixed-point-combinator.html">不動点コンビネータ</a></li>
+          <li><a href="diagonal-argument.html">対角線論法</a></li>
+          <li><a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="wiki-footer">
+    <div class="footer-links">
+      <h4>リンク先</h4>
+      <ul>
+        <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+        <li><a href="fixed-point-combinator.html">不動点コンビネータ</a></li>
+        <li><a href="quine.html">クワイン</a></li>
+        <li><a href="diagonal-argument.html">対角線論法</a></li>
+        <li><a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a></li>
+        <li><a href="goedel-escher-bach.html">ゲーデル、エッシャー、バッハ</a></li>
+      </ul>
+      <h4>被リンク</h4>
+      <ul>
+        <li><a href="fixed-point-combinator.html">不動点コンビネータ</a></li>
+        <li><a href="goedel-escher-bach.html">ゲーデル、エッシャー、バッハ</a></li>
+      </ul>
+    </div>
+    <p style="margin-top:12px;">Auto-Wiki で自動生成</p>
+  </footer>
+</div>
+</body>
+</html>

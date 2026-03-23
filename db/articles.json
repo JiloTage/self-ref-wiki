@@ -23,7 +23,10 @@
       "linked_from": [
         "goedel-incompleteness-theorems",
         "quine",
-        "fixed-point-combinator"
+        "fixed-point-combinator",
+        "goedel-escher-bach",
+        "diagonal-argument",
+        "lambda-calculus"
       ],
       "expansion_status": "expanded",
       "is_root": true
@@ -49,7 +52,10 @@
       "linked_from": [
         "self-reference-engine",
         "quine",
-        "fixed-point-combinator"
+        "fixed-point-combinator",
+        "goedel-escher-bach",
+        "diagonal-argument",
+        "lambda-calculus"
       ],
       "expansion_status": "pending",
       "is_root": false
@@ -72,7 +78,10 @@
       "linked_from": [
         "self-reference-engine",
         "goedel-incompleteness-theorems",
-        "fixed-point-combinator"
+        "fixed-point-combinator",
+        "goedel-escher-bach",
+        "diagonal-argument",
+        "lambda-calculus"
       ],
       "expansion_status": "pending",
       "is_root": false
@@ -97,12 +106,90 @@
       "linked_from": [
         "self-reference-engine",
         "goedel-incompleteness-theorems",
-        "quine"
+        "quine",
+        "goedel-escher-bach",
+        "diagonal-argument",
+        "lambda-calculus"
+      ],
+      "expansion_status": "pending",
+      "is_root": false
+    },
+    "goedel-escher-bach": {
+      "slug": "goedel-escher-bach",
+      "title": "ゲーデル、エッシャー、バッハ",
+      "summary": "1979年にダグラス・ホフスタッターが発表した学際的著作。ストレンジ・ループと自己参照が意識の根源であるというテーゼを、数学・美術・音楽を横断して展開する。ピューリッツァー賞受賞。",
+      "filename": "articles/goedel-escher-bach.html",
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z",
+      "origin": "expansion",
+      "links_to": [
+        "self-reference-engine",
+        "goedel-incompleteness-theorems",
+        "quine",
+        "fixed-point-combinator",
+        "diagonal-argument",
+        "lambda-calculus"
+      ],
+      "linked_from": [
+        "self-reference-engine",
+        "goedel-incompleteness-theorems",
+        "quine",
+        "lambda-calculus"
+      ],
+      "expansion_status": "pending",
+      "is_root": false
+    },
+    "diagonal-argument": {
+      "slug": "diagonal-argument",
+      "title": "対角線論法",
+      "summary": "ある集合が列挙不可能であることを、仮定された列挙の対角線上の要素を反転させることで証明する手法。カントール、ゲーデル、チューリングの根本定理に共通する証明技法。",
+      "filename": "articles/diagonal-argument.html",
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z",
+      "origin": "expansion",
+      "links_to": [
+        "self-reference-engine",
+        "goedel-incompleteness-theorems",
+        "quine",
+        "fixed-point-combinator",
+        "goedel-escher-bach",
+        "lambda-calculus"
+      ],
+      "linked_from": [
+        "self-reference-engine",
+        "goedel-incompleteness-theorems",
+        "quine",
+        "fixed-point-combinator",
+        "goedel-escher-bach",
+        "lambda-calculus"
+      ],
+      "expansion_status": "pending",
+      "is_root": false
+    },
+    "lambda-calculus": {
+      "slug": "lambda-calculus",
+      "title": "ラムダ計算",
+      "summary": "1930年代にアロンゾ・チャーチが考案した形式体系。関数の定義・適用・抽象化のみで計算を表現する。不動点コンビネータの母体であり、自己参照を自己適用として最も純粋に表現する。",
+      "filename": "articles/lambda-calculus.html",
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z",
+      "origin": "expansion",
+      "links_to": [
+        "self-reference-engine",
+        "fixed-point-combinator",
+        "quine",
+        "diagonal-argument",
+        "goedel-incompleteness-theorems",
+        "goedel-escher-bach"
+      ],
+      "linked_from": [
+        "fixed-point-combinator",
+        "goedel-escher-bach"
       ],
       "expansion_status": "pending",
       "is_root": false
     }
   },
   "root_id": "self-reference-engine",
-  "total_count": 4
+  "total_count": 7
 }

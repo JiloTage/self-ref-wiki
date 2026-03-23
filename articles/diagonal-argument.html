@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>対角線論法 - Auto-Wiki</title>
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+</head>
+<body>
+<div class="wiki-wrapper">
+  <header class="wiki-header">
+    <a href="../index.html" class="site-title">Auto-Wiki</a>
+    <nav>
+      <a href="../index.html">トップ</a>
+      <a href="../index.html#article-list">記事一覧</a>
+      <a href="../index.html#graph">サイトグラフ</a>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Auto-Wiki</a> &gt; 対角線論法
+  </div>
+
+  <div class="wiki-content">
+    <main class="wiki-main">
+      <h1 class="article-title">対角線論法</h1>
+      <div class="article-meta">最終更新: 2026-03-23</div>
+      <div class="article-summary"><strong>対角線論法</strong>（diagonalization / diagonal argument）とは、ある集合が列挙不可能であることを、仮定された列挙の「対角線」上の要素を反転させることで証明する手法である。1891年にゲオルク・カントールが実数の非可算性の証明に用いて以来、<a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a>、チューリングの<a href="halting-problem.html">停止問題</a>の決定不能性証明など、<a href="self-reference-engine.html">自己参照</a>に基づく数学・計算機科学の根本的な不可能性定理のほぼすべてに共通する証明技法である。</div>
+
+      <table class="infobox">
+        <tr><td class="infobox-title" colspan="2">対角線論法</td></tr>
+        <tr><th>英語名</th><td>Diagonal argument / Diagonalization</td></tr>
+        <tr><th>考案者</th><td>ゲオルク・カントール（1891年）</td></tr>
+        <tr><th>分類</th><td>証明技法</td></tr>
+        <tr><th>応用</th><td>不完全性定理、停止問題、実数の非可算性</td></tr>
+        <tr><th>本質</th><td>自己参照による矛盾の導出</td></tr>
+      </table>
+
+      <h2 id="basic-idea">基本的なアイデア</h2>
+      <p>対角線論法の基本構造は以下の通りである：</p>
+      <ol>
+        <li><strong>仮定</strong>：ある集合のすべての要素を列挙できると仮定する</li>
+        <li><strong>対角線の構成</strong>：その列挙を表にしたとき、対角線上の要素（第 <em>n</em> 番目の要素の第 <em>n</em> 番目の成分）を取り出す</li>
+        <li><strong>反転</strong>：対角線上の各要素を「反転」（否定、変更）した新しい要素を構成する</li>
+        <li><strong>矛盾</strong>：この新しい要素は列挙のどの要素とも異なる（第 <em>n</em> 番目の要素とは少なくとも第 <em>n</em> 成分で異なる）ため、列挙の完全性に矛盾する</li>
+      </ol>
+
+      <div class="diagram-container">
+        <svg viewBox="0 0 460 320" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="460" height="320" fill="#f8f9fa" rx="4"/>
+          <text x="230" y="25" text-anchor="middle" font-size="13" fill="#333" font-family="sans-serif" font-weight="bold">カントールの対角線論法</text>
+          <!-- Grid header -->
+          <text x="120" y="55" text-anchor="middle" font-size="11" fill="#666" font-family="monospace">d₁</text>
+          <text x="170" y="55" text-anchor="middle" font-size="11" fill="#666" font-family="monospace">d₂</text>
+          <text x="220" y="55" text-anchor="middle" font-size="11" fill="#666" font-family="monospace">d₃</text>
+          <text x="270" y="55" text-anchor="middle" font-size="11" fill="#666" font-family="monospace">d₄</text>
+          <text x="320" y="55" text-anchor="middle" font-size="11" fill="#666" font-family="monospace">d₅</text>
+          <text x="360" y="55" text-anchor="middle" font-size="11" fill="#666" font-family="monospace">…</text>
+          <!-- Row labels -->
+          <text x="55" y="85" text-anchor="middle" font-size="11" fill="#666" font-family="monospace">r₁</text>
+          <text x="55" y="115" text-anchor="middle" font-size="11" fill="#666" font-family="monospace">r₂</text>
+          <text x="55" y="145" text-anchor="middle" font-size="11" fill="#666" font-family="monospace">r₃</text>
+          <text x="55" y="175" text-anchor="middle" font-size="11" fill="#666" font-family="monospace">r₄</text>
+          <text x="55" y="205" text-anchor="middle" font-size="11" fill="#666" font-family="monospace">r₅</text>
+          <!-- Grid values -->
+          <!-- Row 1 -->
+          <rect x="100" y="68" width="40" height="24" fill="#e8f0fe" stroke="#0645ad" stroke-width="2" rx="3"/>
+          <text x="120" y="85" text-anchor="middle" font-size="12" fill="#0645ad" font-family="monospace" font-weight="bold">0</text>
+          <text x="170" y="85" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">1</text>
+          <text x="220" y="85" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">0</text>
+          <text x="270" y="85" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">1</text>
+          <text x="320" y="85" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">1</text>
+          <!-- Row 2 -->
+          <text x="120" y="115" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">1</text>
+          <rect x="150" y="98" width="40" height="24" fill="#e8f0fe" stroke="#0645ad" stroke-width="2" rx="3"/>
+          <text x="170" y="115" text-anchor="middle" font-size="12" fill="#0645ad" font-family="monospace" font-weight="bold">1</text>
+          <text x="220" y="115" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">1</text>
+          <text x="270" y="115" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">0</text>
+          <text x="320" y="115" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">0</text>
+          <!-- Row 3 -->
+          <text x="120" y="145" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">0</text>
+          <text x="170" y="145" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">0</text>
+          <rect x="200" y="128" width="40" height="24" fill="#e8f0fe" stroke="#0645ad" stroke-width="2" rx="3"/>
+          <text x="220" y="145" text-anchor="middle" font-size="12" fill="#0645ad" font-family="monospace" font-weight="bold">1</text>
+          <text x="270" y="145" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">1</text>
+          <text x="320" y="145" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">0</text>
+          <!-- Row 4 -->
+          <text x="120" y="175" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">1</text>
+          <text x="170" y="175" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">0</text>
+          <text x="220" y="175" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">0</text>
+          <rect x="250" y="158" width="40" height="24" fill="#e8f0fe" stroke="#0645ad" stroke-width="2" rx="3"/>
+          <text x="270" y="175" text-anchor="middle" font-size="12" fill="#0645ad" font-family="monospace" font-weight="bold">0</text>
+          <text x="320" y="175" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">1</text>
+          <!-- Row 5 -->
+          <text x="120" y="205" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">0</text>
+          <text x="170" y="205" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">1</text>
+          <text x="220" y="205" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">0</text>
+          <text x="270" y="205" text-anchor="middle" font-size="12" fill="#333" font-family="monospace">1</text>
+          <rect x="300" y="188" width="40" height="24" fill="#e8f0fe" stroke="#0645ad" stroke-width="2" rx="3"/>
+          <text x="320" y="205" text-anchor="middle" font-size="12" fill="#0645ad" font-family="monospace" font-weight="bold">1</text>
+          <!-- Diagonal line -->
+          <line x1="100" y1="68" x2="340" y2="212" stroke="#0645ad" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+          <!-- Anti-diagonal result -->
+          <text x="55" y="255" text-anchor="middle" font-size="11" fill="#d32f2f" font-family="monospace" font-weight="bold">d*</text>
+          <rect x="100" y="238" width="40" height="24" fill="#ffebee" stroke="#d32f2f" stroke-width="2" rx="3"/>
+          <text x="120" y="255" text-anchor="middle" font-size="12" fill="#d32f2f" font-family="monospace" font-weight="bold">1</text>
+          <rect x="150" y="238" width="40" height="24" fill="#ffebee" stroke="#d32f2f" stroke-width="2" rx="3"/>
+          <text x="170" y="255" text-anchor="middle" font-size="12" fill="#d32f2f" font-family="monospace" font-weight="bold">0</text>
+          <rect x="200" y="238" width="40" height="24" fill="#ffebee" stroke="#d32f2f" stroke-width="2" rx="3"/>
+          <text x="220" y="255" text-anchor="middle" font-size="12" fill="#d32f2f" font-family="monospace" font-weight="bold">0</text>
+          <rect x="250" y="238" width="40" height="24" fill="#ffebee" stroke="#d32f2f" stroke-width="2" rx="3"/>
+          <text x="270" y="255" text-anchor="middle" font-size="12" fill="#d32f2f" font-family="monospace" font-weight="bold">1</text>
+          <rect x="300" y="238" width="40" height="24" fill="#ffebee" stroke="#d32f2f" stroke-width="2" rx="3"/>
+          <text x="320" y="255" text-anchor="middle" font-size="12" fill="#d32f2f" font-family="monospace" font-weight="bold">0</text>
+          <text x="360" y="255" text-anchor="middle" font-size="11" fill="#d32f2f" font-family="monospace">…</text>
+          <!-- Label -->
+          <text x="230" y="295" text-anchor="middle" font-size="11" fill="#d32f2f" font-family="sans-serif" font-style="italic">d* は列挙のどの行とも異なる → 矛盾</text>
+        </svg>
+        <div class="diagram-caption">図1: カントールの対角線論法 — 青が対角線要素、赤が反転された新要素 d*</div>
+      </div>
+
+      <h2 id="cantor">カントールの定理（1891年）</h2>
+      <p>カントールは対角線論法を用いて、<strong>実数の集合は自然数の集合より真に大きい</strong>（非可算である）ことを証明した。[0,1] 区間の実数をすべて列挙できると仮定し、各実数を二進小数展開で表す。対角線上の第 <em>n</em> 桁を反転させた新しい実数は列挙に含まれないため矛盾が導かれる。</p>
+      <p>この証明は、すべての自然数に関する操作（列挙）が自然数では「捉えきれない」対象を生み出すという点で、本質的に<a href="self-reference-engine.html">自己参照</a>的である。</p>
+
+      <h2 id="goedel">ゲーデルの不完全性定理における対角化</h2>
+      <p><a href="goedel-incompleteness-theorems.html">ゲーデル</a>は、形式体系の証明可能な命題をすべて列挙し、対角線論法を適用することで「この命題は証明不可能である」という自己言及命題を構成した。これが<strong>対角線補題</strong>（diagonal lemma / fixed-point lemma）であり、不完全性定理の核心をなす。</p>
+      <p>ゲーデル数の仕組みにより、形式的命題が自然数として表現され、体系が自身の命題について語ることが可能になる。対角線論法はこの「自己言及可能性」を体系的に利用する。</p>
+
+      <h2 id="turing">チューリングの停止問題</h2>
+      <p>アラン・チューリングは1936年に対角線論法を用いて、<strong>任意のプログラムが停止するかどうかを判定する一般的なアルゴリズムは存在しない</strong>ことを証明した。</p>
+      <p>停止判定器 <em>H(P, I)</em> が存在すると仮定し、<em>D(P) = if H(P,P) then loop else halt</em> というプログラムを構成する。<em>D(D)</em> の挙動は矛盾を導く——これはまさに対角線論法の構造である。ここで <em>H(P,P)</em>（プログラムに自身を入力として与える）が対角線要素に対応する。</p>
+
+      <h2 id="quine-connection">クワインとの関係</h2>
+      <p><a href="quine.html">クワイン</a>の構成もまた対角線論法の一形態である。プログラムが自身のソースコードを取得する仕組みは、対角線補題の構成的証明と同型である。<a href="fixed-point-combinator.html">不動点コンビネータ</a>はこの対角化を関数レベルで実現するものと見なせる。</p>
+
+      <h2 id="generalizations">一般化と応用</h2>
+      <p>対角線論法は以下の定理の証明にも本質的に用いられる：</p>
+      <ul>
+        <li><strong>ラッセルのパラドックス</strong>：「自分自身を含まない集合の集合」——集合論における対角化</li>
+        <li><strong>タルスキの定理</strong>：形式体系は自身の真理述語を定義できない</li>
+        <li><strong>ライスの定理</strong>：プログラムの非自明な意味的性質は決定不能</li>
+        <li><strong>カリーのパラドックス</strong>：自己参照的条件文による矛盾</li>
+      </ul>
+      <p>これらはすべて、あるシステムが自身を完全に記述・制御しようとする試みが本質的に不可能であることを示しており、<a href="self-reference-engine.html">自己参照</a>の根源的な限界を明らかにする。</p>
+
+      <h2 id="see-also">関連項目</h2>
+      <ul>
+        <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+        <li><a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a></li>
+        <li><a href="quine.html">クワイン（自己複製プログラム）</a></li>
+        <li><a href="fixed-point-combinator.html">不動点コンビネータ</a></li>
+        <li><a href="goedel-escher-bach.html">ゲーデル、エッシャー、バッハ</a></li>
+        <li><a href="lambda-calculus.html">ラムダ計算</a></li>
+      </ul>
+
+    </main>
+
+    <aside class="wiki-sidebar">
+      <div class="toc">
+        <div class="toc-title">目次</div>
+        <ul class="toc-list">
+          <li><a href="#basic-idea">基本的なアイデア</a></li>
+          <li><a href="#cantor">カントールの定理</a></li>
+          <li><a href="#goedel">ゲーデルの不完全性定理における対角化</a></li>
+          <li><a href="#turing">チューリングの停止問題</a></li>
+          <li><a href="#quine-connection">クワインとの関係</a></li>
+          <li><a href="#generalizations">一般化と応用</a></li>
+          <li><a href="#see-also">関連項目</a></li>
+        </ul>
+      </div>
+
+      <div class="related-articles">
+        <div class="related-title">関連記事</div>
+        <ul class="related-list">
+          <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+          <li><a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a></li>
+          <li><a href="quine.html">クワイン</a></li>
+          <li><a href="fixed-point-combinator.html">不動点コンビネータ</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="wiki-footer">
+    <div class="footer-links">
+      <h4>リンク先</h4>
+      <ul>
+        <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+        <li><a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a></li>
+        <li><a href="quine.html">クワイン</a></li>
+        <li><a href="fixed-point-combinator.html">不動点コンビネータ</a></li>
+        <li><a href="goedel-escher-bach.html">ゲーデル、エッシャー、バッハ</a></li>
+        <li><a href="lambda-calculus.html">ラムダ計算</a></li>
+      </ul>
+      <h4>被リンク</h4>
+      <ul>
+        <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+        <li><a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a></li>
+        <li><a href="quine.html">クワイン</a></li>
+        <li><a href="fixed-point-combinator.html">不動点コンビネータ</a></li>
+      </ul>
+    </div>
+    <p style="margin-top:12px;">Auto-Wiki で自動生成</p>
+  </footer>
+</div>
+</body>
+</html>
