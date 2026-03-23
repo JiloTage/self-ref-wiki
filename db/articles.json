@@ -1,5 +1,58 @@
 {
-  "articles": {},
-  "root_id": null,
-  "total_count": 0
+  "articles": {
+    "self-reference-engine": {
+      "slug": "self-reference-engine",
+      "title": "Self-Reference ENGINE",
+      "filename": "articles/self-reference-engine.html",
+      "summary": "『Self-Reference ENGINE』は円城塔による連作SF小説で、「自己言及」という仕掛けを軸に、巨大知性体や入れ子構造の世界を描いた作品である。",
+      "links_to": ["enjoe-toh", "jiko-genkyuu", "kyodai-chisei-tai", "ireko-kouzou", "meta-fiction"],
+      "linked_from": ["enjoe-toh", "jiko-genkyuu", "kyodai-chisei-tai"],
+      "origin": "root",
+      "source_id": null,
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "expansion_status": "completed"
+    },
+    "enjoe-toh": {
+      "slug": "enjoe-toh",
+      "title": "円城塔",
+      "filename": "articles/enjoe-toh.html",
+      "summary": "円城塔（えんじょう・とう、1972年 - ）は、日本の小説家・SF作家。物理学の研究者としての経歴を持ち、科学や数学の考え方を小説に取り入れた実験的な作風で知られる。",
+      "links_to": ["self-reference-engine", "doukeshi-no-chou", "akutagawa-shou", "sf-bungaku", "postmodern-bungaku", "shisha-no-teikoku"],
+      "linked_from": ["self-reference-engine", "jiko-genkyuu", "kyodai-chisei-tai"],
+      "origin": "expanded",
+      "source_id": "self-reference-engine",
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "expansion_status": "completed"
+    },
+    "jiko-genkyuu": {
+      "slug": "jiko-genkyuu",
+      "title": "自己言及",
+      "filename": "articles/jiko-genkyuu.html",
+      "summary": "自己言及（じこげんきゅう）とは、ある文章・物語・システムなどが「自分自身」について述べることを指す。『Self-Reference ENGINE』の中心的なテーマである。",
+      "links_to": ["self-reference-engine", "enjoe-toh", "kyodai-chisei-tai", "ireko-kouzou", "meta-fiction", "paradox", "usotsuki-no-paradox", "goedel-incompleteness", "strange-loop"],
+      "linked_from": ["self-reference-engine", "kyodai-chisei-tai"],
+      "origin": "expanded",
+      "source_id": "self-reference-engine",
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "expansion_status": "completed"
+    },
+    "kyodai-chisei-tai": {
+      "slug": "kyodai-chisei-tai",
+      "title": "巨大知性体",
+      "filename": "articles/kyodai-chisei-tai.html",
+      "summary": "巨大知性体は、円城塔の小説『Self-Reference ENGINE』に繰り返し登場する存在。人間をはるかに超えた知的能力を持ち、現実の構造や時間の流れそのものを操作できる力を持つ。",
+      "links_to": ["self-reference-engine", "enjoe-toh", "jiko-genkyuu", "ireko-kouzou", "meta-fiction", "cho-chisei", "mugen-koutai", "event-sre", "gijutsu-teki-tokuiten"],
+      "linked_from": ["self-reference-engine", "jiko-genkyuu"],
+      "origin": "expanded",
+      "source_id": "self-reference-engine",
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "expansion_status": "completed"
+    }
+  },
+  "root_id": "self-reference-engine",
+  "total_count": 4
 }

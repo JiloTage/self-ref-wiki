@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自己言及 - Auto-Wiki</title>
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+</head>
+<body>
+<div class="wiki-wrapper">
+  <header class="wiki-header">
+    <a href="../index.html" class="site-title">Auto-Wiki</a>
+    <nav>
+      <a href="../index.html">トップ</a>
+      <a href="../index.html#article-list">記事一覧</a>
+      <a href="../index.html#graph">サイトグラフ</a>
+    </nav>
+  </header>
+  <div class="breadcrumb">
+    <a href="../index.html">Auto-Wiki</a> &gt; 自己言及
+  </div>
+  <div class="wiki-content">
+    <main class="wiki-main">
+      <h1 class="article-title">自己言及</h1>
+      <div class="article-meta">最終更新: 2026-03-24</div>
+      <div class="article-summary"><b>自己言及</b>（じこげんきゅう、英: self-reference）とは、ある文章・物語・システムなどが「自分自身」について述べることを指す。『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』の中心的なテーマであり、<a href="meta-fiction.html">メタフィクション</a>や<a href="paradox.html">パラドックス</a>、<a href="ireko-kouzou.html">入れ子構造</a>とも深く関わる考え方である。</div>
+
+      <h2 id="definition">自己言及とは</h2>
+      <p><b>自己言及</b>とは、何かが「自分自身」に言及する（＝触れる、述べる）ことである。言い換えれば、主語と対象が同じものを指している状態のことだ。</p>
+      <p>もっとも身近な例を挙げよう。</p>
+      <ul>
+        <li>「この文は日本語で書かれている」――この文は、自分自身の性質（日本語であること）について述べている</li>
+        <li>「この文は15文字である」――文自体が、自分の文字数について語っている</li>
+        <li>自分の顔を鏡で見ること――見ている人と見られている人が同じ</li>
+        <li>テレビカメラがそのテレビ画面自体を映すと、画面の中にさらに画面が映り、無限に続いていく</li>
+      </ul>
+      <p>このように、自己言及は日常のいたるところに存在する。ただし、ひとたびこの仕組みを意識的に使い始めると、思いがけない面白さや困った問題が生まれてくる。</p>
+
+      <div class="diagram-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" width="520" height="260">
+          <defs>
+            <marker id="arr" viewBox="0 -5 10 10" refX="9" refY="0" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0,-5L10,0L0,5" fill="#36c"/>
+            </marker>
+          </defs>
+
+          <!-- Background -->
+          <rect x="0" y="0" width="520" height="260" rx="8" fill="#f8f9fa" stroke="#a2a9b1" stroke-width="1.5"/>
+          <text x="260" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#202122" font-weight="bold">自己言及のしくみ</text>
+
+          <!-- The sentence box -->
+          <rect x="80" y="55" width="360" height="50" rx="6" fill="#fff" stroke="#36c" stroke-width="2"/>
+          <text x="260" y="78" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#202122">「この文は日本語で書かれている」</text>
+          <text x="260" y="95" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#666">↑ この文自体が主語であり対象でもある</text>
+
+          <!-- Arrow looping from the sentence back to itself -->
+          <path d="M440,80 C490,80 490,150 440,150 L110,150 C60,150 60,80 80,80" fill="none" stroke="#36c" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arr)"/>
+          <text x="500" y="120" text-anchor="start" font-family="sans-serif" font-size="11" fill="#36c" transform="rotate(90,500,120)">自分を指す</text>
+
+          <!-- Explanatory labels -->
+          <rect x="120" y="175" width="130" height="35" rx="4" fill="#e8f0fe" stroke="#36c" stroke-width="1"/>
+          <text x="185" y="197" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#202122">述べる側（主語）</text>
+
+          <rect x="280" y="175" width="130" height="35" rx="4" fill="#fff3e0" stroke="#e68a00" stroke-width="1"/>
+          <text x="345" y="197" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#202122">述べられる側（対象）</text>
+
+          <!-- Equals sign -->
+          <text x="256" y="197" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#36c" font-weight="bold">＝</text>
+
+          <text x="260" y="240" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#666">主語と対象が同一 → 自己言及が成立する</text>
+        </svg>
+        <div class="diagram-caption">図：自己言及の基本構造。「この文」が主語であると同時に、述べられている対象でもある。矢印のループが「自分自身を指す」関係を表している。</div>
+      </div>
+
+      <h2 id="language">ことばの中の自己言及</h2>
+      <p>自己言及がもっとも身近に現れるのは、ことばの世界である。私たちは日常的に「この話」「いま言ったこと」のような表現を使っており、これらはすべて自己言及の一種である。</p>
+      <p>しかし、自己言及は時として「答えの出ない問題」を引き起こす。その代表が<a href="usotsuki-no-paradox.html">嘘つきのパラドックス</a>である。</p>
+
+      <h3 id="liar-paradox">嘘つきのパラドックス</h3>
+      <p>次の文を考えてみてほしい。</p>
+      <blockquote>
+        <p>「この文は嘘である」</p>
+      </blockquote>
+      <p>もしこの文が本当（真）だとすると、書いてある通り「この文は嘘」ということになり、矛盾する。反対に、この文が嘘（偽）だとすると、「この文は嘘である」が嘘なのだから、「この文は本当」ということになり、やはり矛盾する。</p>
+      <p>本当だと仮定しても嘘だと仮定しても矛盾してしまう。これが<a href="paradox.html">パラドックス</a>（逆説）と呼ばれる状態である。このパラドックスが生じる原因は、文が「自分自身」について述べている――つまり自己言及しているからにほかならない。</p>
+      <p>この問題は2000年以上前の古代ギリシャから知られており、哲学や論理学の世界で長く議論されてきた。20世紀には数学者の<a href="goedel-incompleteness.html">ゲーデル</a>が、この自己言及の仕組みを数学の中に持ち込み、「ある種の数学の体系には、証明も反証もできない命題が必ず存在する」ことを証明した（不完全性定理）。自己言及は、単なる言葉遊びではなく、論理そのものの限界を示す深い仕組みなのである。</p>
+
+      <h3 id="everyday-self-ref">日常にひそむ自己言及</h3>
+      <p>パラドックスのような極端な例でなくても、自己言及は日常のいろいろな場面に見つかる。</p>
+      <ul>
+        <li>辞書で「言葉」を引くと、言葉を使って「言葉」が説明されている</li>
+        <li>「お知らせ：お知らせはありません」という掲示</li>
+        <li>「ルール1：すべてのルールに従うこと」というルール</li>
+        <li>映画の中で登場人物が「これって映画みたいだね」と言う場面</li>
+      </ul>
+      <p>気づいてみると、自己言及は私たちの生活にごく自然に溶け込んでいることがわかる。</p>
+
+      <h2 id="literature">文学における自己言及</h2>
+      <p>文学の世界では、自己言及は非常に古くから使われてきた手法である。物語の中で「いま読んでいるこの物語」そのものに触れることで、読者に独特の驚きや気づきを与えることができる。</p>
+
+      <h3 id="metafiction-connection">メタフィクションとの関係</h3>
+      <p><a href="meta-fiction.html">メタフィクション</a>とは、「自分がフィクション（作り話）であることを自覚しているフィクション」のことである。これは文学における自己言及の代表的な形といえる。</p>
+      <p>たとえば、小説の登場人物が「私たちは小説の登場人物にすぎない」と発言したり、語り手が「さて、この物語をどう終わらせようか」と読者に語りかけたりする作品がそれに当たる。物語が自分自身を「物語として」意識しているわけである。</p>
+      <p>こうした手法は、読者を一瞬「現実」に引き戻す効果がある。ふだん私たちは物語を読むとき、そこに書かれた世界を自然に受け入れている。しかし、物語自体が「これは作り話ですよ」と宣言すると、読者は「自分はいま物語を読んでいるのだ」と意識させられる。</p>
+
+      <h3 id="strange-loop">ストレンジループ</h3>
+      <p>自己言及を繰り返していくと、「上に昇っていったはずなのに、いつのまにか出発点に戻っている」という不思議な構造が現れることがある。これを<a href="strange-loop.html">ストレンジループ</a>（奇妙なループ）と呼ぶ。</p>
+      <p>身近な例では、エッシャーの「描く手」という絵がわかりやすい。右手が左手を描いていて、同時にその左手が右手を描いている。どちらが先でどちらが後かがわからなくなる。</p>
+      <p>物語の世界でいえば、「作者が書いた物語の中に作者自身が登場し、その作者が物語を書いている」という状況がストレンジループにあたる。どこが「本当の」始まりで、どこが「本当の」終わりなのかがわからなくなるのだ。</p>
+
+      <h2 id="in-sre">『Self-Reference ENGINE』における自己言及</h2>
+      <p>小説『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』は、そのタイトルが示すとおり、自己言及を作品の中心に据えた小説である。作者の<a href="enjoe-toh.html">円城塔</a>は、自己言及のさまざまな側面を物語の形で読者に体験させることを試みている。</p>
+
+      <h3 id="sre-examples">作中での自己言及の現れかた</h3>
+      <p>本作における自己言及は、ひとつのレベルにとどまらず、何重にも重なって現れる。</p>
+      <ul>
+        <li><b>物語が物語自身について語る</b>：あるエピソードの中で「このエピソード」や「この本」への言及がなされる。語り手が「さて、この話はどう続くのだろう」と述べるような場面がある</li>
+        <li><b>エピソード同士が互いに参照する</b>：20のエピソードが独立しているようでいて、別のエピソードで起きた出来事や登場人物に触れることがある。物語全体がひとつのネットワークのように結ばれている</li>
+        <li><b>登場人物が自分の「虚構性」に気づく</b>：物語の中の人物が、自分が物語の中にいることを認識する。これは<a href="meta-fiction.html">メタフィクション</a>の典型的な手法でもある</li>
+        <li><b><a href="kyodai-chisei-tai.html">巨大知性体</a>と自己言及</b>：巨大知性体は世界を観察し改変する力を持つが、巨大知性体自身もまた何らかの構造の中に含まれている。観察する者が観察される者でもあるという自己言及的な関係が成り立つ</li>
+      </ul>
+      <p>さらに重要なのは、本作の<a href="ireko-kouzou.html">入れ子構造</a>――つまり物語の中に物語がある構成――自体が自己言及の「形」になっているという点である。内容として自己言及を語っているだけでなく、作品の構造そのものが自己言及を体現しているのだ。</p>
+
+      <h3 id="title-as-self-ref">タイトルの自己言及</h3>
+      <p>作品のタイトル「Self-Reference ENGINE」自体が自己言及的である。「Self-Reference」（自己言及）という言葉をタイトルに含む本は、自分自身のテーマについて自分のタイトルで言及していることになる。これは、作品全体がひとつの巨大な自己言及であることを宣言しているようなものである。</p>
+
+      <h2 id="related-concepts">関連する考え方</h2>
+      <p>自己言及は、さまざまな分野の考え方と結びついている。</p>
+
+      <h3 id="recursion">入れ子構造（再帰）との関係</h3>
+      <p><a href="ireko-kouzou.html">入れ子構造</a>（再帰とも呼ばれる）は、ある構造の中に同じ構造が含まれている状態のことである。合わせ鏡のように「鏡の中に鏡が映り、その鏡の中にまた鏡が映り……」という状況がわかりやすい例だ。</p>
+      <p>自己言及と入れ子構造は密接に関わっている。「自分自身について述べる」ことを繰り返すと、必然的に入れ子のような構造が生まれるからだ。「この文について述べているこの文について述べているこの文……」というように、自己言及は再帰的に深くなっていく性質を持っている。</p>
+
+      <h3 id="paradox-connection">パラドックスとの関係</h3>
+      <p>先に述べた<a href="usotsuki-no-paradox.html">嘘つきのパラドックス</a>のように、自己言及は<a href="paradox.html">パラドックス</a>（逆説）の原因になることがある。「自分自身について述べる」ことで、真でも偽でもない――あるいは真であると同時に偽である――という不思議な状態が生じうるのだ。</p>
+      <p>すべての自己言及がパラドックスを引き起こすわけではない。「この文は日本語である」は自己言及だが、パラドックスではない（普通に正しい文である）。パラドックスが生じるのは、自己言及に「否定」が含まれるときである。「この文は嘘」「自分自身を含まない集合の集合」のように、自分自身を否定する形の自己言及が、矛盾を生む。</p>
+
+      <h2 id="summary">まとめ</h2>
+      <p>自己言及とは、何かが自分自身について述べることである。ことばの中に、鏡の中に、物語の中に、そして論理や数学の中に、自己言及は至るところに現れる。</p>
+      <p>ふだんは意識しないこの仕組みに注目すると、世界の見え方が少し変わってくる。自分が読んでいる物語が「自分は物語だ」と語り始めるとき、あるいは論理が自分自身の限界を証明してしまうとき、私たちは「自己言及」の不思議さに出会うことになる。</p>
+      <p>『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』は、その不思議さをまるごと一冊の小説にしたような作品であり、自己言及がどれほど豊かで奥深い仕組みかを物語の形で体験させてくれるのである。</p>
+    </main>
+    <aside class="wiki-sidebar">
+      <div class="toc">
+        <div class="toc-title">目次</div>
+        <ul class="toc-list">
+          <li><a href="#definition">自己言及とは</a></li>
+          <li><a href="#language">ことばの中の自己言及</a></li>
+          <li class="toc-h3"><a href="#liar-paradox">嘘つきのパラドックス</a></li>
+          <li class="toc-h3"><a href="#everyday-self-ref">日常にひそむ自己言及</a></li>
+          <li><a href="#literature">文学における自己言及</a></li>
+          <li class="toc-h3"><a href="#metafiction-connection">メタフィクションとの関係</a></li>
+          <li class="toc-h3"><a href="#strange-loop">ストレンジループ</a></li>
+          <li><a href="#in-sre">『Self-Reference ENGINE』における自己言及</a></li>
+          <li class="toc-h3"><a href="#sre-examples">作中での自己言及の現れかた</a></li>
+          <li class="toc-h3"><a href="#title-as-self-ref">タイトルの自己言及</a></li>
+          <li><a href="#related-concepts">関連する考え方</a></li>
+          <li class="toc-h3"><a href="#recursion">入れ子構造（再帰）との関係</a></li>
+          <li class="toc-h3"><a href="#paradox-connection">パラドックスとの関係</a></li>
+          <li><a href="#summary">まとめ</a></li>
+        </ul>
+      </div>
+      <div class="related-articles">
+        <div class="related-title">関連記事</div>
+        <ul class="related-list">
+          <li><a href="self-reference-engine.html">Self-Reference ENGINE</a></li>
+          <li><a href="enjoe-toh.html">円城塔</a></li>
+          <li><a href="ireko-kouzou.html">入れ子構造と再帰</a></li>
+          <li><a href="meta-fiction.html">メタフィクション</a></li>
+          <li><a href="kyodai-chisei-tai.html">巨大知性体</a></li>
+          <li><a href="paradox.html">パラドックス</a></li>
+          <li><a href="strange-loop.html">ストレンジループ</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  <footer class="wiki-footer">
+    <div class="footer-links">
+      <h4>リンク先</h4>
+      <ul>
+        <li><a href="self-reference-engine.html">Self-Reference ENGINE</a></li>
+        <li><a href="enjoe-toh.html">円城塔</a></li>
+        <li><a href="ireko-kouzou.html">入れ子構造と再帰</a></li>
+        <li><a href="meta-fiction.html">メタフィクション</a></li>
+        <li><a href="kyodai-chisei-tai.html">巨大知性体</a></li>
+        <li><a href="paradox.html">パラドックス</a></li>
+        <li><a href="usotsuki-no-paradox.html">嘘つきのパラドックス</a></li>
+        <li><a href="goedel-incompleteness.html">ゲーデルの不完全性定理</a></li>
+        <li><a href="strange-loop.html">ストレンジループ</a></li>
+      </ul>
+      <h4>被リンク</h4>
+      <ul><li><a href="self-reference-engine.html">Self-Reference ENGINE</a></li></ul>
+    </div>
+    <p style="margin-top:12px;">Auto-Wiki で自動生成</p>
+  </footer>
+</div>
+</body>
+</html>

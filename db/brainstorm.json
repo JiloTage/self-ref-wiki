@@ -1,4 +1,114 @@
 {
-  "queue": [],
-  "history": []
+  "queue": [
+    {
+      "proposed_slug": "strange-loop",
+      "proposed_title": "ストレンジループ",
+      "rationale": "ホフスタッターの概念。エッシャーの絵、バッハの音楽、ゲーデルの定理を結ぶ「奇妙なループ」は、Self-Reference ENGINEの構造そのものと共鳴する。",
+      "interestingness_score": 0.88,
+      "source_slug": "jiko-genkyuu"
+    },
+    {
+      "proposed_slug": "event-sre",
+      "proposed_title": "イベント（Self-Reference ENGINE）",
+      "rationale": "巨大知性体の活動によって引き起こされる現実変容の現象。作品の主要プロットを駆動する出来事として重要。",
+      "interestingness_score": 0.88,
+      "source_slug": "kyodai-chisei-tai"
+    },
+    {
+      "proposed_slug": "doukeshi-no-chou",
+      "proposed_title": "道化師の蝶",
+      "rationale": "円城塔の芥川賞受賞作。言語と翻訳をテーマにした実験的短編で、Self-Reference ENGINEとの共通点や違いを解説できる。",
+      "interestingness_score": 0.88,
+      "source_slug": "enjoe-toh"
+    },
+    {
+      "proposed_slug": "mugen-koutai",
+      "proposed_title": "無限後退",
+      "rationale": "巨大知性体の入れ子構造が示唆する無限の連鎖。哲学（亀の上の亀）、数学（再帰）、作品構造との関連を解説できる。",
+      "interestingness_score": 0.85,
+      "source_slug": "kyodai-chisei-tai"
+    },
+    {
+      "proposed_slug": "paradox",
+      "proposed_title": "パラドックス",
+      "rationale": "自己言及から生じる論理的矛盾の総論。嘘つきのパラドックス、ラッセルのパラドックスなど具体例を平易に解説する入口記事。",
+      "interestingness_score": 0.85,
+      "source_slug": "jiko-genkyuu"
+    },
+    {
+      "proposed_slug": "shisha-no-teikoku",
+      "proposed_title": "屍者の帝国",
+      "rationale": "伊藤計劃の遺作を円城塔が完成させた長編。二人の作家の関係やアニメ映画化など多くのトピックにつながる。",
+      "interestingness_score": 0.85,
+      "source_slug": "enjoe-toh"
+    },
+    {
+      "proposed_slug": "sf-bungaku",
+      "proposed_title": "SF文学",
+      "rationale": "円城塔の活動領域。日本SF文学の歴史や特徴、海外SFとの関係を解説する記事として、wiki全体のハブ記事になりうる。",
+      "interestingness_score": 0.82,
+      "source_slug": "enjoe-toh"
+    },
+    {
+      "proposed_slug": "cho-chisei",
+      "proposed_title": "超知性",
+      "rationale": "巨大知性体の背景にあるSF・AI分野の概念。スーパーインテリジェンスやSFにおける超知性の描かれ方を横断的に解説できる。",
+      "interestingness_score": 0.82,
+      "source_slug": "kyodai-chisei-tai"
+    },
+    {
+      "proposed_slug": "usotsuki-no-paradox",
+      "proposed_title": "嘘つきのパラドックス",
+      "rationale": "自己言及パラドックスの最も有名な例。古代ギリシャから現代論理学まで2000年以上の知的歴史を紹介できる。",
+      "interestingness_score": 0.82,
+      "source_slug": "jiko-genkyuu"
+    },
+    {
+      "proposed_slug": "goedel-incompleteness",
+      "proposed_title": "ゲーデルの不完全性定理",
+      "rationale": "自己言及を数学に持ち込んだ20世紀最大の発見のひとつ。「数学が自分自身の限界を証明した」という物語として平易に語れる。",
+      "interestingness_score": 0.80,
+      "source_slug": "jiko-genkyuu"
+    },
+    {
+      "proposed_slug": "postmodern-bungaku",
+      "proposed_title": "ポストモダン文学",
+      "rationale": "円城塔の作風を位置づける文学的な潮流。ボルヘスやカルヴィーノなど海外作家との関連も含む。",
+      "interestingness_score": 0.79,
+      "source_slug": "enjoe-toh"
+    },
+    {
+      "proposed_slug": "ireko-kouzou",
+      "proposed_title": "入れ子構造と再帰",
+      "rationale": "作品の構造を理解するために不可欠な概念。マトリョーシカ的な入れ子とプログラミングの再帰を平易に解説する。",
+      "interestingness_score": 0.75,
+      "source_slug": "self-reference-engine"
+    },
+    {
+      "proposed_slug": "akutagawa-shou",
+      "proposed_title": "芥川賞",
+      "rationale": "日本でもっとも権威ある文学賞のひとつ。円城塔の受賞が実験的文学の評価にどう影響したかという文脈で興味深い。",
+      "interestingness_score": 0.75,
+      "source_slug": "enjoe-toh"
+    },
+    {
+      "proposed_slug": "gijutsu-teki-tokuiten",
+      "proposed_title": "技術的特異点",
+      "rationale": "AIが人間を超える転換点としてのシンギュラリティ。巨大知性体の現実版としてのAI議論と接続できる。",
+      "interestingness_score": 0.75,
+      "source_slug": "kyodai-chisei-tai"
+    },
+    {
+      "proposed_slug": "meta-fiction",
+      "proposed_title": "メタフィクション",
+      "rationale": "「フィクションであること自体を扱うフィクション」という文学手法の解説。本作の理解を助ける。",
+      "interestingness_score": 0.70,
+      "source_slug": "self-reference-engine"
+    }
+  ],
+  "history": [
+    {"slug": "enjoe-toh", "completed_at": "2026-03-24", "source": "self-reference-engine"},
+    {"slug": "jiko-genkyuu", "completed_at": "2026-03-24", "source": "self-reference-engine"},
+    {"slug": "kyodai-chisei-tai", "completed_at": "2026-03-24", "source": "self-reference-engine"}
+  ]
 }
