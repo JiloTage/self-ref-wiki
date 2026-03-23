@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ストレンジループ - Auto-Wiki</title>
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+</head>
+<body>
+<div class="wiki-wrapper">
+  <header class="wiki-header">
+    <a href="../index.html" class="site-title">Auto-Wiki</a>
+    <nav>
+      <a href="../index.html">トップ</a>
+      <a href="../index.html#article-list">記事一覧</a>
+      <a href="../index.html#graph">サイトグラフ</a>
+    </nav>
+  </header>
+  <div class="breadcrumb">
+    <a href="../index.html">Auto-Wiki</a> &gt; ストレンジループ
+  </div>
+  <div class="wiki-content">
+    <main class="wiki-main">
+      <h1 class="article-title">ストレンジループ</h1>
+      <div class="article-meta">最終更新: 2026-03-24</div>
+      <div class="article-summary"><b>ストレンジループ</b>（英: strange loop、奇妙なループ）とは、あるシステムの階層を順に上がっていく（または下がっていく）と、いつのまにか出発点に戻ってきてしまう不思議な構造のことである。アメリカの認知科学者ダグラス・ホフスタッターが著書『<a href="goedel-escher-bach.html">ゲーデル・エッシャー・バッハ</a>』（1979年）で提唱した概念であり、<a href="jiko-genkyuu.html">自己言及</a>や<a href="ireko-kouzou.html">入れ子構造</a>と深く結びついている。</div>
+
+      <h2 id="definition">ストレンジループとは</h2>
+      <p><b>ストレンジループ</b>を一言でいえば、「階段を上り続けたはずなのに、気づいたら同じ場所に戻っている」という現象である。</p>
+      <p>ふつう、階層（レベル）というものは一方向に積み上がっていく。1階の上に2階があり、2階の上に3階がある。上に行けば上に行くほど、出発点からは遠ざかるはずだ。しかし、ストレンジループでは、その階層をどんどん上に（あるいは下に）たどっていくと、ある時点でいつのまにか一番下（あるいは一番上）に戻ってきてしまう。まるで、らせん階段をぐるぐると上り続けたら、なぜか元の階にたどり着いてしまうようなものである。</p>
+      <p>重要なのは、ただのループ（同じ場所をぐるぐる回ること）ではないという点だ。ストレンジループでは、途中で「レベル」が変わっている。上がったり下がったりしながら、それでも最終的に元の場所に戻ってくる。この「レベルをまたいで戻ってくる」ところが「ストレンジ」（奇妙）なのである。</p>
+
+      <h2 id="everyday-examples">身近にあるストレンジループ</h2>
+      <p>難しそうに聞こえるかもしれないが、実はストレンジループに似た現象は身のまわりにも見つかる。</p>
+
+      <h3 id="video-feedback">ビデオカメラの<a href="feedback.html">フィードバック</a></h3>
+      <p>テレビに映像を映しているカメラを、そのテレビ画面自体に向けてみよう。すると、テレビ画面の中にテレビ画面が映り、さらにその中にまたテレビ画面が映り……という無限の入れ子が発生する。カメラ（撮る側）とテレビ（映す側）は別々のレベルのはずなのに、互いが互いを含むループが生まれるのだ。</p>
+
+      <h3 id="song-about-singing">歌について歌う歌</h3>
+      <p>「歌を歌おう」という歌がある。この歌は「歌を歌うこと」について歌っている。歌の内容（何について歌っているか）と歌という行為そのものが同じレベルに折り畳まれてしまう。</p>
+
+      <h3 id="self-describing-sentence">自分を説明する文</h3>
+      <p>「この文は10文字である」のように、文が自分自身の特徴について述べるとき、「述べている内容」と「述べている行為」が同じ対象を指している。これは<a href="jiko-genkyuu.html">自己言及</a>であると同時に、レベルが一周してくるストレンジループの小さな例でもある。</p>
+
+      <div class="diagram-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 380" width="500" height="380">
+          <defs>
+            <marker id="arrow" viewBox="0 -5 10 10" refX="9" refY="0" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M0,-5L10,0L0,5" fill="#36c"/>
+            </marker>
+          </defs>
+
+          <!-- Background -->
+          <rect x="0" y="0" width="500" height="380" rx="8" fill="#f8f9fa" stroke="#a2a9b1" stroke-width="1.5"/>
+          <text x="250" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#202122" font-weight="bold">ストレンジループの構造</text>
+
+          <!-- Level labels on the left -->
+          <text x="30" y="100" text-anchor="start" font-family="sans-serif" font-size="11" fill="#72777d">レベル 3</text>
+          <text x="30" y="180" text-anchor="start" font-family="sans-serif" font-size="11" fill="#72777d">レベル 2</text>
+          <text x="30" y="260" text-anchor="start" font-family="sans-serif" font-size="11" fill="#72777d">レベル 1</text>
+
+          <!-- Dashed horizontal lines for levels -->
+          <line x1="90" y1="110" x2="460" y2="110" stroke="#c8ccd1" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="90" y1="190" x2="460" y2="190" stroke="#c8ccd1" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="90" y1="270" x2="460" y2="270" stroke="#c8ccd1" stroke-width="1" stroke-dasharray="4,3"/>
+
+          <!-- Step boxes -->
+          <rect x="110" y="240" width="100" height="40" rx="5" fill="#e8f0fe" stroke="#36c" stroke-width="1.5"/>
+          <text x="160" y="264" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122">出発点</text>
+
+          <rect x="260" y="160" width="100" height="40" rx="5" fill="#e8f0fe" stroke="#36c" stroke-width="1.5"/>
+          <text x="310" y="184" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122">上がっていく</text>
+
+          <rect x="370" y="80" width="100" height="40" rx="5" fill="#e8f0fe" stroke="#36c" stroke-width="1.5"/>
+          <text x="420" y="104" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122">さらに上へ</text>
+
+          <!-- Upward arrows -->
+          <path d="M210,250 L260,190" fill="none" stroke="#36c" stroke-width="2" marker-end="url(#arrow)"/>
+          <path d="M360,170 L370,120" fill="none" stroke="#36c" stroke-width="2" marker-end="url(#arrow)"/>
+
+          <!-- The "strange" return arrow: from top level back down to start -->
+          <path d="M420,120 C420,160 480,200 480,260 C480,310 300,330 160,280" fill="none" stroke="#e65100" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#arrow)"/>
+
+          <!-- Label on the return arrow -->
+          <rect x="370" y="290" width="120" height="32" rx="4" fill="#fff3e0" stroke="#e68a00" stroke-width="1"/>
+          <text x="430" y="310" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#e65100" font-weight="bold">元に戻る！</text>
+
+          <!-- Annotation -->
+          <text x="250" y="360" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#72777d">レベルを上がり続けたのに、出発点に戻ってしまう＝ストレンジループ</text>
+        </svg>
+        <div class="diagram-caption">図：ストレンジループの基本構造。レベルを順番に上がっていくと、いつのまにか出発点（レベル1）に戻ってくる。このように階層をまたいで一周するのがストレンジループの特徴である。</div>
+      </div>
+
+      <h2 id="geb">ホフスタッターと『<a href="goedel-escher-bach.html">ゲーデル・エッシャー・バッハ</a>』</h2>
+      <p>「ストレンジループ」という言葉を広めたのは、アメリカの認知科学者ダグラス・ホフスタッターである。彼は1979年に出版した著書『<a href="goedel-escher-bach.html">ゲーデル・エッシャー・バッハ</a>――あるいは不思議の環』（原題: Godel, Escher, Bach: an Eternal Golden Braid）の中で、一見まったく異なる三つの分野にストレンジループが共通して現れることを示した。</p>
+
+      <h3 id="goedel">ゲーデルの不完全性定理</h3>
+      <p>数学者クルト・ゲーデルは1931年に、数学の体系が「自分自身について語る」ことができることを示した。具体的には、「この命題は証明できない」という意味の命題を数学の言葉で作り上げたのである。もしこの命題が証明できてしまうと矛盾が生じ、証明できなければ「正しいのに証明できない命題が存在する」ことになる。</p>
+      <p>ここにストレンジループが潜んでいる。数学の体系の「中」で、その体系「自身」について述べる命題が作れてしまう――つまり、対象のレベル（数学の命題）とメタのレベル（数学について語ること）が一周して結びついているのだ。</p>
+
+      <h3 id="escher"><a href="escher.html">エッシャー</a>の絵</h3>
+      <p>オランダの版画家M.C.エッシャーは、目の錯覚を利用した不思議な絵で知られている。その中でもっともストレンジループ的なのが「描く手」（Drawing Hands）と「滝」（Waterfall）である。</p>
+      <ul>
+        <li><b>「描く手」</b>：右手が左手を描いていて、同時にその左手が右手を描いている。「描く側」と「描かれる側」が入れ替わりながらループしている</li>
+        <li><b>「滝」</b>：水路を流れた水が滝として落ち、その先がまた同じ水路の始点につながっている。水が下に落ちたはずなのに、いつのまにか上に戻っている</li>
+      </ul>
+      <p>エッシャーの絵では、視覚的に「レベルが一周している」ことを直接見ることができるため、ストレンジループを理解するのにとてもわかりやすい。</p>
+
+      <h3 id="bach">バッハのカノン</h3>
+      <p>作曲家J.S.バッハは「音楽の捧げもの」の中で、調（キー）が少しずつ上がっていくカノン（輪唱のような曲の形式）を書いた。メロディが繰り返されるたびに調が一段ずつ上がっていくのだが、6回繰り返すと元の調に戻ってくる。聴いていると「ずっと上がり続けている」ように感じるのに、実際には元に戻っている。これもストレンジループの一種である。</p>
+
+      <h2 id="consciousness">ストレンジループと<a href="ishiki-to-jiko-ninshiki.html">意識</a></h2>
+      <p>ホフスタッターは2007年の著書『わたしは不思議の環（I Am a Strange Loop）』で、ストレンジループと人間の意識・自己認識のつながりをさらに深く論じた。</p>
+      <p>彼の主張をかみくだいて言うと、こうなる。</p>
+      <ul>
+        <li>私たちの脳は、ニューロン（神経細胞）という物質でできている（低いレベル）</li>
+        <li>そのニューロンの活動から、「考え」や「感情」という目に見えないものが生まれる（高いレベル）</li>
+        <li>そしてその「考え」の中に、「自分自身」についての考えが含まれている（自分を考えている自分を考えている……）</li>
+      </ul>
+      <p>つまり、物質のレベル（脳）から始まって、抽象的なレベル（心）に上がり、そこで「自分」について考えることで、再び脳という物質に戻ってくる。この「意識が自分自身を認識する」という構造こそがストレンジループだ、というのがホフスタッターの考えである。</p>
+      <p>私たちが「わたし」と感じるもの――自己意識――は、このストレンジループそのものだと彼は論じている。</p>
+
+      <h2 id="in-sre">『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』とストレンジループ</h2>
+      <p><a href="enjoe-toh.html">円城塔</a>の小説『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』は、作品全体がひとつの巨大なストレンジループとして構成されている。</p>
+
+      <h3 id="sre-structure">物語構造に現れるストレンジループ</h3>
+      <p>本作は20のエピソードからなるが、それぞれのエピソードが独立しているようでいて、互いに参照し合っている。あるエピソードで語られた出来事が、別のエピソードでは異なる角度から語り直され、さらにそのエピソードが最初のエピソードに影響を及ぼすかのように読める。</p>
+      <p>読者はエピソードを順番に読み進めることで「上のレベル」に向かっているつもりでいるが、最後にたどり着くと、まるで最初のエピソードに戻ってきたかのような感覚を味わう。物語が物語自身を含み、出口のないループを形成しているのだ。</p>
+
+      <h3 id="sre-kyodai-chisei">巨大知性体とストレンジループ</h3>
+      <p>作中に登場する<a href="kyodai-chisei-tai.html">巨大知性体</a>たちは、世界を観察し書き換える力を持つ。しかし、その巨大知性体たち自身もまた「何か」によって書かれた存在かもしれない。観察する者が観察される者でもあり、書く者が書かれる者でもある。このメタレベルの折り返しが、まさにストレンジループである。</p>
+
+      <h3 id="sre-reader">読者もループの一部</h3>
+      <p>さらに興味深いのは、この本を読んでいる読者自身もストレンジループに巻き込まれるという点だ。物語は<a href="meta-fiction.html">メタフィクション</a>的な手法で「この物語を読んでいるあなた」の存在を意識させる。すると、読者は「物語の外側」にいるはずなのに、物語の構造の「内側」にいるような感覚に陥る。外から読んでいたつもりが、いつのまにか物語の中にいる――これもまた、レベルをまたいで戻ってくるストレンジループなのである。</p>
+
+      <h2 id="related">関連する概念</h2>
+      <p>ストレンジループは、いくつかの近い概念と関係している。</p>
+
+      <h3 id="self-reference-relation"><a href="jiko-genkyuu.html">自己言及</a>との関係</h3>
+      <p><a href="jiko-genkyuu.html">自己言及</a>とは、何かが自分自身について述べることである。ストレンジループは、自己言及がシステム全体にわたって組織的に起こっている状態だといえる。一つの文が自分自身に言及するのが自己言及なら、システム全体の階層構造が自分自身に折り返されるのがストレンジループである。</p>
+
+      <h3 id="recursion-relation"><a href="ireko-kouzou.html">入れ子構造</a>との関係</h3>
+      <p><a href="ireko-kouzou.html">入れ子構造</a>（再帰）とは、ある構造の中に同じ構造が含まれている状態のことだ。合わせ鏡やマトリョーシカ人形がわかりやすい例である。入れ子構造はどこまでも内側に深くなっていくが、ストレンジループではその「奥」がいつのまにか「外」につながっている。入れ子構造にストレンジなひねりが加わったものが、ストレンジループだと考えることもできる。</p>
+
+      <h3 id="paradox-relation">パラドックスとの関係</h3>
+      <p>ストレンジループは、しばしばパラドックス（逆説）を引き起こす。「この文は嘘である」という嘘つきのパラドックスは、「真→偽→真→偽→……」と永遠にレベルが切り替わり続けるストレンジループの最小の例だと見なすことができる。ゲーデルの不完全性定理も、数学の体系内部にこうしたパラドックス的な構造があることを利用している。</p>
+
+      <h3 id="feedback-relation"><a href="feedback.html">フィードバック</a>との関係</h3>
+      <p>出力が入力に戻ってくるフィードバックの仕組みも、ストレンジループと関わりが深い。ビデオカメラとモニターの例のように、あるシステムの出力がそのまま入力になることで、階層の区別が崩れてループが生じる。制御工学やシステム理論で扱われるフィードバックは、ストレンジループのもっとも実用的な形態のひとつである。</p>
+
+      <h2 id="summary">まとめ</h2>
+      <p>ストレンジループとは、「レベルを上がり続けたはずなのに、出発点に戻ってしまう」という不思議な構造のことである。ゲーデルの数学、エッシャーの絵、バッハの音楽に共通して現れるこの構造を、ホフスタッターは人間の意識そのものと結びつけた。</p>
+      <p>『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』は、このストレンジループを小説の形で体現した作品である。物語の階層を読み進めるうちに、読者はいつの間にか出発点に戻されている。<a href="jiko-genkyuu.html">自己言及</a>や<a href="ireko-kouzou.html">入れ子構造</a>といった仕組みが組み合わさって、作品全体がひとつの大きなストレンジループを形成しているのだ。</p>
+    </main>
+    <aside class="wiki-sidebar">
+      <div class="toc">
+        <div class="toc-title">目次</div>
+        <ul class="toc-list">
+          <li><a href="#definition">ストレンジループとは</a></li>
+          <li><a href="#everyday-examples">身近にあるストレンジループ</a></li>
+          <li class="toc-h3"><a href="#video-feedback">ビデオカメラのフィードバック</a></li>
+          <li class="toc-h3"><a href="#song-about-singing">歌について歌う歌</a></li>
+          <li class="toc-h3"><a href="#self-describing-sentence">自分を説明する文</a></li>
+          <li><a href="#geb">ホフスタッターと『ゲーデル・エッシャー・バッハ』</a></li>
+          <li class="toc-h3"><a href="#goedel">ゲーデルの不完全性定理</a></li>
+          <li class="toc-h3"><a href="#escher">エッシャーの絵</a></li>
+          <li class="toc-h3"><a href="#bach">バッハのカノン</a></li>
+          <li><a href="#consciousness">ストレンジループと意識</a></li>
+          <li><a href="#in-sre">『Self-Reference ENGINE』とストレンジループ</a></li>
+          <li class="toc-h3"><a href="#sre-structure">物語構造に現れるストレンジループ</a></li>
+          <li class="toc-h3"><a href="#sre-kyodai-chisei">巨大知性体とストレンジループ</a></li>
+          <li class="toc-h3"><a href="#sre-reader">読者もループの一部</a></li>
+          <li><a href="#related">関連する概念</a></li>
+          <li class="toc-h3"><a href="#self-reference-relation">自己言及との関係</a></li>
+          <li class="toc-h3"><a href="#recursion-relation">入れ子構造との関係</a></li>
+          <li class="toc-h3"><a href="#paradox-relation">パラドックスとの関係</a></li>
+          <li class="toc-h3"><a href="#feedback-relation">フィードバックとの関係</a></li>
+          <li><a href="#summary">まとめ</a></li>
+        </ul>
+      </div>
+      <div class="related-articles">
+        <div class="related-title">関連記事</div>
+        <ul class="related-list">
+          <li><a href="self-reference-engine.html">Self-Reference ENGINE</a></li>
+          <li><a href="enjoe-toh.html">円城塔</a></li>
+          <li><a href="jiko-genkyuu.html">自己言及</a></li>
+          <li><a href="kyodai-chisei-tai.html">巨大知性体</a></li>
+          <li><a href="ireko-kouzou.html">入れ子構造と再帰</a></li>
+          <li><a href="meta-fiction.html">メタフィクション</a></li>
+          <li><a href="goedel-escher-bach.html">ゲーデル・エッシャー・バッハ</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  <footer class="wiki-footer">
+    <div class="footer-links">
+      <h4>リンク先</h4>
+      <ul>
+        <li><a href="jiko-genkyuu.html">自己言及</a></li>
+        <li><a href="self-reference-engine.html">Self-Reference ENGINE</a></li>
+        <li><a href="enjoe-toh.html">円城塔</a></li>
+        <li><a href="kyodai-chisei-tai.html">巨大知性体</a></li>
+        <li><a href="ireko-kouzou.html">入れ子構造と再帰</a></li>
+        <li><a href="meta-fiction.html">メタフィクション</a></li>
+        <li><a href="goedel-escher-bach.html">ゲーデル・エッシャー・バッハ</a></li>
+        <li><a href="escher.html">エッシャー</a></li>
+        <li><a href="ishiki-to-jiko-ninshiki.html">意識と自己認識</a></li>
+        <li><a href="feedback.html">フィードバック</a></li>
+      </ul>
+      <h4>被リンク</h4>
+      <ul><li><a href="jiko-genkyuu.html">自己言及</a></li></ul>
+    </div>
+    <p style="margin-top:12px;">Auto-Wiki で自動生成</p>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,9 +1,9 @@
 {
   "last_phase": "phase_2",
-  "last_run": "2026-03-24T00:00:00Z",
-  "total_articles": 4,
-  "queue_size": 15,
-  "expansion_frontier": ["strange-loop", "event-sre", "doukeshi-no-chou", "mugen-koutai", "paradox", "shisha-no-teikoku", "sf-bungaku", "cho-chisei", "usotsuki-no-paradox", "goedel-incompleteness", "postmodern-bungaku", "ireko-kouzou", "akutagawa-shou", "gijutsu-teki-tokuiten", "meta-fiction"],
+  "last_run": "2026-03-24T00:01:00Z",
+  "total_articles": 7,
+  "queue_size": 23,
+  "expansion_frontier": ["goedel-escher-bach", "mugen-koutai", "paradox", "shisha-no-teikoku", "sf-bungaku", "cho-chisei", "usotsuki-no-paradox"],
   "settings": {
     "max_agents": 3,
     "max_total_articles": 50,
@@ -11,5 +11,5 @@
     "language": "ja"
   },
   "created_at": "2026-03-24T00:00:00Z",
-  "updated_at": "2026-03-24T00:00:00Z"
+  "updated_at": "2026-03-24T00:01:00Z"
 }

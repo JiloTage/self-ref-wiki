@@ -1,44 +1,38 @@
 {
   "nodes": [
-    {
-      "id": "self-reference-engine",
-      "title": "Self-Reference ENGINE",
-      "summary": "円城塔による連作SF小説。自己言及を軸にした実験的作品。",
-      "url": "articles/self-reference-engine.html",
-      "is_root": true
-    },
-    {
-      "id": "enjoe-toh",
-      "title": "円城塔",
-      "summary": "日本の小説家・SF作家。物理学の経歴を持つ実験的作家。",
-      "url": "articles/enjoe-toh.html",
-      "is_root": false
-    },
-    {
-      "id": "jiko-genkyuu",
-      "title": "自己言及",
-      "summary": "自分自身について述べること。作品の中心的テーマ。",
-      "url": "articles/jiko-genkyuu.html",
-      "is_root": false
-    },
-    {
-      "id": "kyodai-chisei-tai",
-      "title": "巨大知性体",
-      "summary": "人間を超えた知性を持つ巨大存在。現実を操作する力を持つ。",
-      "url": "articles/kyodai-chisei-tai.html",
-      "is_root": false
-    }
+    {"id": "self-reference-engine", "title": "Self-Reference ENGINE", "summary": "円城塔による連作SF小説。自己言及を軸にした実験的作品。", "url": "articles/self-reference-engine.html", "is_root": true},
+    {"id": "enjoe-toh", "title": "円城塔", "summary": "日本の小説家・SF作家。物理学の経歴を持つ実験的作家。", "url": "articles/enjoe-toh.html", "is_root": false},
+    {"id": "jiko-genkyuu", "title": "自己言及", "summary": "自分自身について述べること。作品の中心的テーマ。", "url": "articles/jiko-genkyuu.html", "is_root": false},
+    {"id": "kyodai-chisei-tai", "title": "巨大知性体", "summary": "人間を超えた知性を持つ巨大存在。現実を操作する力を持つ。", "url": "articles/kyodai-chisei-tai.html", "is_root": false},
+    {"id": "strange-loop", "title": "ストレンジループ", "summary": "階層を上がると出発点に戻る不思議な構造。", "url": "articles/strange-loop.html", "is_root": false},
+    {"id": "event-sre", "title": "イベント（SRE）", "summary": "現実の構造を根本から変える大規模な出来事。", "url": "articles/event-sre.html", "is_root": false},
+    {"id": "doukeshi-no-chou", "title": "道化師の蝶", "summary": "円城塔の芥川賞受賞作。翻訳と言語がテーマ。", "url": "articles/doukeshi-no-chou.html", "is_root": false}
   ],
   "links": [
     {"source": "self-reference-engine", "target": "enjoe-toh"},
     {"source": "self-reference-engine", "target": "jiko-genkyuu"},
     {"source": "self-reference-engine", "target": "kyodai-chisei-tai"},
     {"source": "enjoe-toh", "target": "self-reference-engine"},
+    {"source": "enjoe-toh", "target": "doukeshi-no-chou"},
     {"source": "jiko-genkyuu", "target": "self-reference-engine"},
     {"source": "jiko-genkyuu", "target": "enjoe-toh"},
     {"source": "jiko-genkyuu", "target": "kyodai-chisei-tai"},
+    {"source": "jiko-genkyuu", "target": "strange-loop"},
     {"source": "kyodai-chisei-tai", "target": "self-reference-engine"},
     {"source": "kyodai-chisei-tai", "target": "enjoe-toh"},
-    {"source": "kyodai-chisei-tai", "target": "jiko-genkyuu"}
+    {"source": "kyodai-chisei-tai", "target": "jiko-genkyuu"},
+    {"source": "kyodai-chisei-tai", "target": "event-sre"},
+    {"source": "strange-loop", "target": "jiko-genkyuu"},
+    {"source": "strange-loop", "target": "self-reference-engine"},
+    {"source": "strange-loop", "target": "enjoe-toh"},
+    {"source": "strange-loop", "target": "kyodai-chisei-tai"},
+    {"source": "event-sre", "target": "self-reference-engine"},
+    {"source": "event-sre", "target": "enjoe-toh"},
+    {"source": "event-sre", "target": "kyodai-chisei-tai"},
+    {"source": "event-sre", "target": "jiko-genkyuu"},
+    {"source": "event-sre", "target": "strange-loop"},
+    {"source": "doukeshi-no-chou", "target": "enjoe-toh"},
+    {"source": "doukeshi-no-chou", "target": "self-reference-engine"},
+    {"source": "doukeshi-no-chou", "target": "jiko-genkyuu"}
   ]
 }
