@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>チューリングテスト - Auto-Wiki</title>
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+</head>
+<body>
+<div class="wiki-wrapper">
+  <header class="wiki-header">
+    <a href="../index.html" class="site-title">Auto-Wiki</a>
+    <nav>
+      <a href="../index.html">トップ</a>
+      <a href="../index.html#article-list">記事一覧</a>
+      <a href="../index.html#graph">サイトグラフ</a>
+    </nav>
+  </header>
+  <div class="breadcrumb">
+    <a href="../index.html">Auto-Wiki</a> &gt; チューリングテスト
+  </div>
+  <div class="wiki-content">
+    <main class="wiki-main">
+      <h1 class="article-title">チューリングテスト</h1>
+      <div class="article-meta">最終更新: 2026-03-24</div>
+      <div class="article-summary"><b>チューリングテスト</b>とは、機械が人間と見分けのつかない対話を行えるなら、その機械を知的だとみなしてよいのではないかという判定基準である。<a href="ai-philosophy.html">人工知能の哲学</a>の出発点として知られ、機械の「理解」と「ふるまい」の関係をめぐる議論の中心にある。</div>
+
+      <h2 id="overview">概要</h2>
+      <p><b>チューリングテスト</b>は、イギリスの数学者アラン・チューリングが1950年に提案した思考実験である。問いは単純で、「機械は考えられるか」であった。</p>
+      <p>しかしチューリングは、この問いに直接答えるのは難しいと考えた。そこで「考えるとは何か」を定義する代わりに、「機械が人間と区別できないふるまいを示せるか」を問う形へ問題を置き換えた。</p>
+      <p>この転換によって、知性は内面の正体ではなく、対話の場で現れるふるまいとして評価されることになる。</p>
+
+      <h2 id="imitation-game">模倣ゲーム</h2>
+      <p>チューリングテストの原型は「模倣ゲーム」と呼ばれる。判定者は文字だけのやりとりを通じて、相手が人間か機械かを見分けようとする。</p>
+      <p>もし長時間の対話のあとでも判定者が機械を人間と取り違えるなら、その機械は少なくとも対話的な知性を持つとみなしてよいのではないか。これがチューリングの発想である。</p>
+      <p>ここで重要なのは、内部構造を問わないことだ。脳と同じ仕組みで動いているかではなく、人間と同じように応答できるかが焦点になる。</p>
+
+      <div class="diagram-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 290" width="560" height="290">
+          <defs>
+            <marker id="tt-arrow" viewBox="0 -5 10 10" refX="9" refY="0" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0,-5L10,0L0,5" fill="#36c"/>
+            </marker>
+          </defs>
+          <rect x="10" y="10" width="540" height="270" rx="8" fill="#f8f9fa" stroke="#a2a9b1" stroke-width="2"/>
+          <text x="280" y="36" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#202122" font-weight="bold">チューリングテストの構図</text>
+          <rect x="40" y="95" width="140" height="70" rx="6" fill="#e8f0fe" stroke="#36c" stroke-width="1.5"/>
+          <text x="110" y="122" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122" font-weight="bold">判定者</text>
+          <text x="110" y="142" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#54595d">文字だけで会話し</text>
+          <text x="110" y="156" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#54595d">相手を推定する</text>
+          <rect x="220" y="70" width="130" height="60" rx="6" fill="#fff" stroke="#a2a9b1" stroke-width="1.5"/>
+          <text x="285" y="96" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122" font-weight="bold">人間</text>
+          <text x="285" y="114" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#54595d">自然な応答</text>
+          <rect x="220" y="160" width="130" height="60" rx="6" fill="#fff3e0" stroke="#e68a00" stroke-width="1.5"/>
+          <text x="285" y="186" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122" font-weight="bold">機械</text>
+          <text x="285" y="204" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#54595d">人間らしく応答</text>
+          <rect x="390" y="95" width="130" height="70" rx="6" fill="#e8f4e8" stroke="#2a7a2a" stroke-width="1.5"/>
+          <text x="455" y="122" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122" font-weight="bold">判定結果</text>
+          <text x="455" y="142" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#54595d">区別できなければ</text>
+          <text x="455" y="156" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#54595d">知的ふるまいとみなす</text>
+          <line x1="180" y1="130" x2="220" y2="100" stroke="#36c" stroke-width="2" marker-end="url(#tt-arrow)"/>
+          <line x1="180" y1="130" x2="220" y2="190" stroke="#36c" stroke-width="2" marker-end="url(#tt-arrow)"/>
+          <line x1="350" y1="100" x2="390" y2="120" stroke="#36c" stroke-width="2" marker-end="url(#tt-arrow)"/>
+          <line x1="350" y1="190" x2="390" y2="140" stroke="#36c" stroke-width="2" marker-end="url(#tt-arrow)"/>
+          <text x="280" y="252" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#54595d">内部がどうなっているかではなく、外から見た対話性能で判定する</text>
+        </svg>
+        <div class="diagram-caption">図：チューリングテストでは、判定者がテキスト対話だけで相手を人間と機械に区別できるかを問う。</div>
+      </div>
+
+      <h2 id="strengths">なぜ重要か</h2>
+      <p>チューリングテストの強みは、曖昧な哲学概念を観察可能な条件へ置き換えたことにある。知性を「外から見える実践」として扱うことで、議論は具体的になった。</p>
+      <p>また、このテストはコンピュータが人間の言語行為にどこまで迫れるかを問うため、現在の対話型AIや大規模言語モデルにも直接つながっている。</p>
+
+      <h2 id="limits">限界と批判</h2>
+      <p>しかし、チューリングテストが通ったからといって、その機械が本当に理解しているとは限らない。人間らしい返答と、実際の理解のあいだには距離があるかもしれないからだ。</p>
+
+      <h3 id="chinese-room">中国語の部屋</h3>
+      <p>この批判を代表するのが<a href="chinese-room.html">中国語の部屋</a>である。外から見れば完璧に会話していても、内部では単に規則に従って記号を操作しているだけかもしれない、という反論だ。</p>
+      <p>この議論は、チューリングテストが測っているのは「理解」ではなく「理解らしいふるまい」ではないかという疑いを残す。</p>
+
+      <h3 id="consciousness">意識の問題</h3>
+      <p><a href="consciousness-hard-problem.html">意識のハードプロブレム</a>の観点から見れば、対話能力が高くても主観的経験があるとは限らない。つまり、チューリングテストは意識の有無を直接は判定しない。</p>
+
+      <h2 id="relation-to-ai-philosophy">人工知能の哲学における位置</h2>
+      <p><a href="ai-philosophy.html">人工知能の哲学</a>において、チューリングテストは出発点であり続けている。現代のAIをどう評価すべきかという議論も、多くの場合このテストの延長線上にある。</p>
+      <p>現在の対話型AIは、短時間の模倣ゲームであればかなり高い水準に達している。しかしそのことが「強いAI」の実現を意味するのか、それとも洗練された模倣にすぎないのかは、依然として争点である。</p>
+
+      <h2 id="in-sre">『Self-Reference ENGINE』とのつながり</h2>
+      <p>『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』はチューリングテストを直接扱う作品ではないが、知性を外部からどう見分けるかという問題を極端な形で押し広げている。</p>
+      <p>作中の<a href="kyodai-chisei-tai.html">巨大知性体</a>は、人間の対話能力を超え、世界の構造そのものを操作する。こうした知性に対して、そもそも「人間らしいかどうか」で判定するチューリングテストは適用できない。</p>
+      <p>その意味でチューリングテストは、人間スケールの知性判定法であり、『Self-Reference ENGINE』はそのスケールを越えた知性を想像する文学だといえる。</p>
+    </main>
+    <aside class="wiki-sidebar">
+      <div class="toc">
+        <div class="toc-title">目次</div>
+        <ul class="toc-list">
+          <li><a href="#overview">概要</a></li>
+          <li><a href="#imitation-game">模倣ゲーム</a></li>
+          <li><a href="#strengths">なぜ重要か</a></li>
+          <li><a href="#limits">限界と批判</a></li>
+          <li class="toc-h3"><a href="#chinese-room">中国語の部屋</a></li>
+          <li class="toc-h3"><a href="#consciousness">意識の問題</a></li>
+          <li><a href="#relation-to-ai-philosophy">人工知能の哲学における位置</a></li>
+          <li><a href="#in-sre">『Self-Reference ENGINE』とのつながり</a></li>
+        </ul>
+      </div>
+      <div class="related-articles">
+        <div class="related-title">関連記事</div>
+        <ul class="related-list">
+          <li><a href="ai-philosophy.html">人工知能の哲学</a></li>
+          <li><a href="chinese-room.html">中国語の部屋</a></li>
+          <li><a href="consciousness-hard-problem.html">意識のハードプロブレム</a></li>
+          <li><a href="self-reference-engine.html">Self-Reference ENGINE</a></li>
+          <li><a href="kyodai-chisei-tai.html">巨大知性体</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  <footer class="wiki-footer">
+    <div class="footer-links">
+      <h4>リンク先</h4>
+      <ul>
+        <li><a href="ai-philosophy.html">人工知能の哲学</a></li>
+        <li><a href="chinese-room.html">中国語の部屋</a></li>
+        <li><a href="consciousness-hard-problem.html">意識のハードプロブレム</a></li>
+        <li><a href="self-reference-engine.html">Self-Reference ENGINE</a></li>
+        <li><a href="kyodai-chisei-tai.html">巨大知性体</a></li>
+        <li><a href="strange-loop.html">ストレンジループ</a></li>
+      </ul>
+      <h4>被リンク</h4>
+      <ul><li><a href="ai-philosophy.html">人工知能の哲学</a></li></ul>
+    </div>
+    <p style="margin-top:12px;">Auto-Wiki で自動生成</p>
+  </footer>
+</div>
+</body>
+</html>

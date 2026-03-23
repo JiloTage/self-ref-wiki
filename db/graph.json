@@ -132,6 +132,27 @@
       "summary": "嘘つきのパラドックス とは、「この文は嘘である」のように、自分自身の真偽について語る文が引き起こす古典的な パラドックス である。 自己言及 と否定が組み合わさることで、真でも偽でも安定しないループが生まれる。",
       "url": "articles/usotsuki-no-paradox.html",
       "is_root": false
+    },
+    {
+      "id": "goedel-incompleteness",
+      "title": "ゲーデルの不完全性定理",
+      "summary": "ゲーデルの不完全性定理 とは、十分に豊かな 形式システム では、体系の内部で真であっても証明できない命題が必ず存在することを示す定理である。 自己言及 を数学の内部へ持ち込んだ発見として、20世紀思想に大きな影響を与えた。",
+      "url": "articles/goedel-incompleteness.html",
+      "is_root": false
+    },
+    {
+      "id": "inga-ritsu",
+      "title": "因果律",
+      "summary": "因果律 とは、原因が結果を生み、結果はその原因に従うという世界理解の基本法則である。『 Self-Reference ENGINE 』では、 イベント がこの因果律そのものを揺さぶることで、現実のルールが書き換わる。",
+      "url": "articles/inga-ritsu.html",
+      "is_root": false
+    },
+    {
+      "id": "turing-test",
+      "title": "チューリングテスト",
+      "summary": "チューリングテスト とは、機械が人間と見分けのつかない対話を行えるなら、その機械を知的だとみなしてよいのではないかという判定基準である。 人工知能の哲学 の出発点として知られ、機械の「理解」と「ふるまい」の関係をめぐる議論の中心にある。",
+      "url": "articles/turing-test.html",
+      "is_root": false
     }
   ],
   "links": [
@@ -174,6 +195,10 @@
     {
       "source": "jiko-genkyuu",
       "target": "usotsuki-no-paradox"
+    },
+    {
+      "source": "jiko-genkyuu",
+      "target": "goedel-incompleteness"
     },
     {
       "source": "jiko-genkyuu",
@@ -241,6 +266,10 @@
     },
     {
       "source": "event-sre",
+      "target": "inga-ritsu"
+    },
+    {
+      "source": "event-sre",
       "target": "kyodai-chisei-tai"
     },
     {
@@ -282,6 +311,10 @@
     {
       "source": "goedel-escher-bach",
       "target": "ai-philosophy"
+    },
+    {
+      "source": "goedel-escher-bach",
+      "target": "goedel-incompleteness"
     },
     {
       "source": "goedel-escher-bach",
@@ -334,6 +367,10 @@
     {
       "source": "paradox",
       "target": "usotsuki-no-paradox"
+    },
+    {
+      "source": "paradox",
+      "target": "goedel-incompleteness"
     },
     {
       "source": "paradox",
@@ -410,6 +447,10 @@
     {
       "source": "shisha-no-teikoku",
       "target": "paradox"
+    },
+    {
+      "source": "ai-philosophy",
+      "target": "turing-test"
     },
     {
       "source": "ai-philosophy",
@@ -593,6 +634,10 @@
     },
     {
       "source": "keishiki-system",
+      "target": "goedel-incompleteness"
+    },
+    {
+      "source": "keishiki-system",
       "target": "ai-philosophy"
     },
     {
@@ -625,6 +670,10 @@
     },
     {
       "source": "usotsuki-no-paradox",
+      "target": "goedel-incompleteness"
+    },
+    {
+      "source": "usotsuki-no-paradox",
       "target": "strange-loop"
     },
     {
@@ -634,6 +683,74 @@
     {
       "source": "usotsuki-no-paradox",
       "target": "kyodai-chisei-tai"
+    },
+    {
+      "source": "goedel-incompleteness",
+      "target": "keishiki-system"
+    },
+    {
+      "source": "goedel-incompleteness",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "goedel-incompleteness",
+      "target": "usotsuki-no-paradox"
+    },
+    {
+      "source": "goedel-incompleteness",
+      "target": "paradox"
+    },
+    {
+      "source": "goedel-incompleteness",
+      "target": "goedel-escher-bach"
+    },
+    {
+      "source": "goedel-incompleteness",
+      "target": "strange-loop"
+    },
+    {
+      "source": "goedel-incompleteness",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "goedel-incompleteness",
+      "target": "kyodai-chisei-tai"
+    },
+    {
+      "source": "inga-ritsu",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "inga-ritsu",
+      "target": "event-sre"
+    },
+    {
+      "source": "inga-ritsu",
+      "target": "paradox"
+    },
+    {
+      "source": "inga-ritsu",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "inga-ritsu",
+      "target": "strange-loop"
+    },
+    {
+      "source": "turing-test",
+      "target": "ai-philosophy"
+    },
+    {
+      "source": "turing-test",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "turing-test",
+      "target": "kyodai-chisei-tai"
+    },
+    {
+      "source": "turing-test",
+      "target": "strange-loop"
     }
   ]
 }

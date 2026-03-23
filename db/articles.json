@@ -30,7 +30,10 @@
         "sf-bungaku",
         "gyakusatsu-kikan",
         "keishiki-system",
-        "usotsuki-no-paradox"
+        "usotsuki-no-paradox",
+        "goedel-incompleteness",
+        "inga-ritsu",
+        "turing-test"
       ],
       "origin": "root",
       "source_id": null,
@@ -108,7 +111,9 @@
         "sf-bungaku",
         "gyakusatsu-kikan",
         "keishiki-system",
-        "usotsuki-no-paradox"
+        "usotsuki-no-paradox",
+        "goedel-incompleteness",
+        "inga-ritsu"
       ],
       "origin": "expanded",
       "source_id": "self-reference-engine",
@@ -147,7 +152,9 @@
         "itoh-keikaku",
         "sf-bungaku",
         "keishiki-system",
-        "usotsuki-no-paradox"
+        "usotsuki-no-paradox",
+        "goedel-incompleteness",
+        "turing-test"
       ],
       "origin": "expanded",
       "source_id": "self-reference-engine",
@@ -184,7 +191,10 @@
         "itoh-keikaku",
         "sf-bungaku",
         "keishiki-system",
-        "usotsuki-no-paradox"
+        "usotsuki-no-paradox",
+        "goedel-incompleteness",
+        "inga-ritsu",
+        "turing-test"
       ],
       "origin": "expanded",
       "source_id": "jiko-genkyuu",
@@ -212,7 +222,8 @@
       "linked_from": [
         "kyodai-chisei-tai",
         "mugen-koutai",
-        "paradox"
+        "paradox",
+        "inga-ritsu"
       ],
       "origin": "expanded",
       "source_id": "kyodai-chisei-tai",
@@ -272,7 +283,8 @@
         "hofstadter",
         "ai-philosophy",
         "sf-bungaku",
-        "keishiki-system"
+        "keishiki-system",
+        "goedel-incompleteness"
       ],
       "origin": "expanded",
       "source_id": "strange-loop",
@@ -339,7 +351,9 @@
         "itoh-keikaku",
         "sf-bungaku",
         "keishiki-system",
-        "usotsuki-no-paradox"
+        "usotsuki-no-paradox",
+        "goedel-incompleteness",
+        "inga-ritsu"
       ],
       "origin": "expanded",
       "source_id": "jiko-genkyuu",
@@ -427,7 +441,8 @@
         "itoh-keikaku",
         "sf-bungaku",
         "gyakusatsu-kikan",
-        "keishiki-system"
+        "keishiki-system",
+        "turing-test"
       ],
       "origin": "expanded",
       "source_id": "goedel-escher-bach",
@@ -549,7 +564,7 @@
       "source_id": "shisha-no-teikoku",
       "created_at": "2026-03-24",
       "updated_at": "2026-03-24",
-      "expansion_status": "pending"
+      "expansion_status": "completed"
     },
     "keishiki-system": {
       "slug": "keishiki-system",
@@ -569,13 +584,14 @@
         "kyodai-chisei-tai"
       ],
       "linked_from": [
-        "goedel-escher-bach"
+        "goedel-escher-bach",
+        "goedel-incompleteness"
       ],
       "origin": "expanded",
       "source_id": "goedel-escher-bach",
       "created_at": "2026-03-24",
       "updated_at": "2026-03-24",
-      "expansion_status": "pending"
+      "expansion_status": "completed"
     },
     "usotsuki-no-paradox": {
       "slug": "usotsuki-no-paradox",
@@ -595,15 +611,91 @@
       "linked_from": [
         "jiko-genkyuu",
         "paradox",
-        "keishiki-system"
+        "keishiki-system",
+        "goedel-incompleteness"
+      ],
+      "origin": "expanded",
+      "source_id": "jiko-genkyuu",
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "expansion_status": "completed"
+    },
+    "goedel-incompleteness": {
+      "slug": "goedel-incompleteness",
+      "title": "ゲーデルの不完全性定理",
+      "filename": "articles/goedel-incompleteness.html",
+      "summary": "ゲーデルの不完全性定理 とは、十分に豊かな 形式システム では、体系の内部で真であっても証明できない命題が必ず存在することを示す定理である。 自己言及 を数学の内部へ持ち込んだ発見として、20世紀思想に大きな影響を与えた。",
+      "links_to": [
+        "keishiki-system",
+        "jiko-genkyuu",
+        "usotsuki-no-paradox",
+        "paradox",
+        "goedel-escher-bach",
+        "strange-loop",
+        "meta-fiction",
+        "self-reference-engine",
+        "kyodai-chisei-tai"
+      ],
+      "linked_from": [
+        "jiko-genkyuu",
+        "goedel-escher-bach",
+        "paradox",
+        "keishiki-system",
+        "usotsuki-no-paradox"
       ],
       "origin": "expanded",
       "source_id": "jiko-genkyuu",
       "created_at": "2026-03-24",
       "updated_at": "2026-03-24",
       "expansion_status": "pending"
+    },
+    "inga-ritsu": {
+      "slug": "inga-ritsu",
+      "title": "因果律",
+      "filename": "articles/inga-ritsu.html",
+      "summary": "因果律 とは、原因が結果を生み、結果はその原因に従うという世界理解の基本法則である。『 Self-Reference ENGINE 』では、 イベント がこの因果律そのものを揺さぶることで、現実のルールが書き換わる。",
+      "links_to": [
+        "self-reference-engine",
+        "event-sre",
+        "time-paradox",
+        "paradox",
+        "jiko-genkyuu",
+        "strange-loop",
+        "hi-senkei-monogatari",
+        "jikan-to-monogatari"
+      ],
+      "linked_from": [
+        "event-sre"
+      ],
+      "origin": "expanded",
+      "source_id": "event-sre",
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "expansion_status": "pending"
+    },
+    "turing-test": {
+      "slug": "turing-test",
+      "title": "チューリングテスト",
+      "filename": "articles/turing-test.html",
+      "summary": "チューリングテスト とは、機械が人間と見分けのつかない対話を行えるなら、その機械を知的だとみなしてよいのではないかという判定基準である。 人工知能の哲学 の出発点として知られ、機械の「理解」と「ふるまい」の関係をめぐる議論の中心にある。",
+      "links_to": [
+        "ai-philosophy",
+        "chinese-room",
+        "consciousness-hard-problem",
+        "self-reference-engine",
+        "kyodai-chisei-tai",
+        "strange-loop"
+      ],
+      "linked_from": [
+        "ai-philosophy"
+      ],
+      "origin": "expanded",
+      "source_id": "ai-philosophy",
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "expansion_status": "pending"
     }
   },
   "root_id": "self-reference-engine",
-  "total_count": 19
+  "total_count": 22
 }

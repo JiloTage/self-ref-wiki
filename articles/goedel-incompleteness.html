@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ゲーデルの不完全性定理 - Auto-Wiki</title>
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+</head>
+<body>
+<div class="wiki-wrapper">
+  <header class="wiki-header">
+    <a href="../index.html" class="site-title">Auto-Wiki</a>
+    <nav>
+      <a href="../index.html">トップ</a>
+      <a href="../index.html#article-list">記事一覧</a>
+      <a href="../index.html#graph">サイトグラフ</a>
+    </nav>
+  </header>
+  <div class="breadcrumb">
+    <a href="../index.html">Auto-Wiki</a> &gt; ゲーデルの不完全性定理
+  </div>
+  <div class="wiki-content">
+    <main class="wiki-main">
+      <h1 class="article-title">ゲーデルの不完全性定理</h1>
+      <div class="article-meta">最終更新: 2026-03-24</div>
+      <div class="article-summary"><b>ゲーデルの不完全性定理</b>とは、十分に豊かな<a href="keishiki-system.html">形式システム</a>では、体系の内部で真であっても証明できない命題が必ず存在することを示す定理である。<a href="jiko-genkyuu.html">自己言及</a>を数学の内部へ持ち込んだ発見として、20世紀思想に大きな影響を与えた。</div>
+
+      <h2 id="overview">概要</h2>
+      <p>1931年、数学者クルト・ゲーデルは、数学の基礎に関する常識をひっくり返す結果を発表した。それが<b>不完全性定理</b>である。</p>
+      <p>当時、多くの数学者は、適切な公理と推論規則を整えれば、数学の真理はすべて体系の中で証明できるはずだと考えていた。ゲーデルは、この希望が一般には成り立たないことを示した。</p>
+      <p>要するに、十分に強力な<a href="keishiki-system.html">形式システム</a>には、「真ではあるが、その体系の中では証明できない命題」が必ず存在する。体系は完全には自分を閉じることができないのである。</p>
+
+      <h2 id="first-theorem">第一不完全性定理</h2>
+      <p>第一不完全性定理の骨格は、自己言及的な命題を数学の中に作ることにある。ゲーデルは、記号列や証明を自然数へ写す「ゲーデル数化」という技法を導入し、体系の内部から体系自身について語れるようにした。</p>
+      <p>その結果、「この命題はこの体系では証明できない」という意味を持つ命題を構成できる。もしこの命題が証明できれば、内容と矛盾する。逆に証明できないなら、その命題はまさに正しかったことになる。</p>
+      <p>ここから、体系が無矛盾であるなら、証明できない真が存在することが導かれる。</p>
+
+      <div class="diagram-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 300" width="580" height="300">
+          <defs>
+            <marker id="gi-arrow" viewBox="0 -5 10 10" refX="9" refY="0" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0,-5L10,0L0,5" fill="#36c"/>
+            </marker>
+          </defs>
+          <rect x="10" y="10" width="560" height="280" rx="8" fill="#f8f9fa" stroke="#a2a9b1" stroke-width="2"/>
+          <text x="290" y="36" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#202122" font-weight="bold">第一不完全性定理の構図</text>
+          <rect x="60" y="90" width="180" height="60" rx="6" fill="#e8f0fe" stroke="#36c" stroke-width="1.5"/>
+          <text x="150" y="116" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122" font-weight="bold">形式システム</text>
+          <text x="150" y="136" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#54595d">公理と推論規則を持つ</text>
+          <rect x="330" y="90" width="190" height="60" rx="6" fill="#fff3e0" stroke="#e68a00" stroke-width="1.5"/>
+          <text x="425" y="112" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122" font-weight="bold">命題 G</text>
+          <text x="425" y="130" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#54595d">「この命題は証明できない」</text>
+          <line x1="240" y1="120" x2="330" y2="120" stroke="#36c" stroke-width="2" marker-end="url(#gi-arrow)"/>
+          <rect x="120" y="200" width="340" height="48" rx="8" fill="#fff" stroke="#a2a9b1" stroke-width="1"/>
+          <text x="290" y="220" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#202122">G を証明できる → 内容と矛盾</text>
+          <text x="290" y="238" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#202122">G を証明できない → G は真だが証明不能</text>
+        </svg>
+        <div class="diagram-caption">図：形式システムが自分自身について語れるようになると、証明不能な真が生じる。</div>
+      </div>
+
+      <h2 id="second-theorem">第二不完全性定理</h2>
+      <p>第一定理だけでも衝撃的だが、さらに第二不完全性定理が続く。これは、十分に豊かな無矛盾な体系は、自分自身の無矛盾性をその内部で証明できないという主張である。</p>
+      <p>つまり体系は、「自分は矛盾していない」と自分だけの力では最終確認できない。より高いメタレベルの視点が必要になる。</p>
+      <p>このことは、数学がどこかで必ず自分の外部を必要とすることを意味している。</p>
+
+      <h2 id="self-reference">自己言及とパラドックス</h2>
+      <p>不完全性定理は、<a href="jiko-genkyuu.html">自己言及</a>を精密化した結果として現れる。構造的には<a href="usotsuki-no-paradox.html">嘘つきのパラドックス</a>と近いが、直接の矛盾へ落ちる代わりに「証明不能性」という形へ転化させている点が決定的に異なる。</p>
+      <p>嘘つきのパラドックスが「この文は嘘である」と述べるのに対し、ゲーデルの命題は「この命題は証明できない」と述べる。この置き換えによって、数学の内部に持ち込める形が整う。</p>
+      <p>その意味で不完全性定理は、<a href="paradox.html">パラドックス</a>のエネルギーを破壊的な矛盾ではなく、建設的な限界の証明へ変換した成果だといえる。</p>
+
+      <h2 id="geb">GEBとの関係</h2>
+      <p><a href="goedel-escher-bach.html">ゲーデル・エッシャー・バッハ</a>は、不完全性定理を中心の一本柱としている。ホフスタッターは、この定理を単なる数学上の結果ではなく、<a href="strange-loop.html">ストレンジループ</a>の典型例として読む。</p>
+      <p>体系が自分自身を記述し、その結果として完全な閉包に失敗する。この構造は、意識が自分自身をモデル化するときのループや、文学が自分自身を語る<a href="meta-fiction.html">メタフィクション</a>とも響き合う。</p>
+
+      <h2 id="in-sre">『Self-Reference ENGINE』とのつながり</h2>
+      <p>『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』では、自己言及が物語構造そのものに組み込まれている。物語が自分自身を映し、層を上がると出発点へ戻るという感覚は、不完全性定理が示す「体系の内部から体系を完全には閉じられない」という不安定さと近い。</p>
+      <p>また、<a href="kyodai-chisei-tai.html">巨大知性体</a>は、世界を理解しようとすることで逆にその世界の一部になってしまう存在としても読める。これは、体系が自分自身を語るときに限界へぶつかる構図のSF的な変奏でもある。</p>
+
+      <h2 id="importance">なぜ重要か</h2>
+      <p>ゲーデルの不完全性定理は、数学基礎論だけでなく、哲学、情報科学、認知科学、文学理論にまで影響を与えた。どんな厳密な体系にも、自分だけでは回収しきれない余白が残ることを示したからである。</p>
+      <p>そのためこの定理は、「知とはどこまで自分を保証できるのか」という近代以後の大問題に対する、もっとも鮮やかな回答のひとつとして読まれ続けている。</p>
+    </main>
+    <aside class="wiki-sidebar">
+      <div class="toc">
+        <div class="toc-title">目次</div>
+        <ul class="toc-list">
+          <li><a href="#overview">概要</a></li>
+          <li><a href="#first-theorem">第一不完全性定理</a></li>
+          <li><a href="#second-theorem">第二不完全性定理</a></li>
+          <li><a href="#self-reference">自己言及とパラドックス</a></li>
+          <li><a href="#geb">GEBとの関係</a></li>
+          <li><a href="#in-sre">『Self-Reference ENGINE』とのつながり</a></li>
+          <li><a href="#importance">なぜ重要か</a></li>
+        </ul>
+      </div>
+      <div class="related-articles">
+        <div class="related-title">関連記事</div>
+        <ul class="related-list">
+          <li><a href="keishiki-system.html">形式システム</a></li>
+          <li><a href="jiko-genkyuu.html">自己言及</a></li>
+          <li><a href="usotsuki-no-paradox.html">嘘つきのパラドックス</a></li>
+          <li><a href="goedel-escher-bach.html">ゲーデル・エッシャー・バッハ</a></li>
+          <li><a href="strange-loop.html">ストレンジループ</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  <footer class="wiki-footer">
+    <div class="footer-links">
+      <h4>リンク先</h4>
+      <ul>
+        <li><a href="keishiki-system.html">形式システム</a></li>
+        <li><a href="jiko-genkyuu.html">自己言及</a></li>
+        <li><a href="usotsuki-no-paradox.html">嘘つきのパラドックス</a></li>
+        <li><a href="paradox.html">パラドックス</a></li>
+        <li><a href="goedel-escher-bach.html">ゲーデル・エッシャー・バッハ</a></li>
+        <li><a href="strange-loop.html">ストレンジループ</a></li>
+        <li><a href="self-reference-engine.html">Self-Reference ENGINE</a></li>
+        <li><a href="meta-fiction.html">メタフィクション</a></li>
+      </ul>
+      <h4>被リンク</h4>
+      <ul>
+        <li><a href="jiko-genkyuu.html">自己言及</a></li>
+        <li><a href="paradox.html">パラドックス</a></li>
+        <li><a href="goedel-escher-bach.html">ゲーデル・エッシャー・バッハ</a></li>
+      </ul>
+    </div>
+    <p style="margin-top:12px;">Auto-Wiki で自動生成</p>
+  </footer>
+</div>
+</body>
+</html>

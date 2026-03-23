@@ -1,27 +1,6 @@
 {
   "queue": [
     {
-      "proposed_slug": "turing-test",
-      "proposed_title": "チューリングテスト",
-      "rationale": "人工知能の哲学における最も有名な判定基準。",
-      "interestingness_score": 0.82,
-      "source_slug": "ai-philosophy"
-    },
-    {
-      "proposed_slug": "goedel-incompleteness",
-      "proposed_title": "ゲーデルの不完全性定理",
-      "rationale": "自己言及を数学に持ち込んだ発見。",
-      "interestingness_score": 0.8,
-      "source_slug": "jiko-genkyuu"
-    },
-    {
-      "proposed_slug": "inga-ritsu",
-      "proposed_title": "因果律",
-      "rationale": "イベントが因果律を崩壊させる仕組みの背景。",
-      "interestingness_score": 0.8,
-      "source_slug": "event-sre"
-    },
-    {
       "proposed_slug": "honyaku-to-gengo",
       "proposed_title": "翻訳と言語",
       "rationale": "道化師の蝶の中心テーマ。",
@@ -322,6 +301,21 @@
       "slug": "usotsuki-no-paradox",
       "completed_at": "2026-03-24",
       "source": "jiko-genkyuu"
+    },
+    {
+      "slug": "goedel-incompleteness",
+      "completed_at": "2026-03-24",
+      "source": "jiko-genkyuu"
+    },
+    {
+      "slug": "inga-ritsu",
+      "completed_at": "2026-03-24",
+      "source": "event-sre"
+    },
+    {
+      "slug": "turing-test",
+      "completed_at": "2026-03-24",
+      "source": "ai-philosophy"
     }
   ]
 }
