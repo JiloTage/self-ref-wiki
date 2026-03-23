@@ -1,5 +1,108 @@
 {
-  "articles": {},
-  "root_id": null,
-  "total_count": 0
+  "articles": {
+    "self-reference-engine": {
+      "slug": "self-reference-engine",
+      "title": "Self-Reference Engine",
+      "summary": "自分自身の構造・動作・出力を入力として参照し、再帰的に処理を行う計算機構の総称。数学、計算機科学、哲学、文学にまたがる根本的概念。",
+      "filename": "articles/self-reference-engine.html",
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z",
+      "origin": "root",
+      "links_to": [
+        "goedel-incompleteness-theorems",
+        "quine",
+        "fixed-point-combinator",
+        "diagonal-argument",
+        "metacircular-evaluator",
+        "reflection-programming",
+        "transformer-architecture",
+        "autopoiesis",
+        "goedel-escher-bach",
+        "type-theory"
+      ],
+      "linked_from": [
+        "goedel-incompleteness-theorems",
+        "quine",
+        "fixed-point-combinator"
+      ],
+      "expansion_status": "expanded",
+      "is_root": true
+    },
+    "goedel-incompleteness-theorems": {
+      "slug": "goedel-incompleteness-theorems",
+      "title": "ゲーデルの不完全性定理",
+      "summary": "1931年にクルト・ゲーデルが証明した数理論理学の基本定理。十分に強力な形式体系は自身の無矛盾性を証明できず、真であるが証明不可能な命題を必ず含む。",
+      "filename": "articles/goedel-incompleteness-theorems.html",
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z",
+      "origin": "expansion",
+      "links_to": [
+        "self-reference-engine",
+        "diagonal-argument",
+        "fixed-point-combinator",
+        "quine",
+        "halting-problem",
+        "peano-arithmetic",
+        "type-theory",
+        "goedel-escher-bach"
+      ],
+      "linked_from": [
+        "self-reference-engine",
+        "quine",
+        "fixed-point-combinator"
+      ],
+      "expansion_status": "pending",
+      "is_root": false
+    },
+    "quine": {
+      "slug": "quine",
+      "title": "クワイン（自己複製プログラム）",
+      "summary": "入力を一切受け取らず、自分自身のソースコードと完全に一致する文字列を出力するプログラム。クリーネの再帰定理によって存在が保証される。",
+      "filename": "articles/quine.html",
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z",
+      "origin": "expansion",
+      "links_to": [
+        "self-reference-engine",
+        "fixed-point-combinator",
+        "goedel-incompleteness-theorems",
+        "diagonal-argument",
+        "goedel-escher-bach"
+      ],
+      "linked_from": [
+        "self-reference-engine",
+        "goedel-incompleteness-theorems",
+        "fixed-point-combinator"
+      ],
+      "expansion_status": "pending",
+      "is_root": false
+    },
+    "fixed-point-combinator": {
+      "slug": "fixed-point-combinator",
+      "title": "不動点コンビネータ",
+      "summary": "任意の関数 f に対してその不動点 x = f(x) を計算する高階関数。Yコンビネータが最も有名であり、ラムダ計算における再帰の唯一の実現手段。",
+      "filename": "articles/fixed-point-combinator.html",
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z",
+      "origin": "expansion",
+      "links_to": [
+        "self-reference-engine",
+        "quine",
+        "goedel-incompleteness-theorems",
+        "lambda-calculus",
+        "type-theory",
+        "category-theory",
+        "diagonal-argument"
+      ],
+      "linked_from": [
+        "self-reference-engine",
+        "goedel-incompleteness-theorems",
+        "quine"
+      ],
+      "expansion_status": "pending",
+      "is_root": false
+    }
+  },
+  "root_id": "self-reference-engine",
+  "total_count": 4
 }

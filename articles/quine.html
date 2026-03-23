@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>クワイン（自己複製プログラム） - Auto-Wiki</title>
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+</head>
+<body>
+<div class="wiki-wrapper">
+  <header class="wiki-header">
+    <a href="../index.html" class="site-title">Auto-Wiki</a>
+    <nav>
+      <a href="../index.html">トップ</a>
+      <a href="../index.html#article-list">記事一覧</a>
+      <a href="../index.html#graph">サイトグラフ</a>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Auto-Wiki</a> &gt; クワイン（自己複製プログラム）
+  </div>
+
+  <div class="wiki-content">
+    <main class="wiki-main">
+      <h1 class="article-title">クワイン（自己複製プログラム）</h1>
+      <div class="article-meta">最終更新: 2026-03-23</div>
+      <div class="article-summary"><strong>クワイン</strong>（quine）とは、入力を一切受け取らず、自分自身のソースコードと完全に一致する文字列を出力するプログラムである。<a href="self-reference-engine.html">Self-Reference Engine</a>の計算機科学における最も直接的な実装の一つであり、その存在は<strong>クリーネの再帰定理</strong>によって理論的に保証されている。名称は間接的自己参照を研究した哲学者ウィラード・ヴァン・オーマン・クワインに由来する。</div>
+
+      <table class="infobox">
+        <tr><td class="infobox-title" colspan="2">クワイン (Quine)</td></tr>
+        <tr><th>分類</th><td>自己複製プログラム</td></tr>
+        <tr><th>名称由来</th><td>W.V.O. クワイン（哲学者）</td></tr>
+        <tr><th>理論的基盤</th><td>クリーネの再帰定理</td></tr>
+        <tr><th>必要条件</th><td>チューリング完全な言語</td></tr>
+        <tr><th>初出</th><td>1960年代（概念自体はより古い）</td></tr>
+      </table>
+
+      <h2 id="definition">定義と名称の由来</h2>
+      <p>クワインは以下の条件を満たすプログラムとして厳密に定義される：</p>
+      <ul>
+        <li>外部からの入力を一切受け取らない</li>
+        <li>自身のソースコードと完全に一致する文字列を標準出力に出力する</li>
+        <li>空のプログラム（出力なし）は除外する</li>
+      </ul>
+      <p>名称は論理学者・哲学者の<strong>ウィラード・ヴァン・オーマン・クワイン</strong>（1908-2000）に由来する。クワインは間接的自己参照の形式として「クワイニング」（quining）——ある表現を引用して、その引用に対してもとの操作を適用する——を研究した。ダグラス・ホフスタッターが著書「<a href="goedel-escher-bach.html">ゲーデル、エッシャー、バッハ</a>」でこの名称を普及させた。</p>
+
+      <h2 id="theoretical-basis">理論的基礎</h2>
+
+      <h3 id="kleene-theorem">クリーネの再帰定理</h3>
+      <p><strong>クリーネの再帰定理</strong>（Kleene's recursion theorem）は、任意の計算可能関数 <em>f</em> に対して、<em>φ<sub>e</sub> = φ<sub>f(e)</sub></em> を満たすインデックス <em>e</em> が存在することを保証する。ここで <em>φ<sub>e</sub></em> はインデックス <em>e</em> のプログラムが計算する関数である。</p>
+      <p>クワインはこの定理の特殊ケースとして導かれる。<em>f</em> を「インデックス <em>e</em> を受け取り、<em>e</em> のソースコードを出力するプログラムのインデックスを返す」関数とすると、再帰定理により自身のソースを出力するプログラムの存在が保証される。</p>
+      <p>この定理は<a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a>における対角線補題の計算論的対応物であり、<a href="fixed-point-combinator.html">不動点コンビネータ</a>とも深い関係を持つ。</p>
+
+      <h2 id="construction">構成原理</h2>
+      <p>クワインの基本的な構成は、プログラムを二つの部分に分割する。</p>
+
+      <div class="diagram-container">
+        <svg viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="520" height="220" fill="#f8f9fa" rx="4"/>
+          <!-- Part A -->
+          <rect x="40" y="40" width="180" height="70" rx="6" fill="#e8f0fe" stroke="#0645ad" stroke-width="2"/>
+          <text x="130" y="70" text-anchor="middle" font-size="14" fill="#0645ad" font-family="sans-serif" font-weight="bold">Part A: コード部</text>
+          <text x="130" y="90" text-anchor="middle" font-size="11" fill="#54595d" font-family="sans-serif">B のデータを使って</text>
+          <text x="130" y="104" text-anchor="middle" font-size="11" fill="#54595d" font-family="sans-serif">ソースを再構築</text>
+          <!-- Part B -->
+          <rect x="300" y="40" width="180" height="70" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+          <text x="390" y="70" text-anchor="middle" font-size="14" fill="#e65100" font-family="sans-serif" font-weight="bold">Part B: データ部</text>
+          <text x="390" y="90" text-anchor="middle" font-size="11" fill="#54595d" font-family="sans-serif">A のソースコードを</text>
+          <text x="390" y="104" text-anchor="middle" font-size="11" fill="#54595d" font-family="sans-serif">文字列として保持</text>
+          <!-- Arrows -->
+          <path d="M 220 75 L 300 75" stroke="#36c" stroke-width="2" marker-end="url(#qa)"/>
+          <path d="M 300 90 Q 260 130 220 90" stroke="#e65100" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#qb)"/>
+          <!-- Output -->
+          <rect x="160" y="150" width="200" height="40" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+          <text x="260" y="175" text-anchor="middle" font-size="13" fill="#2e7d32" font-family="sans-serif" font-weight="bold">出力 = A + B（自身のソース）</text>
+          <path d="M 130 110 L 210 150" stroke="#54595d" stroke-width="1.5" marker-end="url(#qa)"/>
+          <path d="M 390 110 L 310 150" stroke="#54595d" stroke-width="1.5" marker-end="url(#qa)"/>
+          <defs>
+            <marker id="qa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#54595d"/></marker>
+            <marker id="qb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#e65100"/></marker>
+          </defs>
+        </svg>
+        <div class="diagram-caption">図1: クワインの二部構成 — コード部がデータ部を読み取り、全体のソースを再現する</div>
+      </div>
+
+      <ul>
+        <li><strong>Part A（コード部）</strong>：Part B に格納されたデータを読み取り、それを使ってプログラム全体のソースコードを再構築して出力する処理</li>
+        <li><strong>Part B（データ部）</strong>：Part A のソースコードを文字列リテラルとしてエンコードしたデータ</li>
+      </ul>
+      <p>Part A は Part B のデータから自身（A）のソースを取得し、さらに Part B 自体を再構築する。これにより、A + B の全体が出力される。</p>
+
+      <h2 id="examples">代表的な実装例</h2>
+
+      <h3 id="python-quine">Python</h3>
+      <pre><code>s='s=%r;print(s%%s)';print(s%s)</code></pre>
+      <p>この1行クワインでは、変数 <code>s</code> がプログラムのテンプレート（Part B）を保持し、<code>%r</code> による書式化で <code>s</code> 自身を引用付きで展開する（Part A）。</p>
+
+      <h3 id="javascript-quine">JavaScript</h3>
+      <pre><code>(function q(){console.log('('+q+')()')})()</code></pre>
+      <p>関数 <code>q</code> が自身を文字列化する JavaScript の特性を利用している。</p>
+
+      <h3 id="c-quine">C</h3>
+      <pre><code>#include&lt;stdio.h&gt;
+char*s="#include&lt;stdio.h&gt;%cchar*s=%c%s%c;%cint main(){printf(s,10,34,s,34,10);}";
+int main(){printf(s,10,34,s,34,10);}</code></pre>
+
+      <h2 id="variants">変種</h2>
+
+      <h3 id="relay-quine">リレークワイン</h3>
+      <p><strong>リレークワイン</strong>（relay quine / quine relay）は、複数の言語を循環するクワインの連鎖である。言語 A のプログラムが言語 B のソースを出力し、言語 B のプログラムが言語 A のソースを出力する。最大の例として、128言語を循環するリレークワインが知られている。</p>
+
+      <h3 id="polyglot-quine">ポリグロットクワイン</h3>
+      <p><strong>ポリグロットクワイン</strong>は、複数の言語で同時に有効なクワインである。同一のソースコードが異なる言語のインタプリタ・コンパイラで実行されても、いずれも自身のソースを出力する。</p>
+
+      <h3 id="radiation-hardened">放射線耐性クワイン</h3>
+      <p><strong>放射線耐性クワイン</strong>（radiation-hardened quine）は、ソースコードから任意の1文字を削除しても、元の（削除前の）ソースコードを出力するプログラムである。自己修復型の<a href="self-reference-engine.html">自己参照エンジン</a>の一種とも言える。</p>
+
+      <h2 id="significance">計算機科学における意義</h2>
+      <p>クワインは単なるプログラミングの遊戯にとどまらず、以下の重要な理論的意義を持つ：</p>
+      <ul>
+        <li><strong>計算可能性理論</strong>：クリーネの再帰定理の構成的証明として機能する</li>
+        <li><strong>コンピュータウイルス</strong>：自己複製するプログラムの理論的基盤。フレッド・コーエンのウイルス理論はクワインの概念を拡張したものである</li>
+        <li><strong>チューリング完全性の証</strong>：クワインが書けることは、その言語のチューリング完全性の（必要十分ではないが）実践的な指標となる</li>
+        <li><strong>ブートストラップ</strong>：コンパイラが自身をコンパイルする「セルフホスティング」は、クワインの一般化と見なせる</li>
+        <li><strong><a href="diagonal-argument.html">対角線論法</a></strong>：クワインの構成は対角線論法と本質的に同じ数学的構造を持つ</li>
+      </ul>
+
+      <h2 id="see-also">関連項目</h2>
+      <ul>
+        <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+        <li><a href="fixed-point-combinator.html">不動点コンビネータ</a></li>
+        <li><a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a></li>
+        <li><a href="diagonal-argument.html">対角線論法</a></li>
+        <li><a href="goedel-escher-bach.html">ゲーデル、エッシャー、バッハ</a></li>
+      </ul>
+
+    </main>
+
+    <aside class="wiki-sidebar">
+      <div class="toc">
+        <div class="toc-title">目次</div>
+        <ul class="toc-list">
+          <li><a href="#definition">定義と名称の由来</a></li>
+          <li><a href="#theoretical-basis">理論的基礎</a></li>
+          <li class="toc-h3"><a href="#kleene-theorem">クリーネの再帰定理</a></li>
+          <li><a href="#construction">構成原理</a></li>
+          <li><a href="#examples">代表的な実装例</a></li>
+          <li class="toc-h3"><a href="#python-quine">Python</a></li>
+          <li class="toc-h3"><a href="#javascript-quine">JavaScript</a></li>
+          <li class="toc-h3"><a href="#c-quine">C</a></li>
+          <li><a href="#variants">変種</a></li>
+          <li class="toc-h3"><a href="#relay-quine">リレークワイン</a></li>
+          <li class="toc-h3"><a href="#polyglot-quine">ポリグロットクワイン</a></li>
+          <li class="toc-h3"><a href="#radiation-hardened">放射線耐性クワイン</a></li>
+          <li><a href="#significance">計算機科学における意義</a></li>
+          <li><a href="#see-also">関連項目</a></li>
+        </ul>
+      </div>
+
+      <div class="related-articles">
+        <div class="related-title">関連記事</div>
+        <ul class="related-list">
+          <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+          <li><a href="fixed-point-combinator.html">不動点コンビネータ</a></li>
+          <li><a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="wiki-footer">
+    <div class="footer-links">
+      <h4>リンク先</h4>
+      <ul>
+        <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+        <li><a href="fixed-point-combinator.html">不動点コンビネータ</a></li>
+        <li><a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a></li>
+        <li><a href="diagonal-argument.html">対角線論法</a></li>
+        <li><a href="goedel-escher-bach.html">ゲーデル、エッシャー、バッハ</a></li>
+      </ul>
+      <h4>被リンク</h4>
+      <ul>
+        <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+      </ul>
+    </div>
+    <p style="margin-top:12px;">Auto-Wiki で自動生成</p>
+  </footer>
+</div>
+</body>
+</html>

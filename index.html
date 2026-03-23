@@ -23,8 +23,8 @@
   </div>
 
   <div class="stats-bar">
-    <span>記事数: <span class="stat-value" id="stat-articles">0</span></span>
-    <span>リンク数: <span class="stat-value" id="stat-links">0</span></span>
+    <span>記事数: <span class="stat-value" id="stat-articles">4</span></span>
+    <span>リンク数: <span class="stat-value" id="stat-links">12</span></span>
   </div>
 
   <div class="search-container">
@@ -46,6 +46,30 @@
         </tr>
       </thead>
       <tbody>
+        <tr>
+          <td><a href="articles/self-reference-engine.html">Self-Reference Engine</a></td>
+          <td>自分自身の構造・動作・出力を入力として参照し、再帰的に処理を行う計算機構の総称。</td>
+          <td>2026-03-23</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td><a href="articles/goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a></td>
+          <td>十分に強力な形式体系は自身の無矛盾性を証明できず、真であるが証明不可能な命題を必ず含む。</td>
+          <td>2026-03-23</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td><a href="articles/quine.html">クワイン（自己複製プログラム）</a></td>
+          <td>入力を一切受け取らず、自分自身のソースコードと完全に一致する文字列を出力するプログラム。</td>
+          <td>2026-03-23</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td><a href="articles/fixed-point-combinator.html">不動点コンビネータ</a></td>
+          <td>任意の関数 f に対してその不動点 x = f(x) を計算する高階関数。Yコンビネータが最も有名。</td>
+          <td>2026-03-23</td>
+          <td>7</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -55,6 +79,30 @@
   </footer>
 </div>
 
+<script>
+  window.__GRAPH_DATA__ = {
+  "nodes": [
+    {"id": "self-reference-engine", "title": "Self-Reference Engine", "summary": "自己参照エンジン — 再帰的計算機構の総称", "url": "articles/self-reference-engine.html", "is_root": true},
+    {"id": "goedel-incompleteness-theorems", "title": "ゲーデルの不完全性定理", "summary": "形式体系の限界を示す数理論理学の基本定理", "url": "articles/goedel-incompleteness-theorems.html", "is_root": false},
+    {"id": "quine", "title": "クワイン", "summary": "自分自身のソースコードを出力するプログラム", "url": "articles/quine.html", "is_root": false},
+    {"id": "fixed-point-combinator", "title": "不動点コンビネータ", "summary": "関数の不動点を計算する高階関数", "url": "articles/fixed-point-combinator.html", "is_root": false}
+  ],
+  "links": [
+    {"source": "self-reference-engine", "target": "goedel-incompleteness-theorems"},
+    {"source": "self-reference-engine", "target": "quine"},
+    {"source": "self-reference-engine", "target": "fixed-point-combinator"},
+    {"source": "goedel-incompleteness-theorems", "target": "self-reference-engine"},
+    {"source": "goedel-incompleteness-theorems", "target": "fixed-point-combinator"},
+    {"source": "goedel-incompleteness-theorems", "target": "quine"},
+    {"source": "quine", "target": "self-reference-engine"},
+    {"source": "quine", "target": "fixed-point-combinator"},
+    {"source": "quine", "target": "goedel-incompleteness-theorems"},
+    {"source": "fixed-point-combinator", "target": "self-reference-engine"},
+    {"source": "fixed-point-combinator", "target": "quine"},
+    {"source": "fixed-point-combinator", "target": "goedel-incompleteness-theorems"}
+  ]
+};
+</script>
 <script src="assets/js/graph.js"></script>
 <script src="assets/js/search.js"></script>
 <script>

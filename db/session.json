@@ -1,12 +1,23 @@
 {
-  "last_phase": null,
-  "expansion_frontier": [],
+  "last_phase": "phase_2",
+  "expansion_frontier": [
+    "goedel-escher-bach",
+    "diagonal-argument",
+    "metacircular-evaluator",
+    "lambda-calculus",
+    "halting-problem",
+    "transformer-architecture",
+    "autopoiesis",
+    "reflection-programming",
+    "type-theory",
+    "category-theory"
+  ],
   "settings": {
     "max_agents": 3,
     "max_total_articles": 50,
     "score_threshold": 0.5,
     "language": "ja"
   },
-  "created_at": null,
-  "updated_at": null
+  "created_at": "2026-03-23T00:00:00Z",
+  "updated_at": "2026-03-23T00:00:00Z"
 }

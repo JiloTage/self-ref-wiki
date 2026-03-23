@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>不動点コンビネータ - Auto-Wiki</title>
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+</head>
+<body>
+<div class="wiki-wrapper">
+  <header class="wiki-header">
+    <a href="../index.html" class="site-title">Auto-Wiki</a>
+    <nav>
+      <a href="../index.html">トップ</a>
+      <a href="../index.html#article-list">記事一覧</a>
+      <a href="../index.html#graph">サイトグラフ</a>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Auto-Wiki</a> &gt; 不動点コンビネータ
+  </div>
+
+  <div class="wiki-content">
+    <main class="wiki-main">
+      <h1 class="article-title">不動点コンビネータ</h1>
+      <div class="article-meta">最終更新: 2026-03-23</div>
+      <div class="article-summary"><strong>不動点コンビネータ</strong>（fixed-point combinator）とは、任意の関数 <em>f</em> に対してその不動点 <em>x = f(x)</em> を計算する高階関数である。<a href="self-reference-engine.html">Self-Reference Engine</a>の理論的中核をなす概念であり、<a href="lambda-calculus.html">ラムダ計算</a>においては再帰の唯一の実現手段である。最も有名な不動点コンビネータはハスケル・カリーが発見した<strong>Yコンビネータ</strong>である。</div>
+
+      <table class="infobox">
+        <tr><td class="infobox-title" colspan="2">不動点コンビネータ</td></tr>
+        <tr><th>分野</th><td>ラムダ計算・計算理論</td></tr>
+        <tr><th>発見者</th><td>ハスケル・カリー</td></tr>
+        <tr><th>代表例</th><td>Yコンビネータ、Zコンビネータ、Θコンビネータ</td></tr>
+        <tr><th>性質</th><td>fix f = f (fix f)</td></tr>
+        <tr><th>応用</th><td>再帰関数の定義、型理論、圏論</td></tr>
+      </table>
+
+      <h2 id="overview">概要</h2>
+      <p>関数 <em>f</em> の<strong>不動点</strong>とは、<em>f(x) = x</em> を満たす値 <em>x</em> のことである。不動点コンビネータ <em>fix</em> は、任意の関数 <em>f</em> を受け取り、<em>fix(f) = f(fix(f))</em> を満たす値を返す。</p>
+      <p>型なしラムダ計算には再帰を直接表現する構文がないため、不動点コンビネータが再帰関数を定義する唯一の方法となる。関数が「自分自身を呼び出す」のではなく、不動点コンビネータが関数に「自身の不動点」を供給することで再帰が実現される。</p>
+
+      <div class="diagram-container">
+        <svg viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="500" height="250" fill="#f8f9fa" rx="4"/>
+          <!-- f box -->
+          <rect x="180" y="30" width="140" height="50" rx="8" fill="#e8f0fe" stroke="#0645ad" stroke-width="2"/>
+          <text x="250" y="60" text-anchor="middle" font-size="16" fill="#0645ad" font-family="serif" font-weight="bold">f</text>
+          <!-- fix box -->
+          <rect x="60" y="110" width="140" height="50" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+          <text x="130" y="140" text-anchor="middle" font-size="16" fill="#e65100" font-family="serif" font-weight="bold">fix</text>
+          <!-- x = fix(f) -->
+          <rect x="300" y="110" width="140" height="50" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+          <text x="370" y="132" text-anchor="middle" font-size="14" fill="#2e7d32" font-family="serif" font-weight="bold">x = fix(f)</text>
+          <text x="370" y="148" text-anchor="middle" font-size="11" fill="#2e7d32" font-family="sans-serif">（不動点）</text>
+          <!-- Arrows -->
+          <path d="M 200 135 L 180 80" stroke="#54595d" stroke-width="2" marker-end="url(#fp1)"/>
+          <text x="170" y="115" font-size="11" fill="#54595d" font-family="sans-serif">f を受け取る</text>
+          <path d="M 200 135 L 300 135" stroke="#2e7d32" stroke-width="2" marker-end="url(#fp2)"/>
+          <!-- Loop: f(x) = x -->
+          <path d="M 370 110 Q 370 55 320 55" stroke="#ba0000" stroke-width="2" marker-end="url(#fp3)"/>
+          <path d="M 250 80 Q 290 90 370 110" stroke="#ba0000" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="400" y="80" font-size="12" fill="#ba0000" font-family="serif" font-weight="bold">f(x) = x</text>
+          <!-- Legend -->
+          <text x="250" y="200" text-anchor="middle" font-size="12" fill="#54595d" font-family="sans-serif">fix(f) = f(fix(f))</text>
+          <text x="250" y="220" text-anchor="middle" font-size="11" fill="#72777d" font-family="sans-serif">不動点コンビネータは f の不動点 x を計算する</text>
+          <defs>
+            <marker id="fp1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#54595d"/></marker>
+            <marker id="fp2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#2e7d32"/></marker>
+            <marker id="fp3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#ba0000"/></marker>
+          </defs>
+        </svg>
+        <div class="diagram-caption">図1: 不動点コンビネータの動作 — fix が関数 f を受け取り、f(x) = x を満たす x を返す</div>
+      </div>
+
+      <h2 id="y-combinator">Yコンビネータ</h2>
+      <p>最も有名な不動点コンビネータは<strong>Yコンビネータ</strong>であり、以下のように定義される：</p>
+      <pre><code>Y = λf. (λx. f (x x)) (λx. f (x x))</code></pre>
+      <p>任意の関数 <em>g</em> に対して：</p>
+      <pre><code>Y g = (λx. g (x x)) (λx. g (x x))
+    = g ((λx. g (x x)) (λx. g (x x)))
+    = g (Y g)</code></pre>
+      <p>すなわち <em>Y g = g (Y g)</em> が成り立ち、<em>Y g</em> は <em>g</em> の不動点である。</p>
+      <p>Yコンビネータは<strong>遅延評価</strong>（正規順序）を前提としている。正格評価の言語では <em>Y g</em> の計算が無限ループに陥るため、Zコンビネータを使用する。</p>
+
+      <h2 id="z-combinator">Zコンビネータ</h2>
+      <p><strong>Zコンビネータ</strong>はYコンビネータの正格評価版であり、η展開（eta-expansion）を施して評価の遅延を実現する：</p>
+      <pre><code>Z = λf. (λx. f (λv. x x v)) (λx. f (λv. x x v))</code></pre>
+      <p><em>λv. x x v</em> によって <em>x x</em> の評価が遅延され、引数 <em>v</em> が実際に供給されるまで展開が保留される。このため、Python や JavaScript などの正格評価言語でも不動点コンビネータを用いた再帰が実現できる。</p>
+
+      <h2 id="theta-combinator">Θコンビネータ</h2>
+      <p><strong>Θコンビネータ</strong>（チューリングの不動点コンビネータ）はアラン・チューリングが発見したもので、以下のように定義される：</p>
+      <pre><code>Θ = (λx. λy. y (x x y)) (λx. λy. y (x x y))</code></pre>
+      <p>Yコンビネータと異なり、Θは<em>f</em> の不動点を直接計算する（β簡約1ステップで <em>Θ f = f (Θ f)</em> が得られる）。</p>
+
+      <h2 id="lambda-calculus">ラムダ計算における不動点</h2>
+      <p>型なし<a href="lambda-calculus.html">ラムダ計算</a>では、すべての項に不動点が存在する。これは <em>λx. x x</em> のような自己適用が無制限に許されることによる。実際、不動点コンビネータは無限に多く存在し、Yコンビネータ、Θコンビネータはそのうちの二つに過ぎない。</p>
+      <p>不動点コンビネータの存在は、型なしラムダ計算がチューリング完全であることの鍵であり、同時に強正規化性（すべての項が正規形を持つ性質）を持たない理由でもある。</p>
+
+      <h2 id="typed-lambda">型付きラムダ計算と不動点</h2>
+      <p>単純型付きラムダ計算では、<em>λx. x x</em> のような自己適用に型を付けることができず、Yコンビネータは型付けできない。これは単純型付きラムダ計算が<strong>強正規化性</strong>を持つことに対応する——すべての計算が停止するため、無限ループ（＝不動点コンビネータの展開）は不可能である。</p>
+      <p>再帰を許すために、実用的な型付き言語は以下のような方法を採る：</p>
+      <ul>
+        <li><strong>再帰型</strong>（recursive types）：μ型を導入し、<em>μα. α → α</em> のような型を許容する</li>
+        <li><strong>fix プリミティブ</strong>：<em>fix : (α → α) → α</em> を組み込みで提供する（Haskell、OCaml等）</li>
+        <li><strong>一般再帰</strong>：<em>let rec</em> 構文として直接サポートする</li>
+      </ul>
+      <p><a href="type-theory.html">型理論</a>（System F、依存型理論など）における不動点の扱いは、体系の表現力と停止性のトレードオフに直結する重要な問題である。</p>
+
+      <h2 id="tarski">タルスキの不動点定理</h2>
+      <p><strong>タルスキの不動点定理</strong>（1955年）は、完備束上の単調関数が必ず不動点を持つことを保証する。計算機科学ではデノテーショナル意味論（表示的意味論）において中心的な役割を果たし、再帰的プログラムの意味を最小不動点として定義する理論的基盤を提供する。</p>
+
+      <h2 id="kleene">クリーネの再帰定理</h2>
+      <p><strong>クリーネの再帰定理</strong>は、不動点コンビネータの計算可能性理論版である。任意の計算可能関数 <em>f</em> に対し、<em>φ<sub>e</sub> = φ<sub>f(e)</sub></em> を満たすインデックス <em>e</em> が存在する。これは<a href="quine.html">クワイン</a>の存在保証や、<a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a>における対角線補題と密接に関連する。</p>
+
+      <h2 id="category-theory">圏論的不動点</h2>
+      <p><a href="category-theory.html">圏論</a>では、不動点は自己関手（endofunctor）の代数として定式化される。関手 <em>F</em> の初期代数 <em>(μF, in)</em> はランベックの補題により <em>F(μF) ≅ μF</em> を満たす——すなわち <em>F</em> の不動点である。帰納的データ型（リスト、木など）の理論的基盤を提供する。</p>
+
+      <h2 id="programming">プログラミングにおける応用</h2>
+      <p>不動点コンビネータは理論的に重要であるだけでなく、実際のプログラミングでも応用される：</p>
+      <ul>
+        <li><strong>無名再帰</strong>：名前を持たないラムダ式で再帰を実現する</li>
+        <li><strong>メモ化再帰</strong>：不動点コンビネータをメモ化関数で包むことで、再帰関数に透過的にメモ化を追加できる</li>
+        <li><strong>オープン再帰</strong>：オブジェクト指向における <code>self</code> / <code>this</code> のメカニズムは不動点の適用と見なせる</li>
+        <li><strong>トランポリン</strong>：スタックオーバーフローを防ぐ反復的不動点計算</li>
+      </ul>
+
+      <h2 id="see-also">関連項目</h2>
+      <ul>
+        <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+        <li><a href="quine.html">クワイン（自己複製プログラム）</a></li>
+        <li><a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a></li>
+        <li><a href="lambda-calculus.html">ラムダ計算</a></li>
+        <li><a href="type-theory.html">型理論</a></li>
+        <li><a href="category-theory.html">圏論</a></li>
+        <li><a href="diagonal-argument.html">対角線論法</a></li>
+      </ul>
+
+    </main>
+
+    <aside class="wiki-sidebar">
+      <div class="toc">
+        <div class="toc-title">目次</div>
+        <ul class="toc-list">
+          <li><a href="#overview">概要</a></li>
+          <li><a href="#y-combinator">Yコンビネータ</a></li>
+          <li><a href="#z-combinator">Zコンビネータ</a></li>
+          <li><a href="#theta-combinator">Θコンビネータ</a></li>
+          <li><a href="#lambda-calculus">ラムダ計算における不動点</a></li>
+          <li><a href="#typed-lambda">型付きラムダ計算と不動点</a></li>
+          <li><a href="#tarski">タルスキの不動点定理</a></li>
+          <li><a href="#kleene">クリーネの再帰定理</a></li>
+          <li><a href="#category-theory">圏論的不動点</a></li>
+          <li><a href="#programming">プログラミングにおける応用</a></li>
+          <li><a href="#see-also">関連項目</a></li>
+        </ul>
+      </div>
+
+      <div class="related-articles">
+        <div class="related-title">関連記事</div>
+        <ul class="related-list">
+          <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+          <li><a href="quine.html">クワイン</a></li>
+          <li><a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="wiki-footer">
+    <div class="footer-links">
+      <h4>リンク先</h4>
+      <ul>
+        <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+        <li><a href="quine.html">クワイン</a></li>
+        <li><a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a></li>
+        <li><a href="lambda-calculus.html">ラムダ計算</a></li>
+        <li><a href="type-theory.html">型理論</a></li>
+        <li><a href="category-theory.html">圏論</a></li>
+        <li><a href="diagonal-argument.html">対角線論法</a></li>
+      </ul>
+      <h4>被リンク</h4>
+      <ul>
+        <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+      </ul>
+    </div>
+    <p style="margin-top:12px;">Auto-Wiki で自動生成</p>
+  </footer>
+</div>
+</body>
+</html>

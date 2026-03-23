@@ -1,4 +1,104 @@
 {
-  "queue": [],
-  "history": []
+  "queue": [
+    {
+      "slug": "goedel-escher-bach",
+      "title": "ゲーデル、エッシャー、バッハ",
+      "reason": "ストレンジ・ループと自己参照を多分野横断で論じた名著。",
+      "suggested_by": "self-reference-engine",
+      "interestingness_score": 0.88,
+      "created_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "slug": "diagonal-argument",
+      "title": "対角線論法",
+      "reason": "カントール・ゲーデル・チューリングに共通する自己参照的証明手法。",
+      "suggested_by": "self-reference-engine",
+      "interestingness_score": 0.87,
+      "created_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "slug": "metacircular-evaluator",
+      "title": "メタ循環評価器",
+      "reason": "言語自身で書かれたインタプリタ。自己参照の実用的応用。",
+      "suggested_by": "self-reference-engine",
+      "interestingness_score": 0.85,
+      "created_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "slug": "transformer-architecture",
+      "title": "Transformerアーキテクチャ",
+      "reason": "自己注意機構による現代的な自己参照の実装。",
+      "suggested_by": "self-reference-engine",
+      "interestingness_score": 0.84,
+      "created_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "slug": "autopoiesis",
+      "title": "オートポイエーシス",
+      "reason": "自己を産出するシステムの概念。生物学的自己参照。",
+      "suggested_by": "self-reference-engine",
+      "interestingness_score": 0.82,
+      "created_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "slug": "lambda-calculus",
+      "title": "ラムダ計算",
+      "reason": "不動点コンビネータの母体となる計算体系。自己適用の理論的基盤。",
+      "suggested_by": "fixed-point-combinator",
+      "interestingness_score": 0.86,
+      "created_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "slug": "halting-problem",
+      "title": "停止問題",
+      "reason": "チューリングによる決定不能性の証明。ゲーデルの定理と対角線論法で結ばれる。",
+      "suggested_by": "goedel-incompleteness-theorems",
+      "interestingness_score": 0.85,
+      "created_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "slug": "reflection-programming",
+      "title": "リフレクション（プログラミング）",
+      "reason": "プログラムが実行時に自身を検査・変更する能力。",
+      "suggested_by": "self-reference-engine",
+      "interestingness_score": 0.80,
+      "created_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "slug": "type-theory",
+      "title": "型理論",
+      "reason": "自己参照パラドックスの回避策として発展した理論体系。",
+      "suggested_by": "self-reference-engine",
+      "interestingness_score": 0.78,
+      "created_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "slug": "category-theory",
+      "title": "圏論",
+      "reason": "不動点の圏論的定式化。初期代数とランベックの補題。",
+      "suggested_by": "fixed-point-combinator",
+      "interestingness_score": 0.75,
+      "created_at": "2026-03-23T00:00:00Z"
+    }
+  ],
+  "history": [
+    {
+      "slug": "goedel-incompleteness-theorems",
+      "title": "ゲーデルの不完全性定理",
+      "created_at": "2026-03-23T00:00:00Z",
+      "suggested_by": "self-reference-engine"
+    },
+    {
+      "slug": "quine",
+      "title": "クワイン（自己複製プログラム）",
+      "created_at": "2026-03-23T00:00:00Z",
+      "suggested_by": "self-reference-engine"
+    },
+    {
+      "slug": "fixed-point-combinator",
+      "title": "不動点コンビネータ",
+      "created_at": "2026-03-23T00:00:00Z",
+      "suggested_by": "self-reference-engine"
+    }
+  ]
 }

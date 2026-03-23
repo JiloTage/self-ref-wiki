@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ゲーデルの不完全性定理 - Auto-Wiki</title>
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+</head>
+<body>
+<div class="wiki-wrapper">
+  <header class="wiki-header">
+    <a href="../index.html" class="site-title">Auto-Wiki</a>
+    <nav>
+      <a href="../index.html">トップ</a>
+      <a href="../index.html#article-list">記事一覧</a>
+      <a href="../index.html#graph">サイトグラフ</a>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Auto-Wiki</a> &gt; ゲーデルの不完全性定理
+  </div>
+
+  <div class="wiki-content">
+    <main class="wiki-main">
+      <h1 class="article-title">ゲーデルの不完全性定理</h1>
+      <div class="article-meta">最終更新: 2026-03-23</div>
+      <div class="article-summary"><strong>ゲーデルの不完全性定理</strong>（Gödel's incompleteness theorems）は、1931年にクルト・ゲーデルが証明した数理論理学の基本定理であり、十分に強力な形式体系は自身の無矛盾性を証明できず、真であるが証明不可能な命題を必ず含むことを示す。<a href="self-reference-engine.html">Self-Reference Engine</a>の数学的基礎として最も重要な定理の一つであり、形式体系における自己参照の限界を明らかにした。</div>
+
+      <table class="infobox">
+        <tr><td class="infobox-title" colspan="2">ゲーデルの不完全性定理</td></tr>
+        <tr><th>提唱者</th><td>クルト・ゲーデル</td></tr>
+        <tr><th>発表年</th><td>1931年</td></tr>
+        <tr><th>分野</th><td>数理論理学・数学基礎論</td></tr>
+        <tr><th>前提</th><td>ω無矛盾な再帰的公理化可能体系</td></tr>
+        <tr><th>論文</th><td>「プリンキピア・マテマティカおよび関連体系の形式的に決定不能な命題について」</td></tr>
+      </table>
+
+      <h2 id="overview">概要</h2>
+      <p>不完全性定理は二つの定理から成る。第一不完全性定理は、自然数論を含む任意の無矛盾な形式体系には、その体系内で証明も反証もできない命題（決定不能命題）が存在することを主張する。第二不完全性定理は、そのような体系は自身の無矛盾性を体系内で証明できないことを主張する。</p>
+      <p>これらの定理は、ダフィット・ヒルベルトが提唱した<strong>ヒルベルト・プログラム</strong>——数学の全体を有限の手続きで完全に形式化し、その無矛盾性を証明するという計画——が実現不可能であることを示した。</p>
+
+      <h2 id="first-theorem">第一不完全性定理</h2>
+      <p><strong>定理（第一不完全性定理）</strong>：<a href="peano-arithmetic.html">ペアノ算術</a>を含む任意の無矛盾な再帰的公理化可能体系 <em>T</em> に対して、<em>T</em> で証明も反証もできない閉論理式 <em>G</em> が存在する。</p>
+      <p>直観的には、<em>G</em> は「この文は体系 <em>T</em> 内で証明不可能である」と主張する文であり、自己参照構造を本質的に用いている。もし <em>G</em> が <em>T</em> で証明可能ならば <em>G</em> は偽であり <em>T</em> は矛盾する。もし <em>¬G</em> が証明可能ならば <em>G</em> は真（すなわち証明不可能）となり、やはり矛盾する。したがって <em>T</em> が無矛盾である限り、<em>G</em> は決定不能である。</p>
+
+      <div class="diagram-container">
+        <svg viewBox="0 0 550 280" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="550" height="280" fill="#f8f9fa" rx="4"/>
+          <!-- Formal system box -->
+          <rect x="30" y="30" width="490" height="200" rx="8" fill="none" stroke="#36c" stroke-width="2"/>
+          <text x="275" y="22" text-anchor="middle" font-size="13" fill="#36c" font-family="sans-serif" font-weight="bold">形式体系 T</text>
+          <!-- Provable truths -->
+          <ellipse cx="200" cy="130" rx="120" ry="75" fill="#e8f0fe" stroke="#0645ad" stroke-width="1.5"/>
+          <text x="200" y="100" text-anchor="middle" font-size="12" fill="#0645ad" font-family="sans-serif">T で証明可能な</text>
+          <text x="200" y="116" text-anchor="middle" font-size="12" fill="#0645ad" font-family="sans-serif">真なる命題</text>
+          <!-- True statements -->
+          <ellipse cx="320" cy="130" rx="150" ry="85" fill="none" stroke="#2e7d32" stroke-width="1.5" stroke-dasharray="6,3"/>
+          <text x="430" y="80" text-anchor="middle" font-size="12" fill="#2e7d32" font-family="sans-serif">真なる命題全体</text>
+          <!-- Gödel sentence -->
+          <circle cx="390" cy="145" r="18" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+          <text x="390" y="149" text-anchor="middle" font-size="14" fill="#e65100" font-family="serif" font-weight="bold">G</text>
+          <text x="390" y="180" text-anchor="middle" font-size="10" fill="#e65100" font-family="sans-serif">ゲーデル文</text>
+          <text x="390" y="192" text-anchor="middle" font-size="9" fill="#e65100" font-family="sans-serif">（真だが証明不能）</text>
+          <!-- Legend -->
+          <text x="275" y="268" text-anchor="middle" font-size="11" fill="#54595d" font-family="sans-serif">図: 第一不完全性定理 — ゲーデル文 G は真だが体系 T 内で証明できない</text>
+        </svg>
+        <div class="diagram-caption">図1: 形式体系における決定不能命題の位置づけ</div>
+      </div>
+
+      <h2 id="second-theorem">第二不完全性定理</h2>
+      <p><strong>定理（第二不完全性定理）</strong>：ペアノ算術を含む任意の無矛盾な再帰的公理化可能体系 <em>T</em> は、<em>Con(T)</em>（「<em>T</em> は無矛盾である」を表す算術的文）を証明できない。</p>
+      <p>第二不完全性定理は、第一不完全性定理の系として導かれる。ゲーデル文 <em>G</em> は本質的に「<em>T</em> が無矛盾ならば <em>G</em> は証明不能」と等価であり、<em>T</em> 内で <em>Con(T) → G</em> が証明できる。もし <em>T</em> が <em>Con(T)</em> を証明できれば <em>G</em> も証明でき、第一不完全性定理に矛盾する。</p>
+
+      <h2 id="proof-sketch">証明のスケッチ</h2>
+
+      <h3 id="goedel-numbering">ゲーデル数化</h3>
+      <p>証明の鍵は、形式体系の構文論（記号・論理式・証明列）を自然数に符号化する<strong>ゲーデル数化</strong>である。各記号に一意な自然数を割り当て、論理式を数の列として、証明列をさらにその列として符号化する。これにより、「論理式 φ は体系 <em>T</em> で証明可能か？」という構文的（メタ数学的）問いが、自然数の算術的性質に関する問いに変換される。</p>
+
+      <h3 id="diagonal-lemma">対角線補題</h3>
+      <p><strong>対角線補題</strong>（不動点補題）は、不完全性定理の核心を成す。</p>
+      <p><em>任意の論理式 φ(x)（自由変数 x を一つ持つ）に対し、閉論理式 σ が存在して、T ⊢ σ ↔ φ(⌜σ⌝) が成り立つ。</em></p>
+      <p>ここで ⌜σ⌝ は σ のゲーデル数を表す。すなわち、σ は「自分自身がφの性質を持つ」と主張する自己参照文である。これは<a href="diagonal-argument.html">対角線論法</a>の論理学版であり、<a href="fixed-point-combinator.html">不動点コンビネータ</a>の論理学的対応物でもある。</p>
+
+      <h3 id="construction">ゲーデル文の構成</h3>
+      <p>対角線補題で φ(x) = ¬Prov<sub>T</sub>(x)（「x は T で証明可能でない」を表す算術的述語）とすると、閉論理式 <em>G</em> が得られ、<em>T ⊢ G ↔ ¬Prov<sub>T</sub>(⌜G⌝)</em> が成り立つ。すなわち <em>G</em> は「<em>G</em> は <em>T</em> で証明不可能である」と主張する。</p>
+
+      <h2 id="historical-context">歴史的背景</h2>
+
+      <h3 id="hilbert-program">ヒルベルト・プログラム</h3>
+      <p>19世紀末から20世紀初頭にかけての数学の基礎論争（集合論のパラドックス、直観主義論争）を受け、ダフィット・ヒルベルトは数学の形式化と有限的方法による無矛盾性証明を提唱した（ヒルベルト・プログラム）。1928年の「ボローニャ会議」でヒルベルトは数学の完全性・無矛盾性・決定可能性の三つの問いを提起し、ゲーデルの定理はこのうち完全性と無矛盾性に否定的回答を与えた。</p>
+
+      <h3 id="reception">受容と反応</h3>
+      <p>ゲーデルは1930年のケーニヒスベルク会議で予備的結果を発表し、ジョン・フォン・ノイマンがすぐに第二不完全性定理を独立に導いた。1931年の論文は直ちに数学界に衝撃を与え、ヒルベルト・プログラムの限界が広く認識された。ただし、ゲンツェンの無矛盾性証明（超限帰納法を用いたペアノ算術の無矛盾性証明、1936年）のように、ヒルベルトの要件を緩和した形での研究は続いた。</p>
+
+      <h2 id="implications">影響と応用</h2>
+
+      <h3 id="computability">計算可能性理論への影響</h3>
+      <p>不完全性定理は、アラン・チューリングの<a href="halting-problem.html">停止問題</a>の決定不能性（1936年）やアロンゾ・チャーチの決定問題の否定的解決と密接に関連する。ゲーデル数化はチューリング機械の万能性の概念に先行し、計算可能性理論の発展に直接寄与した。</p>
+
+      <h3 id="philosophy">哲学的含意</h3>
+      <p>不完全性定理は数学の哲学に深い影響を与えた。形式主義（ヒルベルト）への制約、プラトニズムとの関係（ゲーデル自身は数学的実在論者であった）、人間の精神と機械の関係（ルーカス-ペンローズ論証）など、多様な哲学的議論を生んだ。</p>
+
+      <h3 id="geb">文化的影響</h3>
+      <p>ダグラス・ホフスタッターの「<a href="goedel-escher-bach.html">ゲーデル、エッシャー、バッハ</a>」（1979年）は、不完全性定理を芸術・音楽・人工知能と結びつけて解説し、一般読者にも広く知られるようになった。</p>
+
+      <h2 id="extensions">発展</h2>
+      <p>ゲーデルの原証明以降、不完全性定理は多くの方向に拡張・精緻化された。</p>
+      <ul>
+        <li><strong>ロッサーの改良</strong>（1936年）：ω無矛盾性の仮定を単純無矛盾性に弱めた</li>
+        <li><strong>レーブの定理</strong>（1955年）：体系が「φ が証明可能ならば φ」を証明できるならば、体系は φ を証明できる</li>
+        <li><strong>可証性論理</strong>：Prov述語の性質を様相論理として公理化（GL論理）</li>
+        <li><strong>パリス-ハリントンの定理</strong>（1977年）：ラムゼー理論の自然な命題でペアノ算術から独立なものの発見</li>
+        <li><strong>ハーヴェイ・フリードマンの研究</strong>：日常的数学に近い不完全性の例の構成</li>
+      </ul>
+
+      <h2 id="see-also">関連項目</h2>
+      <ul>
+        <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+        <li><a href="diagonal-argument.html">対角線論法</a></li>
+        <li><a href="fixed-point-combinator.html">不動点コンビネータ</a></li>
+        <li><a href="quine.html">クワイン（自己複製プログラム）</a></li>
+        <li><a href="halting-problem.html">停止問題</a></li>
+        <li><a href="peano-arithmetic.html">ペアノ算術</a></li>
+        <li><a href="type-theory.html">型理論</a></li>
+        <li><a href="goedel-escher-bach.html">ゲーデル、エッシャー、バッハ</a></li>
+      </ul>
+
+    </main>
+
+    <aside class="wiki-sidebar">
+      <div class="toc">
+        <div class="toc-title">目次</div>
+        <ul class="toc-list">
+          <li><a href="#overview">概要</a></li>
+          <li><a href="#first-theorem">第一不完全性定理</a></li>
+          <li><a href="#second-theorem">第二不完全性定理</a></li>
+          <li><a href="#proof-sketch">証明のスケッチ</a></li>
+          <li class="toc-h3"><a href="#goedel-numbering">ゲーデル数化</a></li>
+          <li class="toc-h3"><a href="#diagonal-lemma">対角線補題</a></li>
+          <li class="toc-h3"><a href="#construction">ゲーデル文の構成</a></li>
+          <li><a href="#historical-context">歴史的背景</a></li>
+          <li class="toc-h3"><a href="#hilbert-program">ヒルベルト・プログラム</a></li>
+          <li class="toc-h3"><a href="#reception">受容と反応</a></li>
+          <li><a href="#implications">影響と応用</a></li>
+          <li class="toc-h3"><a href="#computability">計算可能性理論</a></li>
+          <li class="toc-h3"><a href="#philosophy">哲学的含意</a></li>
+          <li class="toc-h3"><a href="#geb">文化的影響</a></li>
+          <li><a href="#extensions">発展</a></li>
+          <li><a href="#see-also">関連項目</a></li>
+        </ul>
+      </div>
+
+      <div class="related-articles">
+        <div class="related-title">関連記事</div>
+        <ul class="related-list">
+          <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+          <li><a href="diagonal-argument.html">対角線論法</a></li>
+          <li><a href="fixed-point-combinator.html">不動点コンビネータ</a></li>
+          <li><a href="goedel-escher-bach.html">ゲーデル、エッシャー、バッハ</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="wiki-footer">
+    <div class="footer-links">
+      <h4>リンク先</h4>
+      <ul>
+        <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+        <li><a href="diagonal-argument.html">対角線論法</a></li>
+        <li><a href="fixed-point-combinator.html">不動点コンビネータ</a></li>
+        <li><a href="quine.html">クワイン</a></li>
+        <li><a href="halting-problem.html">停止問題</a></li>
+        <li><a href="peano-arithmetic.html">ペアノ算術</a></li>
+        <li><a href="type-theory.html">型理論</a></li>
+        <li><a href="goedel-escher-bach.html">ゲーデル、エッシャー、バッハ</a></li>
+      </ul>
+      <h4>被リンク</h4>
+      <ul>
+        <li><a href="self-reference-engine.html">Self-Reference Engine</a></li>
+      </ul>
+    </div>
+    <p style="margin-top:12px;">Auto-Wiki で自動生成</p>
+  </footer>
+</div>
+</body>
+</html>

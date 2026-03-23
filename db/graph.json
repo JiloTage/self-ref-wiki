@@ -1,4 +1,46 @@
 {
-  "nodes": [],
-  "links": []
+  "nodes": [
+    {
+      "id": "self-reference-engine",
+      "title": "Self-Reference Engine",
+      "summary": "自己参照エンジン — 再帰的計算機構の総称",
+      "url": "articles/self-reference-engine.html",
+      "is_root": true
+    },
+    {
+      "id": "goedel-incompleteness-theorems",
+      "title": "ゲーデルの不完全性定理",
+      "summary": "形式体系の限界を示す数理論理学の基本定理",
+      "url": "articles/goedel-incompleteness-theorems.html",
+      "is_root": false
+    },
+    {
+      "id": "quine",
+      "title": "クワイン",
+      "summary": "自分自身のソースコードを出力するプログラム",
+      "url": "articles/quine.html",
+      "is_root": false
+    },
+    {
+      "id": "fixed-point-combinator",
+      "title": "不動点コンビネータ",
+      "summary": "関数の不動点を計算する高階関数",
+      "url": "articles/fixed-point-combinator.html",
+      "is_root": false
+    }
+  ],
+  "links": [
+    {"source": "self-reference-engine", "target": "goedel-incompleteness-theorems"},
+    {"source": "self-reference-engine", "target": "quine"},
+    {"source": "self-reference-engine", "target": "fixed-point-combinator"},
+    {"source": "goedel-incompleteness-theorems", "target": "self-reference-engine"},
+    {"source": "goedel-incompleteness-theorems", "target": "fixed-point-combinator"},
+    {"source": "goedel-incompleteness-theorems", "target": "quine"},
+    {"source": "quine", "target": "self-reference-engine"},
+    {"source": "quine", "target": "fixed-point-combinator"},
+    {"source": "quine", "target": "goedel-incompleteness-theorems"},
+    {"source": "fixed-point-combinator", "target": "self-reference-engine"},
+    {"source": "fixed-point-combinator", "target": "quine"},
+    {"source": "fixed-point-combinator", "target": "goedel-incompleteness-theorems"}
+  ]
 }

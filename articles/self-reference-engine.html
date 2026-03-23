@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self-Reference Engine - Auto-Wiki</title>
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+</head>
+<body>
+<div class="wiki-wrapper">
+  <header class="wiki-header">
+    <a href="../index.html" class="site-title">Auto-Wiki</a>
+    <nav>
+      <a href="../index.html">トップ</a>
+      <a href="../index.html#article-list">記事一覧</a>
+      <a href="../index.html#graph">サイトグラフ</a>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Auto-Wiki</a> &gt; Self-Reference Engine
+  </div>
+
+  <div class="wiki-content">
+    <main class="wiki-main">
+      <h1 class="article-title">Self-Reference Engine</h1>
+      <div class="article-meta">最終更新: 2026-03-23</div>
+      <div class="article-summary"><strong>Self-Reference Engine</strong>（自己参照エンジン）とは、自分自身の構造・動作・出力を入力として参照し、再帰的に処理を行う計算機構の総称である。数学における<a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a>、計算機科学における<a href="quine.html">クワイン</a>や<a href="fixed-point-combinator.html">不動点コンビネータ</a>、さらには文学・哲学における自己言及のパラドックスまで、幅広い分野に現れる根本的な概念である。</div>
+
+      <h2 id="overview">概要</h2>
+      <p>自己参照（self-reference）とは、あるシステムが自分自身について言及・操作する性質を指す。Self-Reference Engineは、この性質を計算の原理として活用する仕組みであり、以下のような特徴を持つ。</p>
+      <ul>
+        <li><strong>再帰性</strong>：出力が再び入力として自身に供給される循環構造</li>
+        <li><strong>自己記述性</strong>：システムが自身の構造を内部的に表現できる能力</li>
+        <li><strong>不動点の存在</strong>：自己適用しても変化しない安定状態を生み出す性質</li>
+        <li><strong>創発性</strong>：自己参照の繰り返しから予測不可能な構造が生まれる現象</li>
+      </ul>
+
+      <div class="diagram-container">
+        <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+          <!-- Background -->
+          <rect x="0" y="0" width="600" height="300" fill="#f8f9fa" rx="4"/>
+          <!-- Central loop -->
+          <ellipse cx="300" cy="150" rx="180" ry="90" fill="none" stroke="#0645ad" stroke-width="2" stroke-dasharray="8,4"/>
+          <!-- Engine box -->
+          <rect x="220" y="110" width="160" height="60" rx="8" fill="#fff" stroke="#36c" stroke-width="2"/>
+          <text x="300" y="145" text-anchor="middle" font-size="16" font-family="sans-serif" fill="#202122" font-weight="bold">Self-Reference</text>
+          <text x="300" y="163" text-anchor="middle" font-size="16" font-family="sans-serif" fill="#202122" font-weight="bold">Engine</text>
+          <!-- Input arrow -->
+          <path d="M 120 140 Q 160 100 220 125" fill="none" stroke="#54595d" stroke-width="2" marker-end="url(#arr)"/>
+          <text x="130" y="115" font-size="12" fill="#54595d" font-family="sans-serif">入力</text>
+          <!-- Output arrow -->
+          <path d="M 380 155 Q 440 180 480 155" fill="none" stroke="#54595d" stroke-width="2" marker-end="url(#arr)"/>
+          <text x="445" y="185" font-size="12" fill="#54595d" font-family="sans-serif">出力</text>
+          <!-- Feedback loop -->
+          <path d="M 480 150 Q 530 150 530 220 Q 530 270 300 270 Q 80 270 80 200 Q 80 140 120 140" fill="none" stroke="#ba0000" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arr2)"/>
+          <text x="300" y="255" text-anchor="middle" font-size="13" fill="#ba0000" font-family="sans-serif" font-weight="bold">自己参照ループ</text>
+          <!-- Arrowhead markers -->
+          <defs>
+            <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#54595d"/></marker>
+            <marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#ba0000"/></marker>
+          </defs>
+        </svg>
+        <div class="diagram-caption">図1: Self-Reference Engineの基本構造 — 出力が自己参照ループを通じて再び入力となる</div>
+      </div>
+
+      <h2 id="mathematical-foundations">数学的基礎</h2>
+      <p>Self-Reference Engineの理論的基盤は、20世紀初頭の数理論理学に遡る。</p>
+
+      <h3 id="goedel-numbering">ゲーデル数と自己参照</h3>
+      <p>1931年、クルト・ゲーデルは<a href="goedel-incompleteness-theorems.html">不完全性定理</a>の証明において、形式体系内の命題に自然数を対応させる<strong>ゲーデル数化</strong>（Gödel numbering）を発明した。この手法により、形式体系は自分自身について語る命題を構成できるようになった。ゲーデル文「この文は証明不可能である」は、自己参照の最も有名な形式化であり、いかなる十分に強力な形式体系も自身の無矛盾性を証明できないことを示した。</p>
+
+      <h3 id="fixed-points">不動点定理</h3>
+      <p><a href="fixed-point-combinator.html">不動点コンビネータ</a>は、関数 <em>f</em> に対して <em>f(x) = x</em> を満たす点 <em>x</em> を見つける高階関数である。ラムダ計算における <strong>Yコンビネータ</strong>（Y = λf.(λx.f(x x))(λx.f(x x))）は、任意の関数の不動点を計算でき、これが再帰の理論的基盤となっている。タルスキの不動点定理やクリーネの再帰定理も、自己参照の数学的形式化として重要である。</p>
+
+      <h3 id="diagonal-argument">対角線論法</h3>
+      <p>カントールの<a href="diagonal-argument.html">対角線論法</a>は、自己参照的な構成によって「想定された全体の外側にある要素」を構成する手法である。この手法はゲーデルの不完全性定理、チューリングの停止問題の決定不能性、ラッセルのパラドックスなど、多くの基本的結果の証明で用いられている。</p>
+
+      <h2 id="computer-science">計算機科学における自己参照</h2>
+
+      <h3 id="quines">クワイン</h3>
+      <p><a href="quine.html">クワイン</a>（quine）は、自分自身のソースコードを出力するプログラムである。入力を一切受け取らず、自身の完全なコピーを標準出力に書き出す。クワインの存在は<strong>クリーネの再帰定理</strong>（Kleene's recursion theorem）によって保証されており、チューリング完全な任意のプログラミング言語でクワインを構成できる。</p>
+
+      <h3 id="metacircular-evaluator">メタ循環評価器</h3>
+      <p><a href="metacircular-evaluator.html">メタ循環評価器</a>（metacircular evaluator）は、ある言語で書かれた、その言語自身のインタプリタである。Lispにおけるevalやapplyの自己定義は、計算機科学における自己参照の古典的な例であり、「Structure and Interpretation of Computer Programs」（SICP）で詳細に解説されている。</p>
+
+      <h3 id="reflection">リフレクション</h3>
+      <p><a href="reflection-programming.html">リフレクション</a>（reflection）は、プログラムが実行時に自身の構造を検査・変更する能力である。Java の <code>java.lang.reflect</code> パッケージや Python の <code>inspect</code> モジュール、Ruby のメタプログラミング機構は、実用的な自己参照の実装である。リフレクションにより、プログラムは自身のクラス構造、メソッド、属性を動的に操作できる。</p>
+
+      <h3 id="self-modifying-code">自己変更コード</h3>
+      <p>自己変更コード（self-modifying code）は、実行中に自身の命令列を書き換えるプログラムである。初期のコンピュータでは命令とデータが同一のメモリ空間に配置されていたため一般的な手法であったが、現代ではJIT（Just-In-Time）コンパイルやウイルスのポリモーフィズムなど、特定の文脈で使われている。</p>
+
+      <h2 id="paradoxes">自己参照のパラドックス</h2>
+      <p>自己参照は多くの論理的パラドックスの源泉である。</p>
+
+      <table class="infobox">
+        <tr><td class="infobox-title" colspan="2">代表的な自己参照パラドックス</td></tr>
+        <tr><th>嘘つきのパラドックス</th><td>「この文は偽である」— 真とすると偽、偽とすると真</td></tr>
+        <tr><th>ラッセルのパラドックス</th><td>自分自身を要素として含まない集合全体の集合</td></tr>
+        <tr><th>グレリングのパラドックス</th><td>「自己記述的でない」という語は自己記述的か？</td></tr>
+        <tr><th>カリーのパラドックス</th><td>「この文が真ならば、任意の命題が真である」</td></tr>
+        <tr><th>ベリーのパラドックス</th><td>「20字以内で定義できない最小の自然数」</td></tr>
+      </table>
+
+      <p>これらのパラドックスは、形式体系の限界を示すと同時に、型理論（<a href="type-theory.html">型理論</a>）や集合論の公理化（ZFC公理系など）の発展を促した。ラッセルの型理論、タルスキの真理の階層理論、クリプキの不動点意味論は、パラドックスを回避しつつ自己参照を許容する枠組みを提供している。</p>
+
+      <h2 id="applications">現代的応用</h2>
+
+      <h3 id="ai-self-reference">人工知能と自己参照</h3>
+      <p>自己参照は現代AI研究における重要なテーマである。<a href="transformer-architecture.html">Transformerアーキテクチャ</a>の自己注意機構（self-attention）は、入力列が自分自身を参照して文脈表現を構築する仕組みであり、Self-Reference Engineの現代的実装と見なせる。また、AIシステムの自己改善（recursive self-improvement）や、自己モデリング（self-modeling）の研究は、自己参照の応用として活発に進められている。</p>
+
+      <h3 id="autopoiesis">オートポイエーシス</h3>
+      <p><a href="autopoiesis.html">オートポイエーシス</a>（autopoiesis）は、マトゥラーナとヴァレラが提唱した「自己を産出するシステム」の概念である。生命体が自身の構成要素を自ら生産し、自己を維持・再生産する過程は、生物学的な Self-Reference Engine と言える。</p>
+
+      <h3 id="strange-loops">ストレンジ・ループ</h3>
+      <p>ダグラス・ホフスタッターは著書「<a href="goedel-escher-bach.html">ゲーデル、エッシャー、バッハ</a>」（GEB）において、<strong>ストレンジ・ループ</strong>（strange loop）の概念を提唱した。これは、階層的なシステムにおいて上位と下位が予想外に交差し、自己参照的な閉ループが生じる現象を指す。エッシャーの「描く手」やバッハのカノンにおける主題の反転は、芸術における Self-Reference Engine の表現である。</p>
+
+      <h2 id="literary-context">円城塔『Self-Reference ENGINE』</h2>
+      <p>日本の作家・円城塔による小説『<strong>Self-Reference ENGINE</strong>』（2007年）は、自己参照をテーマとした実験的SF作品である。相互に参照し合う断片的なエピソードから構成され、物語自体が自己参照構造を体現している。作品内では、フロイトの夢、巨大な知性体、時間の崩壊が描かれ、自己参照と再帰がもたらす不思議な世界を文学的に表現している。本作は<strong>フィリップ・K・ディック賞</strong>特別賞を受賞し、自己参照という数学的・計算機科学的概念が文学作品として昇華された稀有な例として評価されている。</p>
+
+      <h2 id="formal-definition">形式的定義</h2>
+      <p>Self-Reference Engineを形式的に定義すると、以下のように表現できる。</p>
+      <p>組 <em>S = (Σ, δ, ρ, φ)</em> が自己参照エンジンであるとは、</p>
+      <ul>
+        <li><em>Σ</em>: 状態空間</li>
+        <li><em>δ: Σ → Σ</em>: 遷移関数</li>
+        <li><em>ρ: Σ → Desc(S)</em>: 自身の記述 <em>Desc(S)</em> への射影関数（自己記述性）</li>
+        <li><em>φ: Desc(S) × Σ → Σ</em>: 自己記述を利用して状態を更新するフィードバック関数</li>
+      </ul>
+      <p>ここで、<em>δ(σ) = φ(ρ(σ), σ)</em> が成り立つ、すなわち遷移が自己記述のフィードバックによって駆動されることが自己参照エンジンの本質的条件である。不動点 <em>σ*</em> は <em>δ(σ*) = σ*</em> を満たす状態であり、システムの平衡状態を表す。</p>
+
+      <h2 id="see-also">関連項目</h2>
+      <ul>
+        <li><a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a></li>
+        <li><a href="quine.html">クワイン（自己複製プログラム）</a></li>
+        <li><a href="fixed-point-combinator.html">不動点コンビネータ</a></li>
+        <li><a href="diagonal-argument.html">対角線論法</a></li>
+        <li><a href="metacircular-evaluator.html">メタ循環評価器</a></li>
+        <li><a href="reflection-programming.html">リフレクション（プログラミング）</a></li>
+        <li><a href="transformer-architecture.html">Transformerアーキテクチャ</a></li>
+        <li><a href="autopoiesis.html">オートポイエーシス</a></li>
+        <li><a href="goedel-escher-bach.html">ゲーデル、エッシャー、バッハ</a></li>
+        <li><a href="type-theory.html">型理論</a></li>
+      </ul>
+
+    </main>
+
+    <aside class="wiki-sidebar">
+      <div class="toc">
+        <div class="toc-title">目次</div>
+        <ul class="toc-list">
+          <li><a href="#overview">概要</a></li>
+          <li><a href="#mathematical-foundations">数学的基礎</a></li>
+          <li class="toc-h3"><a href="#goedel-numbering">ゲーデル数と自己参照</a></li>
+          <li class="toc-h3"><a href="#fixed-points">不動点定理</a></li>
+          <li class="toc-h3"><a href="#diagonal-argument">対角線論法</a></li>
+          <li><a href="#computer-science">計算機科学における自己参照</a></li>
+          <li class="toc-h3"><a href="#quines">クワイン</a></li>
+          <li class="toc-h3"><a href="#metacircular-evaluator">メタ循環評価器</a></li>
+          <li class="toc-h3"><a href="#reflection">リフレクション</a></li>
+          <li class="toc-h3"><a href="#self-modifying-code">自己変更コード</a></li>
+          <li><a href="#paradoxes">自己参照のパラドックス</a></li>
+          <li><a href="#applications">現代的応用</a></li>
+          <li class="toc-h3"><a href="#ai-self-reference">人工知能と自己参照</a></li>
+          <li class="toc-h3"><a href="#autopoiesis">オートポイエーシス</a></li>
+          <li class="toc-h3"><a href="#strange-loops">ストレンジ・ループ</a></li>
+          <li><a href="#literary-context">円城塔『Self-Reference ENGINE』</a></li>
+          <li><a href="#formal-definition">形式的定義</a></li>
+          <li><a href="#see-also">関連項目</a></li>
+        </ul>
+      </div>
+
+      <div class="related-articles">
+        <div class="related-title">関連記事</div>
+        <ul class="related-list">
+          <li><a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a></li>
+          <li><a href="quine.html">クワイン</a></li>
+          <li><a href="fixed-point-combinator.html">不動点コンビネータ</a></li>
+          <li><a href="goedel-escher-bach.html">ゲーデル、エッシャー、バッハ</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="wiki-footer">
+    <div class="footer-links">
+      <h4>リンク先</h4>
+      <ul>
+        <li><a href="goedel-incompleteness-theorems.html">ゲーデルの不完全性定理</a></li>
+        <li><a href="quine.html">クワイン</a></li>
+        <li><a href="fixed-point-combinator.html">不動点コンビネータ</a></li>
+        <li><a href="diagonal-argument.html">対角線論法</a></li>
+        <li><a href="metacircular-evaluator.html">メタ循環評価器</a></li>
+        <li><a href="reflection-programming.html">リフレクション</a></li>
+        <li><a href="transformer-architecture.html">Transformerアーキテクチャ</a></li>
+        <li><a href="autopoiesis.html">オートポイエーシス</a></li>
+        <li><a href="goedel-escher-bach.html">ゲーデル、エッシャー、バッハ</a></li>
+        <li><a href="type-theory.html">型理論</a></li>
+      </ul>
+      <h4>被リンク</h4>
+      <ul></ul>
+    </div>
+    <p style="margin-top:12px;">Auto-Wiki で自動生成</p>
+  </footer>
+</div>
+</body>
+</html>
