@@ -6,92 +6,73 @@
       "filename": "articles/self-reference-engine.html",
       "summary": "『Self-Reference ENGINE』は円城塔による連作SF小説で、「自己言及」という仕掛けを軸に、巨大知性体や入れ子構造の世界を描いた作品である。",
       "links_to": ["enjoe-toh", "jiko-genkyuu", "kyodai-chisei-tai", "ireko-kouzou", "meta-fiction"],
-      "linked_from": ["enjoe-toh", "jiko-genkyuu", "kyodai-chisei-tai", "strange-loop", "event-sre", "doukeshi-no-chou"],
-      "origin": "root",
-      "source_id": null,
-      "created_at": "2026-03-24",
-      "updated_at": "2026-03-24",
-      "expansion_status": "completed"
+      "linked_from": ["enjoe-toh", "jiko-genkyuu", "kyodai-chisei-tai", "strange-loop", "event-sre", "doukeshi-no-chou", "goedel-escher-bach", "mugen-koutai", "paradox"],
+      "origin": "root", "source_id": null, "created_at": "2026-03-24", "updated_at": "2026-03-24", "expansion_status": "completed"
     },
     "enjoe-toh": {
-      "slug": "enjoe-toh",
-      "title": "円城塔",
-      "filename": "articles/enjoe-toh.html",
-      "summary": "円城塔（えんじょう・とう、1972年 - ）は、日本の小説家・SF作家。物理学の研究者としての経歴を持ち、科学や数学の考え方を小説に取り入れた実験的な作風で知られる。",
+      "slug": "enjoe-toh", "title": "円城塔", "filename": "articles/enjoe-toh.html",
+      "summary": "円城塔（えんじょう・とう、1972年 - ）は、日本の小説家・SF作家。物理学の研究者としての経歴を持ち、実験的な作風で知られる。",
       "links_to": ["self-reference-engine", "doukeshi-no-chou", "akutagawa-shou", "sf-bungaku", "postmodern-bungaku", "shisha-no-teikoku"],
-      "linked_from": ["self-reference-engine", "jiko-genkyuu", "kyodai-chisei-tai", "strange-loop", "event-sre", "doukeshi-no-chou"],
-      "origin": "expanded",
-      "source_id": "self-reference-engine",
-      "created_at": "2026-03-24",
-      "updated_at": "2026-03-24",
-      "expansion_status": "completed"
+      "linked_from": ["self-reference-engine", "jiko-genkyuu", "kyodai-chisei-tai", "strange-loop", "event-sre", "doukeshi-no-chou", "goedel-escher-bach", "mugen-koutai", "paradox"],
+      "origin": "expanded", "source_id": "self-reference-engine", "created_at": "2026-03-24", "updated_at": "2026-03-24", "expansion_status": "completed"
     },
     "jiko-genkyuu": {
-      "slug": "jiko-genkyuu",
-      "title": "自己言及",
-      "filename": "articles/jiko-genkyuu.html",
-      "summary": "自己言及（じこげんきゅう）とは、ある文章・物語・システムなどが「自分自身」について述べることを指す。『Self-Reference ENGINE』の中心的なテーマである。",
+      "slug": "jiko-genkyuu", "title": "自己言及", "filename": "articles/jiko-genkyuu.html",
+      "summary": "自己言及とは、ある文章・物語・システムなどが「自分自身」について述べることを指す。『Self-Reference ENGINE』の中心的テーマ。",
       "links_to": ["self-reference-engine", "enjoe-toh", "kyodai-chisei-tai", "ireko-kouzou", "meta-fiction", "paradox", "usotsuki-no-paradox", "goedel-incompleteness", "strange-loop"],
-      "linked_from": ["self-reference-engine", "kyodai-chisei-tai", "strange-loop", "event-sre", "doukeshi-no-chou"],
-      "origin": "expanded",
-      "source_id": "self-reference-engine",
-      "created_at": "2026-03-24",
-      "updated_at": "2026-03-24",
-      "expansion_status": "completed"
+      "linked_from": ["self-reference-engine", "kyodai-chisei-tai", "strange-loop", "event-sre", "doukeshi-no-chou", "goedel-escher-bach", "mugen-koutai", "paradox"],
+      "origin": "expanded", "source_id": "self-reference-engine", "created_at": "2026-03-24", "updated_at": "2026-03-24", "expansion_status": "completed"
     },
     "kyodai-chisei-tai": {
-      "slug": "kyodai-chisei-tai",
-      "title": "巨大知性体",
-      "filename": "articles/kyodai-chisei-tai.html",
-      "summary": "巨大知性体は、円城塔の小説『Self-Reference ENGINE』に繰り返し登場する存在。人間をはるかに超えた知的能力を持ち、現実の構造や時間の流れそのものを操作できる力を持つ。",
+      "slug": "kyodai-chisei-tai", "title": "巨大知性体", "filename": "articles/kyodai-chisei-tai.html",
+      "summary": "巨大知性体は、『Self-Reference ENGINE』に繰り返し登場する存在。人間をはるかに超えた知的能力を持つ。",
       "links_to": ["self-reference-engine", "enjoe-toh", "jiko-genkyuu", "ireko-kouzou", "meta-fiction", "cho-chisei", "mugen-koutai", "event-sre", "gijutsu-teki-tokuiten"],
-      "linked_from": ["self-reference-engine", "jiko-genkyuu", "strange-loop", "event-sre"],
-      "origin": "expanded",
-      "source_id": "self-reference-engine",
-      "created_at": "2026-03-24",
-      "updated_at": "2026-03-24",
-      "expansion_status": "completed"
+      "linked_from": ["self-reference-engine", "jiko-genkyuu", "strange-loop", "event-sre", "goedel-escher-bach", "mugen-koutai", "paradox"],
+      "origin": "expanded", "source_id": "self-reference-engine", "created_at": "2026-03-24", "updated_at": "2026-03-24", "expansion_status": "completed"
     },
     "strange-loop": {
-      "slug": "strange-loop",
-      "title": "ストレンジループ",
-      "filename": "articles/strange-loop.html",
-      "summary": "ストレンジループ（奇妙なループ）とは、あるシステムの階層を順に上がっていくと、いつのまにか出発点に戻ってきてしまう不思議な構造のこと。",
+      "slug": "strange-loop", "title": "ストレンジループ", "filename": "articles/strange-loop.html",
+      "summary": "ストレンジループとは、あるシステムの階層を順に上がっていくと、いつのまにか出発点に戻る不思議な構造。",
       "links_to": ["jiko-genkyuu", "self-reference-engine", "enjoe-toh", "kyodai-chisei-tai", "ireko-kouzou", "meta-fiction", "goedel-escher-bach", "escher", "ishiki-to-jiko-ninshiki", "feedback"],
-      "linked_from": ["jiko-genkyuu", "event-sre"],
-      "origin": "expanded",
-      "source_id": "jiko-genkyuu",
-      "created_at": "2026-03-24",
-      "updated_at": "2026-03-24",
-      "expansion_status": "completed"
+      "linked_from": ["jiko-genkyuu", "event-sre", "goedel-escher-bach", "mugen-koutai", "paradox"],
+      "origin": "expanded", "source_id": "jiko-genkyuu", "created_at": "2026-03-24", "updated_at": "2026-03-24", "expansion_status": "completed"
     },
     "event-sre": {
-      "slug": "event-sre",
-      "title": "イベント（Self-Reference ENGINE）",
-      "filename": "articles/event-sre.html",
-      "summary": "イベントは、『Self-Reference ENGINE』において現実そのものの構造を根本から変えてしまう大規模な出来事を指す。巨大知性体の活動に起因し、因果律すらも書き換える。",
+      "slug": "event-sre", "title": "イベント（Self-Reference ENGINE）", "filename": "articles/event-sre.html",
+      "summary": "イベントは、『Self-Reference ENGINE』において現実の構造を根本から変える大規模な出来事。巨大知性体の活動に起因する。",
       "links_to": ["self-reference-engine", "enjoe-toh", "kyodai-chisei-tai", "jiko-genkyuu", "ireko-kouzou", "strange-loop", "meta-fiction", "inga-ritsu", "hi-senkei-monogatari", "jikan-to-monogatari"],
-      "linked_from": ["kyodai-chisei-tai"],
-      "origin": "expanded",
-      "source_id": "kyodai-chisei-tai",
-      "created_at": "2026-03-24",
-      "updated_at": "2026-03-24",
-      "expansion_status": "completed"
+      "linked_from": ["kyodai-chisei-tai", "mugen-koutai", "paradox"],
+      "origin": "expanded", "source_id": "kyodai-chisei-tai", "created_at": "2026-03-24", "updated_at": "2026-03-24", "expansion_status": "completed"
     },
     "doukeshi-no-chou": {
-      "slug": "doukeshi-no-chou",
-      "title": "道化師の蝶",
-      "filename": "articles/doukeshi-no-chou.html",
-      "summary": "『道化師の蝶』は円城塔による短編小説で、2012年に第146回芥川賞を受賞。翻訳によって文章の意味が変わる現象を軸に、言葉とは何かを問いかける物語。",
+      "slug": "doukeshi-no-chou", "title": "道化師の蝶", "filename": "articles/doukeshi-no-chou.html",
+      "summary": "『道化師の蝶』は円城塔の芥川賞受賞作。翻訳によって文章の意味が変わる現象を軸に、言葉とは何かを問いかける物語。",
       "links_to": ["enjoe-toh", "self-reference-engine", "akutagawa-shou", "meta-fiction", "jiko-genkyuu", "ireko-kouzou", "honyaku-to-gengo", "jikken-bungaku", "gengo-to-identity"],
       "linked_from": ["enjoe-toh"],
-      "origin": "expanded",
-      "source_id": "enjoe-toh",
-      "created_at": "2026-03-24",
-      "updated_at": "2026-03-24",
-      "expansion_status": "completed"
+      "origin": "expanded", "source_id": "enjoe-toh", "created_at": "2026-03-24", "updated_at": "2026-03-24", "expansion_status": "completed"
+    },
+    "goedel-escher-bach": {
+      "slug": "goedel-escher-bach", "title": "ゲーデル・エッシャー・バッハ", "filename": "articles/goedel-escher-bach.html",
+      "summary": "『ゲーデル・エッシャー・バッハ』はホフスタッターのピューリッツァー賞受賞作。数学・美術・音楽に共通するストレンジループを解明した名著。",
+      "links_to": ["strange-loop", "jiko-genkyuu", "escher", "ireko-kouzou", "self-reference-engine", "enjoe-toh", "kyodai-chisei-tai", "meta-fiction", "goedel-incompleteness"],
+      "linked_from": ["strange-loop", "paradox"],
+      "origin": "expanded", "source_id": "strange-loop", "created_at": "2026-03-24", "updated_at": "2026-03-24", "expansion_status": "completed"
+    },
+    "mugen-koutai": {
+      "slug": "mugen-koutai", "title": "無限後退", "filename": "articles/mugen-koutai.html",
+      "summary": "無限後退とは、説明にさらなる説明が必要になり終わりなく続いてしまう現象。巨大知性体の階層構造と密接に関わる。",
+      "links_to": ["self-reference-engine", "enjoe-toh", "kyodai-chisei-tai", "jiko-genkyuu", "ireko-kouzou", "strange-loop", "event-sre", "meta-fiction", "paradox", "awase-kagami", "mugen", "daiichi-genin", "tetsugaku-teki-kaigi"],
+      "linked_from": ["kyodai-chisei-tai"],
+      "origin": "expanded", "source_id": "kyodai-chisei-tai", "created_at": "2026-03-24", "updated_at": "2026-03-24", "expansion_status": "completed"
+    },
+    "paradox": {
+      "slug": "paradox", "title": "パラドックス", "filename": "articles/paradox.html",
+      "summary": "パラドックスとは、正しそうな前提から矛盾した結論が導かれる問題。自己言及と密接に関わり、物語世界を動かす原動力として描かれる。",
+      "links_to": ["jiko-genkyuu", "self-reference-engine", "enjoe-toh", "usotsuki-no-paradox", "russell-no-paradox", "goedel-incompleteness", "strange-loop", "kyodai-chisei-tai", "event-sre", "goedel-escher-bach", "time-paradox", "zeno-no-paradox"],
+      "linked_from": ["jiko-genkyuu", "mugen-koutai"],
+      "origin": "expanded", "source_id": "jiko-genkyuu", "created_at": "2026-03-24", "updated_at": "2026-03-24", "expansion_status": "completed"
     }
   },
   "root_id": "self-reference-engine",
-  "total_count": 7
+  "total_count": 10
 }

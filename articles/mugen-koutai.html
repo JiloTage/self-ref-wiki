@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>無限後退 - Auto-Wiki</title>
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+</head>
+<body>
+<div class="wiki-wrapper">
+  <header class="wiki-header">
+    <a href="../index.html" class="site-title">Auto-Wiki</a>
+    <nav>
+      <a href="../index.html">トップ</a>
+      <a href="../index.html#article-list">記事一覧</a>
+      <a href="../index.html#graph">サイトグラフ</a>
+    </nav>
+  </header>
+  <div class="breadcrumb"><a href="../index.html">Auto-Wiki</a> &gt; 無限後退</div>
+  <div class="wiki-content">
+    <main class="wiki-main">
+      <h1 class="article-title">無限後退</h1>
+      <div class="article-meta">最終更新: 2026-03-24</div>
+      <div class="article-summary"><b>無限後退</b>（むげんこうたい、英: infinite regress）とは、何かを説明しようとしたとき、その説明自体にまた説明が必要になり、さらにその説明にも説明が必要になり……と、終わりなく続いてしまう現象のことである。哲学や論理学における古典的な問題であり、<a href="enjoe-toh.html">円城塔</a>の小説『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』では、<a href="kyodai-chisei-tai.html">巨大知性体</a>の階層構造や<a href="ireko-kouzou.html">入れ子構造</a>を通じてこのテーマが繰り返し描かれている。</div>
+
+      <h2 id="definition">無限後退とは何か</h2>
+      <p><b>無限後退</b>を一言でいえば、「説明の説明の説明の……が永遠に終わらない」ということである。</p>
+      <p>たとえば、子どもが「なぜ空は青いの？」と聞いてきたとしよう。「光が散乱するからだよ」と答えると、「なぜ散乱するの？」と返される。「空気中の分子にぶつかるからだよ」と答えると、今度は「なぜぶつかるの？」と聞かれる。この「なぜ？」は原理的にはどこまでも続く。どんな答えを出しても、さらにその「なぜ」を問うことができるからだ。</p>
+      <p>これが無限後退の基本的な構造である。ある問いに対する答えが、新しい問いを生み出し、その答えがまた新しい問いを生み出す。この連鎖に「最終的な答え」が存在しないとき、私たちは無限後退に陥っている。</p>
+
+      <h2 id="turtles">亀の上の亀――もっとも有名なたとえ話</h2>
+      <p>無限後退を説明するもっとも有名なたとえ話が、「<a href="awase-kagami.html">亀の塔</a>」である。</p>
+      <p>ある哲学者が講演をしていると、聴衆の一人が「地球は何の上に乗っているのですか？」と質問した。哲学者が「大きな亀の上に乗っています」と答えると、聴衆は「では、その亀は何の上に乗っているのですか？」と聞いた。哲学者は「もっと大きな亀の上です」と答えた。「では、その亀は……？」。哲学者はため息をついて言った――「お嬢さん、その下はずっと亀ですよ（It's turtles all the way down）」。</p>
+      <p>この逸話は、英語圏で「turtles all the way down」という慣用句として広く知られている。地球を支える「土台」を探そうとすると、どの土台にもさらに土台が必要になり、結局どこまでいっても「亀の上に亀」が続いてしまう。これこそが無限後退の本質を見事に示したたとえ話である。</p>
+
+      <div class="diagram-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440" width="480" height="440">
+          <defs>
+            <marker id="arrow-down" viewBox="0 -5 10 10" refX="9" refY="0" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0,-5L10,0L0,5" fill="#a2a9b1"/>
+            </marker>
+          </defs>
+
+          <!-- Background -->
+          <rect x="0" y="0" width="480" height="440" rx="6" fill="#f8f9fa" stroke="#a2a9b1" stroke-width="2"/>
+          <text x="240" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#202122" font-weight="bold">無限後退のイメージ：亀の上の亀</text>
+
+          <!-- Earth (top) -->
+          <ellipse cx="240" cy="68" rx="70" ry="24" fill="#d4e4fc" stroke="#36c" stroke-width="1.5"/>
+          <text x="240" y="73" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122" font-weight="bold">地球</text>
+
+          <!-- Turtle 1 -->
+          <rect x="160" y="100" width="160" height="48" rx="20" fill="#e8f0fe" stroke="#36c" stroke-width="1.5"/>
+          <text x="240" y="120" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122">亀 1</text>
+          <text x="240" y="138" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#36c">「地球を支えている」</text>
+
+          <!-- Turtle 2 -->
+          <rect x="140" y="168" width="200" height="48" rx="20" fill="#d4e4fc" stroke="#36c" stroke-width="1.5"/>
+          <text x="240" y="188" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122">亀 2</text>
+          <text x="240" y="206" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#36c">「亀1を支えている」</text>
+
+          <!-- Turtle 3 -->
+          <rect x="120" y="236" width="240" height="48" rx="20" fill="#c0d4f8" stroke="#36c" stroke-width="1.5"/>
+          <text x="240" y="256" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122">亀 3</text>
+          <text x="240" y="274" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#36c">「亀2を支えている」</text>
+
+          <!-- Turtle 4 (fading) -->
+          <rect x="100" y="304" width="280" height="48" rx="20" fill="#f8f9fa" stroke="#a2a9b1" stroke-width="1" stroke-dasharray="5,4"/>
+          <text x="240" y="324" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#a2a9b1">亀 4</text>
+          <text x="240" y="342" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a2a9b1">「亀3を支えている」</text>
+
+          <!-- Dots indicating infinity -->
+          <text x="240" y="375" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#a2a9b1">⋮</text>
+          <text x="240" y="400" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#a2a9b1" font-style="italic">ずっと亀です（It's turtles all the way down）</text>
+
+          <!-- Arrows between layers -->
+          <line x1="240" y1="92" x2="240" y2="100" stroke="#a2a9b1" stroke-width="1.5"/>
+          <line x1="240" y1="148" x2="240" y2="168" stroke="#a2a9b1" stroke-width="1.5"/>
+          <line x1="240" y1="216" x2="240" y2="236" stroke="#a2a9b1" stroke-width="1.5"/>
+          <line x1="240" y1="284" x2="240" y2="304" stroke="#a2a9b1" stroke-width="1.5"/>
+
+          <!-- Side annotation -->
+          <path d="M400,95 L420,95 L420,360 L400,360" fill="none" stroke="#36c" stroke-width="1.5" stroke-dasharray="6,3"/>
+          <text x="438" y="230" text-anchor="start" font-family="sans-serif" font-size="10" fill="#36c" writing-mode="tb">無限後退</text>
+        </svg>
+        <div class="diagram-caption">図：「亀の上の亀」のたとえ。地球を支える亀、その亀を支える亀……と、土台の下にさらに土台が必要になり、連鎖が永遠に続いてしまう。</div>
+      </div>
+
+      <h2 id="philosophy">哲学における無限後退</h2>
+      <p>無限後退は、哲学の歴史においてとても重要な問題として繰り返し議論されてきた。「何かを正しいと言うためには、その根拠が必要だ。しかしその根拠もまた、別の根拠によって支えられなければならない」。この問題は「正当化の問題」と呼ばれている。</p>
+
+      <h3 id="justification">正当化の無限後退</h3>
+      <p>たとえば、「太陽は東から昇る」という知識があるとする。「なぜそう言えるのか？」と聞かれたら、「毎朝観察しているから」と答えるだろう。しかし、「なぜ過去の観察が未来を保証するのか？」と問われると、また別の根拠が必要になる。このように、知識の根拠をたどっていくと、どこかで「これ以上さかのぼれない出発点」が必要になるか、あるいは無限に根拠を求め続けることになる。</p>
+      <p>古代ギリシャの哲学者アリストテレスは、無限後退を避けるために「<a href="daiichi-genin.html">第一原因</a>」（それ自体は何にも原因を持たない最初の原因）が必要だと考えた。一方で、<a href="tetsugaku-teki-kaigi.html">哲学的懐疑</a>の立場からは、「本当にそのような出発点が存在するのか？」という疑問も提起されている。</p>
+
+      <h3 id="trilemma">ミュンヒハウゼンのトリレンマ</h3>
+      <p>ドイツの哲学者ハンス・アルバートは、知識の正当化には三つの選択肢しかないと指摘した。これを「ミュンヒハウゼンのトリレンマ」という。</p>
+      <ul>
+        <li><b>無限後退</b>：根拠の根拠の根拠の……と永遠に続ける</li>
+        <li><b>循環論法</b>：AはBが根拠、BはAが根拠、と堂々巡りをする</li>
+        <li><b>独断的打ち切り</b>：どこかで「これは自明だから」と議論を打ち切る</li>
+      </ul>
+      <p>どの選択肢にも問題があるというのがトリレンマの核心であり、無限後退はこの三つの選択肢のうちのひとつとして位置づけられている。</p>
+
+      <h2 id="in-sre">『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』における無限後退</h2>
+      <p><a href="enjoe-toh.html">円城塔</a>の小説『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』は、無限後退というテーマをさまざまなかたちで物語に織り込んでいる。</p>
+
+      <h3 id="kyodai-chisei">巨大知性体の階層と無限後退</h3>
+      <p>もっとも直接的に無限後退が表れているのは、<a href="kyodai-chisei-tai.html">巨大知性体</a>のスケール構造である。作中には惑星規模の巨大知性体が登場するが、その巨大知性体もまた、さらに大きな構造の中に含まれている。そしてその「さらに大きな構造」もまた、もっと大きな何かの一部にすぎない。</p>
+      <p>これは「亀の上の亀」とまったく同じ構造である。知性体の上にさらに大きな知性体がいて、その上にもまた知性体がいる。どこまでたどっても「最も大きな知性体」にたどり着けないかもしれないという可能性が、作品に底なしの深みを与えている。</p>
+
+      <h3 id="narrative-regress">物語構造の無限後退</h3>
+      <p>無限後退は、物語の構造そのものにも表れている。ある<a href="event-sre.html">イベント</a>を説明するためには別のイベントを参照しなければならず、そのイベントを理解するためにはまた別のイベントが必要になる。物語を「完全に理解する」ためには、無限に物語を読み続けなければならないような構造が意図的に作られているのだ。</p>
+      <p>これは<a href="meta-fiction.html">メタフィクション</a>の手法のひとつでもある。物語が自分自身を説明しようとすると、その説明もまた物語の一部になる。物語についての物語についての物語……という無限後退が生まれるのである。</p>
+
+      <h2 id="related-concepts">関連する概念との関係</h2>
+
+      <h3 id="ireko">入れ子構造と無限後退</h3>
+      <p><a href="ireko-kouzou.html">入れ子構造</a>と無限後退は、非常に近い関係にある。箱の中に小さな箱があり、その中にさらに小さな箱がある、という<a href="ireko-kouzou.html">入れ子構造</a>を、限りなく続けていったらどうなるだろうか。それが無限後退である。入れ子構造が「構造のかたち」を表しているのに対して、無限後退はそれが「終わらない」という性質を強調した言い方だと言える。</p>
+
+      <h3 id="jiko-genkyuu">自己言及と無限後退</h3>
+      <p><a href="jiko-genkyuu.html">自己言及</a>もまた、しばしば無限後退を引き起こす。「この文は正しい」という文について、「本当に正しいのか？」を確認するためには、その文自体を参照するしかない。すると「その参照は正しいのか？」と問わなければならず、そのためにはまた元の文を……という具合に、自分自身を参照し続ける無限のループに陥る。</p>
+      <p><a href="paradox.html">パラドックス</a>の多くは、<a href="jiko-genkyuu.html">自己言及</a>が無限後退を引き起こすことで生じている。「この文は嘘である」という嘘つきのパラドックスは、真偽の判定が無限に行ったり来たりする無限後退の典型例である。</p>
+
+      <h3 id="strange-loop">ストレンジループという「脱出口」</h3>
+      <p>無限後退が「どこまでも続いて終わらない」のに対して、<a href="strange-loop.html">ストレンジループ</a>は一種の「脱出口」を提供する。ストレンジループでは、階層を上がり続ける（または下がり続ける）と、いつのまにか出発点に戻ってくる。つまり、無限に直線的に続くのではなく、ループして閉じるのである。</p>
+      <p>ダグラス・ホフスタッターが提唱した<a href="strange-loop.html">ストレンジループ</a>の概念は、無限後退に陥りそうな構造が「折り返す」ことで、無限ではなく有限の中に収まる仕組みを説明している。『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』においても、巨大知性体の階層がどこかで折り返し、最下層と最上層がつながっているのではないか、という読みが可能であり、それこそが作品の「Self-Reference（自己言及）」というタイトルの意味するところかもしれない。</p>
+
+      <h2 id="everyday">日常にひそむ無限後退</h2>
+      <p>無限後退は哲学や小説の中だけのものではない。実は私たちの日常にも、無限後退の構造はあちこちに潜んでいる。</p>
+
+      <h3 id="mirrors"><a href="awase-kagami.html">合わせ鏡</a></h3>
+      <p>二枚の鏡を向かい合わせに置くと、鏡の中に鏡が映り、さらにその鏡の中にも鏡が映り……と、像が<a href="mugen.html">無限</a>に続いていく。これは無限後退をもっとも視覚的にわかりやすく体験できる例である。どこまで奥を覗き込んでも、「最後の像」にはたどり着けない。</p>
+
+      <h3 id="watchmen">「誰が見張りを見張るのか？」</h3>
+      <p>古代ローマの詩人ユウェナリスの言葉「Quis custodiet ipsos custodes?（誰が見張り番を見張るのか？）」は、権力の監視に関する無限後退の問題を端的に表している。見張りが必要なら、その見張りにも見張りが必要で、さらにその見張りにも……。</p>
+      <p>この問いは現代でも、権力のチェック機関をチェックする機関は誰がチェックするのか、という形で繰り返し議論されている。</p>
+
+      <h3 id="dictionary">辞書の循環</h3>
+      <p>辞書で言葉の意味を調べると、その説明にまた知らない言葉が出てくる。その言葉を調べると、また別の言葉が出てくる。理論的には、すべての言葉の意味を「知らない状態」から理解しようとすると、無限に辞書を引き続けなければならない（実際には循環して元に戻るので、正確には無限後退ではなく循環だが、終わりのない連鎖という点では似た構造を持っている）。</p>
+
+      <h3 id="recursive-definition">再帰的な定義</h3>
+      <p>コンピュータプログラミングの世界では、「再帰（recursion）」が無限後退と深く関わっている。「再帰とは何か」を調べたら「再帰を参照せよ」と書いてあった、というプログラマーの間で有名な冗談がある。終了条件のない再帰はまさに無限後退であり、コンピュータの場合はスタックオーバーフロー（メモリ不足）によって強制的に止まることになる。</p>
+
+      <h2 id="summary">まとめ</h2>
+      <p>無限後退とは、「根拠の根拠の根拠」「説明の説明の説明」がどこまでも続いて終わらない現象である。哲学では知識の正当化の問題として古くから議論されており、日常でも<a href="awase-kagami.html">合わせ鏡</a>や「誰が見張りを見張るのか」といったかたちで現れる。</p>
+      <p>『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』では、<a href="kyodai-chisei-tai.html">巨大知性体</a>の際限なく大きくなる階層構造として無限後退が描かれ、<a href="ireko-kouzou.html">入れ子構造</a>や<a href="jiko-genkyuu.html">自己言及</a>と結びつけられている。一方で、<a href="strange-loop.html">ストレンジループ</a>がこの無限後退を「折り返す」ことで有限の構造に変える可能性も示唆されており、作品全体がこの「無限に続くのか、それとも戻ってくるのか」という緊張関係の上に成り立っている。</p>
+
+    </main>
+
+    <aside class="wiki-sidebar">
+      <div class="toc">
+        <div class="toc-title">目次</div>
+        <ul class="toc-list">
+          <li><a href="#definition">無限後退とは何か</a></li>
+          <li><a href="#turtles">亀の上の亀――もっとも有名なたとえ話</a></li>
+          <li><a href="#philosophy">哲学における無限後退</a></li>
+          <li class="toc-h3"><a href="#justification">正当化の無限後退</a></li>
+          <li class="toc-h3"><a href="#trilemma">ミュンヒハウゼンのトリレンマ</a></li>
+          <li><a href="#in-sre">『Self-Reference ENGINE』における無限後退</a></li>
+          <li class="toc-h3"><a href="#kyodai-chisei">巨大知性体の階層と無限後退</a></li>
+          <li class="toc-h3"><a href="#narrative-regress">物語構造の無限後退</a></li>
+          <li><a href="#related-concepts">関連する概念との関係</a></li>
+          <li class="toc-h3"><a href="#ireko">入れ子構造と無限後退</a></li>
+          <li class="toc-h3"><a href="#jiko-genkyuu">自己言及と無限後退</a></li>
+          <li class="toc-h3"><a href="#strange-loop">ストレンジループという「脱出口」</a></li>
+          <li><a href="#everyday">日常にひそむ無限後退</a></li>
+          <li class="toc-h3"><a href="#mirrors">合わせ鏡</a></li>
+          <li class="toc-h3"><a href="#watchmen">「誰が見張りを見張るのか？」</a></li>
+          <li class="toc-h3"><a href="#dictionary">辞書の循環</a></li>
+          <li class="toc-h3"><a href="#recursive-definition">再帰的な定義</a></li>
+          <li><a href="#summary">まとめ</a></li>
+        </ul>
+      </div>
+
+      <div class="related-articles">
+        <div class="related-title">関連記事</div>
+        <ul class="related-list">
+          <li><a href="self-reference-engine.html">Self-Reference ENGINE</a></li>
+          <li><a href="enjoe-toh.html">円城塔</a></li>
+          <li><a href="kyodai-chisei-tai.html">巨大知性体</a></li>
+          <li><a href="jiko-genkyuu.html">自己言及</a></li>
+          <li><a href="ireko-kouzou.html">入れ子構造と再帰</a></li>
+          <li><a href="strange-loop.html">ストレンジループ</a></li>
+          <li><a href="paradox.html">パラドックス</a></li>
+          <li><a href="meta-fiction.html">メタフィクション</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="wiki-footer">
+    <div class="footer-links">
+      <h4>リンク先</h4>
+      <ul>
+        <li><a href="self-reference-engine.html">Self-Reference ENGINE</a></li>
+        <li><a href="enjoe-toh.html">円城塔</a></li>
+        <li><a href="kyodai-chisei-tai.html">巨大知性体</a></li>
+        <li><a href="jiko-genkyuu.html">自己言及</a></li>
+        <li><a href="ireko-kouzou.html">入れ子構造と再帰</a></li>
+        <li><a href="strange-loop.html">ストレンジループ</a></li>
+        <li><a href="event-sre.html">イベント（Self-Reference ENGINE）</a></li>
+        <li><a href="meta-fiction.html">メタフィクション</a></li>
+        <li><a href="paradox.html">パラドックス</a></li>
+        <li><a href="awase-kagami.html">合わせ鏡</a></li>
+        <li><a href="mugen.html">無限</a></li>
+        <li><a href="daiichi-genin.html">第一原因</a></li>
+        <li><a href="tetsugaku-teki-kaigi.html">哲学的懐疑</a></li>
+      </ul>
+      <h4>被リンク</h4>
+      <ul><li><a href="kyodai-chisei-tai.html">巨大知性体</a></li></ul>
+    </div>
+    <p style="margin-top:12px;">Auto-Wiki で自動生成</p>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>パラドックス - Auto-Wiki</title>
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+</head>
+<body>
+<div class="wiki-wrapper">
+  <header class="wiki-header">
+    <a href="../index.html" class="site-title">Auto-Wiki</a>
+    <nav>
+      <a href="../index.html">トップ</a>
+      <a href="../index.html#article-list">記事一覧</a>
+      <a href="../index.html#graph">サイトグラフ</a>
+    </nav>
+  </header>
+  <div class="breadcrumb">
+    <a href="../index.html">Auto-Wiki</a> &gt; パラドックス
+  </div>
+  <div class="wiki-content">
+    <main class="wiki-main">
+      <h1 class="article-title">パラドックス</h1>
+      <div class="article-meta">最終更新: 2026-03-24</div>
+      <div class="article-summary"><b>パラドックス</b>（英: paradox、逆説）とは、一見すると正しそうな前提や推論から、矛盾した結論や常識に反する結論が導かれてしまう問題のことである。単なる間違いではなく、その矛盾の中にこそ深い真実が隠されていることが多い。<a href="jiko-genkyuu.html">自己言及</a>と密接に関わっており、『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』では物語世界そのものを動かす原動力として描かれている。</div>
+
+      <h2 id="definition">パラドックスとは</h2>
+      <p><b>パラドックス</b>を日常的な言葉で言い換えれば、「筋が通っているはずなのに、おかしな結論になってしまう話」のことだ。</p>
+      <p>たとえば、こんな場面を想像してほしい。あなたの友人が「私の言うことは全部嘘だよ」と言ったとする。もしこの発言が本当なら、友人の言うことはすべて嘘のはずだから、この発言自体も嘘でなければならない。しかし嘘だとすると、「全部嘘」が嘘なのだから、本当のことも言っていることになり、最初の仮定と矛盾する。</p>
+      <p>このように、どちらに転んでも矛盾してしまう。これがパラドックスである。</p>
+      <p>パラドックスは古代ギリシャの時代から哲学者たちを悩ませてきた。しかし、ただの頭の体操ではない。パラドックスに真剣に向き合うことで、論理学や数学、物理学に革命的な進歩がもたらされてきた。矛盾があるように見える場所には、私たちの「考え方の枠組み」の限界が隠れているのだ。</p>
+
+      <h2 id="types">パラドックスの種類</h2>
+      <p>パラドックスにはさまざまな種類がある。ここでは代表的なものをいくつかのグループに分けて紹介しよう。</p>
+
+      <h3 id="self-referential-paradoxes">自己言及のパラドックス</h3>
+      <p>もっとも有名なパラドックスの多くは、<a href="jiko-genkyuu.html">自己言及</a>――つまり「自分自身について述べる」ことから生まれる。</p>
+      <p><b><a href="usotsuki-no-paradox.html">嘘つきのパラドックス</a></b>はその代表例である。「この文は嘘である」というたった一文が、真でも偽でもありえないという矛盾を引き起こす。この文は自分自身の真偽について述べている（自己言及している）からこそ、逃げ場のない矛盾に陥るのだ。</p>
+      <p><b><a href="russell-no-paradox.html">ラッセルのパラドックス</a></b>も自己言及から生まれる。「自分自身を要素として含まない集合をすべて集めた集合」を考えると、その集合は自分自身を含むのか含まないのか、どちらにしても矛盾してしまう。20世紀初頭、数学者バートランド・ラッセルがこの問題を発見し、当時の数学の基礎を揺るがした。</p>
+
+      <div class="diagram-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 320" width="520" height="320">
+          <defs>
+            <marker id="arr-blue" viewBox="0 -5 10 10" refX="9" refY="0" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M0,-5L10,0L0,5" fill="#36c"/>
+            </marker>
+            <marker id="arr-orange" viewBox="0 -5 10 10" refX="9" refY="0" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M0,-5L10,0L0,5" fill="#e65100"/>
+            </marker>
+          </defs>
+
+          <!-- Background -->
+          <rect x="0" y="0" width="520" height="320" rx="8" fill="#f8f9fa" stroke="#a2a9b1" stroke-width="1.5"/>
+          <text x="260" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#202122" font-weight="bold">嘘つきのパラドックス ── 終わらないループ</text>
+
+          <!-- "This statement is false" central box -->
+          <rect x="145" y="55" width="230" height="42" rx="6" fill="#fff" stroke="#36c" stroke-width="2"/>
+          <text x="260" y="80" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#202122" font-weight="bold">「この文は嘘である」</text>
+
+          <!-- TRUE box (left) -->
+          <rect x="40" y="145" width="140" height="50" rx="6" fill="#e8f0fe" stroke="#36c" stroke-width="1.5"/>
+          <text x="110" y="166" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122" font-weight="bold">本当（真）だとすると</text>
+          <text x="110" y="183" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#36c">→ 内容通り嘘になる</text>
+
+          <!-- FALSE box (right) -->
+          <rect x="340" y="145" width="140" height="50" rx="6" fill="#fff3e0" stroke="#e68a00" stroke-width="1.5"/>
+          <text x="410" y="166" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122" font-weight="bold">嘘（偽）だとすると</text>
+          <text x="410" y="183" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#e65100">→ 嘘の否定で本当になる</text>
+
+          <!-- Arrow: statement -> TRUE -->
+          <path d="M200,97 L130,145" fill="none" stroke="#36c" stroke-width="2" marker-end="url(#arr-blue)"/>
+          <text x="140" y="120" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#36c">もし真なら</text>
+
+          <!-- Arrow: statement -> FALSE -->
+          <path d="M320,97 L390,145" fill="none" stroke="#e65100" stroke-width="2" marker-end="url(#arr-orange)"/>
+          <text x="380" y="120" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e65100">もし偽なら</text>
+
+          <!-- Arrow: TRUE -> FALSE (矛盾!) -->
+          <path d="M180,175 L340,175" fill="none" stroke="#36c" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arr-orange)"/>
+          <text x="260" y="168" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#c62828" font-weight="bold">矛盾！</text>
+
+          <!-- Arrow: FALSE -> TRUE (矛盾!) -->
+          <path d="M340,185 L180,185" fill="none" stroke="#e65100" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arr-blue)"/>
+          <text x="260" y="206" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#c62828" font-weight="bold">矛盾！</text>
+
+          <!-- Looping arrow below -->
+          <path d="M110,195 C110,260 410,260 410,195" fill="none" stroke="#a2a9b1" stroke-width="2" stroke-dasharray="8,4" marker-end="url(#arr-blue)"/>
+          <text x="260" y="255" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#72777d">真 → 偽 → 真 → 偽 → ……永遠にループ</text>
+
+          <!-- Bottom caption -->
+          <rect x="100" y="278" width="320" height="28" rx="4" fill="#fff" stroke="#a2a9b1" stroke-width="1"/>
+          <text x="260" y="296" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#202122">自分自身に言及する（自己言及する）ことで逃げ場のない矛盾が生まれる</text>
+        </svg>
+        <div class="diagram-caption">図：嘘つきのパラドックスの構造。「この文は嘘である」が真だとすると偽になり、偽だとすると真になる。自己言及が原因で、真偽が永遠にループし続ける。</div>
+      </div>
+
+      <h3 id="time-paradoxes">時間のパラドックス（<a href="time-paradox.html">タイムパラドックス</a>）</h3>
+      <p>もしタイムマシンで過去に行けるとしたら、どんな問題が起きるだろうか。もっとも有名なのが<b>祖父のパラドックス</b>（おじいさんのパラドックス）である。</p>
+      <p>あなたがタイムマシンで過去に行き、まだ若いおじいさんが結婚する前に出会いを妨げたとする。するとおじいさんは結婚せず、あなたのお父さん（またはお母さん）は生まれず、したがってあなた自身も生まれないはずだ。しかし、あなたが生まれなければ、過去に行っておじいさんの出会いを妨げることもできないから、おじいさんは普通に結婚して……という具合に堂々巡りになる。</p>
+      <p>タイムパラドックスが興味深いのは、これが「時間の流れ」という私たちの根本的な前提に疑問を投げかけるからだ。物理学者たちは今日にいたるまで、タイムパラドックスを避けるための理論をさまざまに提案している。</p>
+
+      <h3 id="logical-paradoxes">論理のパラドックス</h3>
+      <p>自己言及や時間に関係しないパラドックスもある。古代ギリシャの哲学者ゼノンが提出した<b><a href="zeno-no-paradox.html">ゼノンのパラドックス</a></b>はその代表格だ。</p>
+      <p>もっとも有名なのは「アキレスと亀」の話である。足の速いアキレスが遅い亀を追いかけるとする。アキレスがまず亀のいた地点まで走ると、その間に亀は少し先に進んでいる。アキレスがその地点まで走ると、また亀はもう少し先に進んでいる。これを繰り返すと、アキレスは永遠に亀に追いつけないように思える。</p>
+      <p>もちろん現実にはアキレスは亀を追い抜く。しかしゼノンの論理自体には一見したところ穴がない。このパラドックスは「無限」という概念の扱い方に問題があり、後に数学で「無限級数の収束」という考え方が整備されることで解決された。パラドックスが数学の発展を促した好例である。</p>
+
+      <h3 id="infinity-paradoxes">無限のパラドックス</h3>
+      <p>無限という概念そのものが、多くのパラドックスを生み出す。たとえば「ヒルベルトの無限ホテル」という思考実験がある。</p>
+      <p>無限に部屋があるホテルが全室満室だとする。ここに新しいお客さんが一人やってきた。ふつうなら「満室です」と断るしかない。しかし、すべてのお客さんに「いまの部屋番号より1つ大きい部屋に移ってください」とお願いすれば、1号室が空いて新しいお客さんを泊めることができる。満室なのに新しいお客さんが入れる。有限の世界では起こりえないことが、無限の世界では起きてしまうのだ。</p>
+      <p>このような無限に関するパラドックスは、私たちの直感がいかに「有限」を前提にしているかを教えてくれる。</p>
+
+      <h2 id="self-reference-and-paradox">自己言及とパラドックスの深い関係</h2>
+      <p><a href="jiko-genkyuu.html">自己言及</a>とパラドックスは切っても切れない関係にある。歴史に残る有名なパラドックスの多くが、自己言及を含んでいるからだ。</p>
+      <p>ただし、すべての自己言及がパラドックスを生むわけではない。「この文は日本語で書かれている」は自己言及だが、何の矛盾も起きない。パラドックスが生まれるのは、自己言及に<b>否定</b>が加わるときである。</p>
+      <ul>
+        <li>「この文は<b>嘘</b>である」（<a href="usotsuki-no-paradox.html">嘘つきのパラドックス</a>）――自分自身を<b>否定</b>している</li>
+        <li>「自分自身を<b>含まない</b>集合の集合」（<a href="russell-no-paradox.html">ラッセルのパラドックス</a>）――「含まない」が否定にあたる</li>
+      </ul>
+      <p>「自分自身について述べる」ことと「自分自身を否定する」ことが組み合わさったとき、矛盾の逃げ道がなくなり、パラドックスが出現する。この仕組みは、20世紀の論理学と数学に巨大な影響を与えた。</p>
+
+      <h3 id="goedel-connection">ゲーデルの不完全性定理とパラドックス</h3>
+      <p>1931年、数学者クルト・ゲーデルは<a href="goedel-incompleteness.html">不完全性定理</a>を証明した。この証明の核心にあるのが、パラドックスに似た自己言及の構造である。</p>
+      <p>ゲーデルは「この命題は証明できない」という意味の命題を、数学の言葉で厳密に作り上げた。もしこの命題が証明できるなら、「証明できない」と主張している内容が間違っていることになり矛盾する。証明できなければ、正しいのに証明できない命題が存在することになる。</p>
+      <p>これは嘘つきのパラドックスに似ているが、ゲーデルの巧みさは「嘘」を「証明できない」に置き換えたことにある。こうすることで直接の矛盾を避けつつ、「どんな数学の体系にも、証明も反証もできない命題が存在する」という驚くべき結論を導き出した。パラドックスの構造を逆手に取って、論理そのものの限界を明らかにしたのである。</p>
+
+      <h2 id="paradoxes-in-sre">『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』におけるパラドックス</h2>
+      <p><a href="enjoe-toh.html">円城塔</a>の小説『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』では、パラドックスは単なる論理パズルではなく、物語世界の構造そのものに組み込まれている。</p>
+
+      <h3 id="sre-paradox-world">物語世界を動かすパラドックス</h3>
+      <p>この小説の世界では、「<a href="event-sre.html">イベント</a>」と呼ばれる出来事が時間の因果関係を無視して起こりうる。原因より先に結果が現れたり、矛盾した出来事が同時に成り立ったりする。これはまさにパラドックス的な世界である。</p>
+      <p>登場する<a href="kyodai-chisei-tai.html">巨大知性体</a>たちは、こうしたパラドックスを「解決すべき問題」としてではなく、「世界の性質そのもの」として受け入れている。パラドックスが世界を壊すのではなく、パラドックスこそが世界を動かしている。これは私たちの日常の論理感覚とはまったく異なる発想だ。</p>
+
+      <h3 id="sre-paradox-structure">物語構造そのもののパラドックス</h3>
+      <p>本作の20のエピソードは、互いに参照し合いながらも矛盾する描写を含んでいることがある。あるエピソードで語られた出来事が、別のエピソードでは異なる形で語られる。どちらが「本当」なのかは決まらない。</p>
+      <p>さらに、物語が自分自身について語る（<a href="jiko-genkyuu.html">自己言及</a>する）場面がたびたび現れる。物語の「中」と「外」の境界が揺らぎ、読者は<a href="strange-loop.html">ストレンジループ</a>に引き込まれる。これは嘘つきのパラドックスの文学版ともいえる構造だ。</p>
+
+      <h2 id="creative-paradoxes">創造の原動力としてのパラドックス</h2>
+      <p>パラドックスは問題を引き起こすだけの厄介者ではない。哲学、文学、科学のさまざまな分野で、パラドックスは新しい考え方を切り拓く力になってきた。</p>
+
+      <h3 id="philosophy-literature">哲学と文学におけるパラドックス</h3>
+      <p>哲学者たちはパラドックスに向き合うことで、論理や言語の限界を探ってきた。「真実とは何か」「知識とは何か」という根本的な問いの多くが、パラドックスをきっかけに深められてきたのだ。</p>
+      <p>文学においても、パラドックスは強力な表現手段である。「急がば回れ」「負けるが勝ち」のような逆説的な言い回しは、一見矛盾しているようでいて、日常の思い込みを超えた真実を伝えてくれる。小説や詩では、パラドックスを使って読者の思考を揺さぶり、新しい視点を提供する作品が数多くある。</p>
+      <p>『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』はその最たる例であり、パラドックスそのものを「楽しむ」ことを読者に求めている作品だといえる。</p>
+
+      <h3 id="science-math">科学と数学におけるパラドックス</h3>
+      <p>科学の歴史を振り返ると、パラドックスは重要な発見への入り口であることが多い。</p>
+      <ul>
+        <li><b>ゼノンのパラドックス</b>は、無限や連続性についての数学的理解を促した</li>
+        <li><b>ラッセルのパラドックス</b>は、集合論の厳密な基礎づけ（公理的集合論）につながった</li>
+        <li><b><a href="goedel-incompleteness.html">ゲーデルの不完全性定理</a></b>は、パラドックス的構造を使って数学の限界を明らかにした</li>
+        <li>量子力学の「シュレーディンガーの猫」も、観測の問題に関するパラドックスから生まれた思考実験である</li>
+      </ul>
+      <p>パラドックスが指し示す「矛盾」は、既存の考え方の枠組みが不十分であることのサインなのだ。矛盾を解消しようとする努力が、より深い理解へとつながっていく。</p>
+
+      <h2 id="summary">まとめ</h2>
+      <p>パラドックスとは、筋の通った推論から矛盾した結論が導かれてしまう不思議な問題である。<a href="usotsuki-no-paradox.html">嘘つきのパラドックス</a>に代表される自己言及のパラドックス、時間旅行をめぐる<a href="time-paradox.html">タイムパラドックス</a>、<a href="zeno-no-paradox.html">ゼノンのパラドックス</a>のような論理のパラドックス、無限が生むパラドックスなど、その種類は多岐にわたる。</p>
+      <p>パラドックスの多くは<a href="jiko-genkyuu.html">自己言及</a>と深く結びついている。「自分自身について述べ、かつ自分自身を否定する」という構造が、逃げ場のない矛盾を生む。<a href="goedel-incompleteness.html">ゲーデル</a>はこの構造を利用して数学の限界を証明し、『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』はこの構造を物語世界の根本に据えた。</p>
+      <p>パラドックスは困った問題であると同時に、新しい思考を切り拓く創造の原動力でもある。矛盾を恐れずに見つめることで、私たちの知の世界は広がり続けてきたのだ。</p>
+    </main>
+    <aside class="wiki-sidebar">
+      <div class="toc">
+        <div class="toc-title">目次</div>
+        <ul class="toc-list">
+          <li><a href="#definition">パラドックスとは</a></li>
+          <li><a href="#types">パラドックスの種類</a></li>
+          <li class="toc-h3"><a href="#self-referential-paradoxes">自己言及のパラドックス</a></li>
+          <li class="toc-h3"><a href="#time-paradoxes">時間のパラドックス</a></li>
+          <li class="toc-h3"><a href="#logical-paradoxes">論理のパラドックス</a></li>
+          <li class="toc-h3"><a href="#infinity-paradoxes">無限のパラドックス</a></li>
+          <li><a href="#self-reference-and-paradox">自己言及とパラドックスの深い関係</a></li>
+          <li class="toc-h3"><a href="#goedel-connection">ゲーデルの不完全性定理とパラドックス</a></li>
+          <li><a href="#paradoxes-in-sre">『Self-Reference ENGINE』におけるパラドックス</a></li>
+          <li class="toc-h3"><a href="#sre-paradox-world">物語世界を動かすパラドックス</a></li>
+          <li class="toc-h3"><a href="#sre-paradox-structure">物語構造そのもののパラドックス</a></li>
+          <li><a href="#creative-paradoxes">創造の原動力としてのパラドックス</a></li>
+          <li class="toc-h3"><a href="#philosophy-literature">哲学と文学におけるパラドックス</a></li>
+          <li class="toc-h3"><a href="#science-math">科学と数学におけるパラドックス</a></li>
+          <li><a href="#summary">まとめ</a></li>
+        </ul>
+      </div>
+      <div class="related-articles">
+        <div class="related-title">関連記事</div>
+        <ul class="related-list">
+          <li><a href="jiko-genkyuu.html">自己言及</a></li>
+          <li><a href="self-reference-engine.html">Self-Reference ENGINE</a></li>
+          <li><a href="usotsuki-no-paradox.html">嘘つきのパラドックス</a></li>
+          <li><a href="goedel-incompleteness.html">ゲーデルの不完全性定理</a></li>
+          <li><a href="strange-loop.html">ストレンジループ</a></li>
+          <li><a href="goedel-escher-bach.html">ゲーデル・エッシャー・バッハ</a></li>
+          <li><a href="kyodai-chisei-tai.html">巨大知性体</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  <footer class="wiki-footer">
+    <div class="footer-links">
+      <h4>リンク先</h4>
+      <ul>
+        <li><a href="jiko-genkyuu.html">自己言及</a></li>
+        <li><a href="self-reference-engine.html">Self-Reference ENGINE</a></li>
+        <li><a href="enjoe-toh.html">円城塔</a></li>
+        <li><a href="usotsuki-no-paradox.html">嘘つきのパラドックス</a></li>
+        <li><a href="russell-no-paradox.html">ラッセルのパラドックス</a></li>
+        <li><a href="goedel-incompleteness.html">ゲーデルの不完全性定理</a></li>
+        <li><a href="strange-loop.html">ストレンジループ</a></li>
+        <li><a href="kyodai-chisei-tai.html">巨大知性体</a></li>
+        <li><a href="event-sre.html">イベント</a></li>
+        <li><a href="goedel-escher-bach.html">ゲーデル・エッシャー・バッハ</a></li>
+        <li><a href="time-paradox.html">タイムパラドックス</a></li>
+        <li><a href="zeno-no-paradox.html">ゼノンのパラドックス</a></li>
+      </ul>
+      <h4>被リンク</h4>
+      <ul><li><a href="jiko-genkyuu.html">自己言及</a></li></ul>
+    </div>
+    <p style="margin-top:12px;">Auto-Wiki で自動生成</p>
+  </footer>
+</div>
+</body>
+</html>
