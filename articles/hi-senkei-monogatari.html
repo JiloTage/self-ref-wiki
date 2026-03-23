@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>非線形物語 - Auto-Wiki</title>
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+</head>
+<body>
+<div class="wiki-wrapper">
+  <header class="wiki-header">
+    <a href="../index.html" class="site-title">Auto-Wiki</a>
+    <nav>
+      <a href="../index.html">トップ</a>
+      <a href="../index.html#article-list">記事一覧</a>
+      <a href="../index.html#graph">サイトグラフ</a>
+    </nav>
+  </header>
+  <div class="breadcrumb">
+    <a href="../index.html">Auto-Wiki</a> &gt; 非線形物語
+  </div>
+  <div class="wiki-content">
+    <main class="wiki-main">
+      <h1 class="article-title">非線形物語</h1>
+      <div class="article-meta">最終更新: 2026-03-24</div>
+      <div class="article-summary"><b>非線形物語</b>とは、出来事が単純な時系列に従わず、反復・飛躍・循環・分岐を含みながら構成される物語形式である。<a href="event-sre.html">イベント</a>、<a href="jikan-to-monogatari.html" class="redlink">時間と物語</a>、<a href="inga-ritsu.html">因果律</a>を考えるうえで重要であり、<a href="self-reference-engine.html">Self-Reference ENGINE</a>の構造理解にも直結する。</div>
+
+      <table class="infobox">
+        <tr><td colspan="2" class="infobox-title">非線形物語</td></tr>
+        <tr><th>分類</th><td>物語論 / 小説形式</td></tr>
+        <tr><th>特徴</th><td>時間の反転 / 循環 / 断片化 / 多層配置</td></tr>
+        <tr><th>関連概念</th><td><a href="jikan-to-monogatari.html" class="redlink">時間と物語</a><br><a href="inga-ritsu.html">因果律</a><br><a href="strange-loop.html">ストレンジループ</a></td></tr>
+        <tr><th>関係記事</th><td><a href="event-sre.html">イベント</a><br><a href="self-reference-engine.html">Self-Reference ENGINE</a></td></tr>
+      </table>
+
+      <h2 id="overview">概要</h2>
+      <p>非線形物語では、出来事が「始まりから終わりへ」という一本の線で並ばない。ある場面が別の場面を先取りしたり、後から語り直したり、別の視点から反復されたりすることで、読者は物語の時間を自分で再構成しなければならなくなる。</p>
+      <p>この形式は、単なる技巧ではない。時間や因果が安定していない世界を描くとき、あるいは記憶や認識の断片性を描くとき、物語そのものもまた線形ではいられなくなる。</p>
+
+      <h2 id="why">なぜ非線形になるのか</h2>
+      <p>物語が非線形になる理由はいくつかある。第一に、作中世界そのものの時間秩序が揺らいでいる場合。第二に、語り手の認識や記憶が断片化している場合。第三に、作品が読者に構造的な読解を要求し、読む行為自体を主題化している場合である。</p>
+      <p>このため非線形物語は、時間の問題だけでなく、知覚・記述・解釈の問題とも結び付く。順番の崩れは、世界の崩れであると同時に、語りの条件の露出でもある。</p>
+
+      <div class="diagram-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="560" height="300">
+          <rect x="10" y="10" width="540" height="280" rx="8" fill="#f8f9fa" stroke="#a2a9b1" stroke-width="1.5"/>
+          <text x="280" y="34" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#202122" font-weight="bold">線形物語と非線形物語</text>
+          <text x="95" y="90" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122" font-weight="bold">線形</text>
+          <line x1="40" y1="120" x2="230" y2="120" stroke="#36c" stroke-width="2"/>
+          <circle cx="70" cy="120" r="6" fill="#36c"/>
+          <circle cx="135" cy="120" r="6" fill="#36c"/>
+          <circle cx="200" cy="120" r="6" fill="#36c"/>
+          <text x="70" y="140" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#54595d">A</text>
+          <text x="135" y="140" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#54595d">B</text>
+          <text x="200" y="140" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#54595d">C</text>
+
+          <text x="420" y="90" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122" font-weight="bold">非線形</text>
+          <circle cx="340" cy="120" r="6" fill="#e68a00"/>
+          <circle cx="430" cy="120" r="6" fill="#e68a00"/>
+          <circle cx="500" cy="165" r="6" fill="#e68a00"/>
+          <circle cx="390" cy="205" r="6" fill="#e68a00"/>
+          <path d="M340,120 C380,90 400,90 430,120" fill="none" stroke="#e68a00" stroke-width="2"/>
+          <path d="M430,120 C470,120 495,135 500,165" fill="none" stroke="#e68a00" stroke-width="2"/>
+          <path d="M500,165 C470,210 430,225 390,205" fill="none" stroke="#e68a00" stroke-width="2"/>
+          <path d="M390,205 C350,185 330,160 340,120" fill="none" stroke="#e68a00" stroke-width="2"/>
+          <text x="340" y="110" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#54595d">A</text>
+          <text x="430" y="110" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#54595d">B</text>
+          <text x="500" y="182" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#54595d">C</text>
+          <text x="390" y="223" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#54595d">A'</text>
+
+          <rect x="125" y="240" width="310" height="32" rx="6" fill="#fff" stroke="#a2a9b1" stroke-width="1"/>
+          <text x="280" y="260" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#202122">読者は断片を時系列に戻すのではなく、構造として理解する必要がある</text>
+        </svg>
+        <div class="diagram-caption">非線形物語では、出来事は単純な順序で並ばず、反復や折り返しを伴う。読者は順番そのものを読み解くことになる。</div>
+      </div>
+
+      <h2 id="time-and-causality">時間と因果</h2>
+      <p>非線形物語では、<a href="jikan-to-monogatari.html" class="redlink">時間と物語</a>の関係が前景化する。時間が並び替えられると、出来事の原因と結果も自明ではなくなる。読者は「何が先で何が後か」だけでなく、「どこまでが因果として結ばれているのか」を再判断しなければならない。</p>
+      <p>この点で<a href="inga-ritsu.html">因果律</a>の問題は重要である。因果が揺らぐ世界では、物語の順序の崩れは単なる編集上の技巧ではなく、世界の法則そのものの表現になる。</p>
+
+      <h2 id="event">『イベント』とのつながり</h2>
+      <p><a href="event-sre.html">イベント</a>では、世界の構造が書き換えられることで、出来事の連なりそのものが不安定になる。あるエピソードで見た現象が別の位置で別の意味を帯びて現れ、読者はひとつの直線的な時間を前提にできなくなる。</p>
+      <p>ここで非線形性は、作品の「読みにくさ」ではなく、作中世界の存在論に対応している。順番が崩れているのは世界が壊れているからであり、読者の混乱はその世界に住む者の混乱と重なる。</p>
+
+      <h2 id="in-sre">『Self-Reference ENGINE』とのつながり</h2>
+      <p><a href="self-reference-engine.html">Self-Reference ENGINE</a>の読解でも、読者は断片的なエピソードのあいだに構造的対応を見いだしながら全体像を組み立てる。これは非線形物語の典型的な読書経験であり、順番を追うこと以上に、配置の意味を読むことが求められる。</p>
+      <p>そのため非線形物語は、<a href="strange-loop.html">ストレンジループ</a>や自己参照的構造とも相性がよい。出来事の順番が折り返すとき、物語は時間の中だけでなく、構造の中でもループを形成する。</p>
+    </main>
+    <aside class="wiki-sidebar">
+      <div class="toc">
+        <div class="toc-title">目次</div>
+        <ul class="toc-list">
+          <li><a href="#overview">概要</a></li>
+          <li><a href="#why">なぜ非線形になるのか</a></li>
+          <li><a href="#time-and-causality">時間と因果</a></li>
+          <li><a href="#event">『イベント』とのつながり</a></li>
+          <li><a href="#in-sre">『Self-Reference ENGINE』とのつながり</a></li>
+        </ul>
+      </div>
+      <div class="related-articles">
+        <div class="related-title">関連項目</div>
+        <ul class="related-list">
+          <li><a href="event-sre.html">イベント</a></li>
+          <li><a href="jikan-to-monogatari.html" class="redlink">時間と物語</a></li>
+          <li><a href="inga-ritsu.html">因果律</a></li>
+          <li><a href="strange-loop.html">ストレンジループ</a></li>
+          <li><a href="self-reference-engine.html">Self-Reference ENGINE</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  <footer class="wiki-footer">
+    <div class="footer-links">
+      <h4>リンク先</h4>
+      <ul>
+        <li><a href="event-sre.html">イベント</a></li>
+        <li><a href="jikan-to-monogatari.html" class="redlink">時間と物語</a></li>
+        <li><a href="inga-ritsu.html">因果律</a></li>
+        <li><a href="strange-loop.html">ストレンジループ</a></li>
+        <li><a href="self-reference-engine.html">Self-Reference ENGINE</a></li>
+      </ul>
+      <h4>被リンク</h4>
+      <ul>
+        <li><a href="event-sre.html">イベント</a></li>
+      </ul>
+    </div>
+    <p style="margin-top:12px;">Auto-Wiki で自動生成</p>
+  </footer>
+</div>
+</body>
+</html>

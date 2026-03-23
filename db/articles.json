@@ -19,10 +19,12 @@
         "cho-chisei",
         "doukeshi-no-chou",
         "enjoe-toh",
+        "escher",
         "event-sre",
         "goedel-escher-bach",
         "goedel-incompleteness",
         "gyakusatsu-kikan",
+        "hi-senkei-monogatari",
         "hofstadter",
         "honyaku-to-gengo",
         "inga-ritsu",
@@ -32,6 +34,7 @@
         "kyodai-chisei-tai",
         "mugen-koutai",
         "paradox",
+        "postmodern-bungaku",
         "sf-bungaku",
         "shisha-no-teikoku",
         "strange-loop",
@@ -71,6 +74,7 @@
         "kyodai-chisei-tai",
         "mugen-koutai",
         "paradox",
+        "postmodern-bungaku",
         "self-reference-engine",
         "sf-bungaku",
         "shisha-no-teikoku",
@@ -113,6 +117,7 @@
         "kyodai-chisei-tai",
         "mugen-koutai",
         "paradox",
+        "postmodern-bungaku",
         "self-reference-engine",
         "sf-bungaku",
         "shisha-no-teikoku",
@@ -188,9 +193,11 @@
         "ai-philosophy",
         "analogy",
         "cho-chisei",
+        "escher",
         "event-sre",
         "goedel-escher-bach",
         "goedel-incompleteness",
+        "hi-senkei-monogatari",
         "hofstadter",
         "inga-ritsu",
         "itoh-keikaku",
@@ -226,6 +233,7 @@
         "jikan-to-monogatari"
       ],
       "linked_from": [
+        "hi-senkei-monogatari",
         "inga-ritsu",
         "kyodai-chisei-tai",
         "mugen-koutai",
@@ -287,6 +295,7 @@
       "linked_from": [
         "ai-philosophy",
         "analogy",
+        "escher",
         "goedel-incompleteness",
         "hofstadter",
         "keishiki-system",
@@ -322,6 +331,7 @@
       ],
       "linked_from": [
         "cho-chisei",
+        "escher",
         "kyodai-chisei-tai"
       ],
       "origin": "expanded",
@@ -543,7 +553,8 @@
       ],
       "linked_from": [
         "enjoe-toh",
-        "gyakusatsu-kikan"
+        "gyakusatsu-kikan",
+        "postmodern-bungaku"
       ],
       "origin": "expanded",
       "source_id": "enjoe-toh",
@@ -676,7 +687,8 @@
         "jikan-to-monogatari"
       ],
       "linked_from": [
-        "event-sre"
+        "event-sre",
+        "hi-senkei-monogatari"
       ],
       "origin": "expanded",
       "source_id": "event-sre",
@@ -728,7 +740,7 @@
       "source_id": "doukeshi-no-chou",
       "created_at": "2026-03-24",
       "updated_at": "2026-03-24",
-      "expansion_status": "pending"
+      "expansion_status": "completed"
     },
     "analogy": {
       "slug": "analogy",
@@ -752,7 +764,7 @@
       "source_id": "hofstadter",
       "created_at": "2026-03-24",
       "updated_at": "2026-03-24",
-      "expansion_status": "pending"
+      "expansion_status": "completed"
     },
     "chinese-room": {
       "slug": "chinese-room",
@@ -776,9 +788,75 @@
       "source_id": "ai-philosophy",
       "created_at": "2026-03-24",
       "updated_at": "2026-03-24",
+      "expansion_status": "completed"
+    },
+    "postmodern-bungaku": {
+      "slug": "postmodern-bungaku",
+      "title": "ポストモダン文学",
+      "filename": "articles/postmodern-bungaku.html",
+      "summary": "ポストモダン文学 とは、単一の物語中心や安定した現実感を疑い、引用・入れ子・自己言及・虚構性の露出を積極的に用いる文学的傾向である。 円城塔 の作品群や メタフィクション 、 Self-Reference ENGINE のような構造志向の作品を考えるうえで重要な視点となる。",
+      "links_to": [
+        "enjoe-toh",
+        "meta-fiction",
+        "self-reference-engine",
+        "jiko-genkyuu",
+        "ireko-kouzou",
+        "sf-bungaku"
+      ],
+      "linked_from": [
+        "enjoe-toh"
+      ],
+      "origin": "expanded",
+      "source_id": "enjoe-toh",
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "expansion_status": "pending"
+    },
+    "escher": {
+      "slug": "escher",
+      "title": "エッシャー",
+      "filename": "articles/escher.html",
+      "summary": "エッシャー ことM.C.エッシャーは、自己参照や無限後退を視覚化する作品で知られる版画家である。 ストレンジループ 、 ゲーデル・エッシャー・バッハ 、 入れ子構造 を考えるうえで重要な視覚的参照点となる。",
+      "links_to": [
+        "strange-loop",
+        "goedel-escher-bach",
+        "ireko-kouzou",
+        "mugen-koutai",
+        "self-reference-engine"
+      ],
+      "linked_from": [
+        "goedel-escher-bach",
+        "strange-loop"
+      ],
+      "origin": "expanded",
+      "source_id": "strange-loop",
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "expansion_status": "pending"
+    },
+    "hi-senkei-monogatari": {
+      "slug": "hi-senkei-monogatari",
+      "title": "非線形物語",
+      "filename": "articles/hi-senkei-monogatari.html",
+      "summary": "非線形物語 とは、出来事が単純な時系列に従わず、反復・飛躍・循環・分岐を含みながら構成される物語形式である。 イベント 、 時間と物語 、 因果律 を考えるうえで重要であり、 Self-Reference ENGINE の構造理解にも直結する。",
+      "links_to": [
+        "event-sre",
+        "jikan-to-monogatari",
+        "inga-ritsu",
+        "self-reference-engine",
+        "strange-loop"
+      ],
+      "linked_from": [
+        "event-sre",
+        "inga-ritsu"
+      ],
+      "origin": "expanded",
+      "source_id": "event-sre",
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
       "expansion_status": "pending"
     }
   },
   "root_id": "self-reference-engine",
-  "total_count": 25
+  "total_count": 28
 }

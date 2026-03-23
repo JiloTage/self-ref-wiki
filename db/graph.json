@@ -174,6 +174,27 @@
       "url": "articles/chinese-room.html",
       "summary": "中国語の部屋 は、ジョン・サールが提案した思考実験で、記号操作だけでは理解は生まれないのではないかと問う。 チューリングテスト 、 AI哲学 、 意識のハードプロブレム と強く結び付き、強いAI批判の代表例とされる。",
       "is_root": false
+    },
+    {
+      "id": "postmodern-bungaku",
+      "title": "ポストモダン文学",
+      "url": "articles/postmodern-bungaku.html",
+      "summary": "ポストモダン文学 とは、単一の物語中心や安定した現実感を疑い、引用・入れ子・自己言及・虚構性の露出を積極的に用いる文学的傾向である。 円城塔 の作品群や メタフィクション 、 Self-Reference ENGINE のような構造志向の作品を考えるうえで重要な視点となる。",
+      "is_root": false
+    },
+    {
+      "id": "escher",
+      "title": "エッシャー",
+      "url": "articles/escher.html",
+      "summary": "エッシャー ことM.C.エッシャーは、自己参照や無限後退を視覚化する作品で知られる版画家である。 ストレンジループ 、 ゲーデル・エッシャー・バッハ 、 入れ子構造 を考えるうえで重要な視覚的参照点となる。",
+      "is_root": false
+    },
+    {
+      "id": "hi-senkei-monogatari",
+      "title": "非線形物語",
+      "url": "articles/hi-senkei-monogatari.html",
+      "summary": "非線形物語 とは、出来事が単純な時系列に従わず、反復・飛躍・循環・分岐を含みながら構成される物語形式である。 イベント 、 時間と物語 、 因果律 を考えるうえで重要であり、 Self-Reference ENGINE の構造理解にも直結する。",
+      "is_root": false
     }
   ],
   "links": [
@@ -200,6 +221,10 @@
     {
       "source": "enjoe-toh",
       "target": "sf-bungaku"
+    },
+    {
+      "source": "enjoe-toh",
+      "target": "postmodern-bungaku"
     },
     {
       "source": "enjoe-toh",
@@ -267,6 +292,10 @@
     },
     {
       "source": "strange-loop",
+      "target": "escher"
+    },
+    {
+      "source": "strange-loop",
       "target": "self-reference-engine"
     },
     {
@@ -299,6 +328,10 @@
     },
     {
       "source": "event-sre",
+      "target": "hi-senkei-monogatari"
+    },
+    {
+      "source": "event-sre",
       "target": "strange-loop"
     },
     {
@@ -320,6 +353,10 @@
     {
       "source": "goedel-escher-bach",
       "target": "hofstadter"
+    },
+    {
+      "source": "goedel-escher-bach",
+      "target": "escher"
     },
     {
       "source": "goedel-escher-bach",
@@ -774,6 +811,10 @@
       "target": "strange-loop"
     },
     {
+      "source": "inga-ritsu",
+      "target": "hi-senkei-monogatari"
+    },
+    {
       "source": "turing-test",
       "target": "ai-philosophy"
     },
@@ -844,6 +885,54 @@
     {
       "source": "chinese-room",
       "target": "kyodai-chisei-tai"
+    },
+    {
+      "source": "postmodern-bungaku",
+      "target": "enjoe-toh"
+    },
+    {
+      "source": "postmodern-bungaku",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "postmodern-bungaku",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "postmodern-bungaku",
+      "target": "sf-bungaku"
+    },
+    {
+      "source": "escher",
+      "target": "strange-loop"
+    },
+    {
+      "source": "escher",
+      "target": "goedel-escher-bach"
+    },
+    {
+      "source": "escher",
+      "target": "mugen-koutai"
+    },
+    {
+      "source": "escher",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "hi-senkei-monogatari",
+      "target": "event-sre"
+    },
+    {
+      "source": "hi-senkei-monogatari",
+      "target": "inga-ritsu"
+    },
+    {
+      "source": "hi-senkei-monogatari",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "hi-senkei-monogatari",
+      "target": "strange-loop"
     }
   ]
 }

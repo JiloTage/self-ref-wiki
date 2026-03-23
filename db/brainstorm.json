@@ -1,27 +1,6 @@
 {
   "queue": [
     {
-      "proposed_slug": "postmodern-bungaku",
-      "proposed_title": "ポストモダン文学",
-      "rationale": "円城塔の作風を位置づける文学的潮流。",
-      "interestingness_score": 0.79,
-      "source_slug": "enjoe-toh"
-    },
-    {
-      "proposed_slug": "escher",
-      "proposed_title": "エッシャー",
-      "rationale": "不可能な構造を描いたオランダの版画家。",
-      "interestingness_score": 0.78,
-      "source_slug": "strange-loop"
-    },
-    {
-      "proposed_slug": "hi-senkei-monogatari",
-      "proposed_title": "非線形物語",
-      "rationale": "非線形な物語構造の手法。",
-      "interestingness_score": 0.78,
-      "source_slug": "event-sre"
-    },
-    {
       "proposed_slug": "jikken-bungaku",
       "proposed_title": "実験文学",
       "rationale": "実験的な文学手法・伝統。",
@@ -310,6 +289,21 @@
       "slug": "chinese-room",
       "completed_at": "2026-03-24",
       "source": "ai-philosophy"
+    },
+    {
+      "slug": "postmodern-bungaku",
+      "completed_at": "2026-03-24",
+      "source": "enjoe-toh"
+    },
+    {
+      "slug": "escher",
+      "completed_at": "2026-03-24",
+      "source": "strange-loop"
+    },
+    {
+      "slug": "hi-senkei-monogatari",
+      "completed_at": "2026-03-24",
+      "source": "event-sre"
     }
   ]
 }
