@@ -1,32 +1,639 @@
 {
   "nodes": [
-    {"id": "self-reference-engine", "title": "Self-Reference ENGINE", "summary": "円城塔による連作SF小説。", "url": "articles/self-reference-engine.html", "is_root": true},
-    {"id": "enjoe-toh", "title": "円城塔", "summary": "日本の小説家・SF作家。", "url": "articles/enjoe-toh.html", "is_root": false},
-    {"id": "jiko-genkyuu", "title": "自己言及", "summary": "自分自身について述べること。", "url": "articles/jiko-genkyuu.html", "is_root": false},
-    {"id": "kyodai-chisei-tai", "title": "巨大知性体", "summary": "人間を超えた知性を持つ巨大存在。", "url": "articles/kyodai-chisei-tai.html", "is_root": false},
-    {"id": "strange-loop", "title": "ストレンジループ", "summary": "階層を上がると出発点に戻る構造。", "url": "articles/strange-loop.html", "is_root": false},
-    {"id": "event-sre", "title": "イベント（SRE）", "summary": "現実の構造を変える大規模な出来事。", "url": "articles/event-sre.html", "is_root": false},
-    {"id": "doukeshi-no-chou", "title": "道化師の蝶", "summary": "円城塔の芥川賞受賞作。", "url": "articles/doukeshi-no-chou.html", "is_root": false},
-    {"id": "goedel-escher-bach", "title": "ゲーデル・エッシャー・バッハ", "summary": "ホフスタッターの名著。", "url": "articles/goedel-escher-bach.html", "is_root": false},
-    {"id": "mugen-koutai", "title": "無限後退", "summary": "説明が終わりなく続く現象。", "url": "articles/mugen-koutai.html", "is_root": false},
-    {"id": "paradox", "title": "パラドックス", "summary": "矛盾が導かれる問題。", "url": "articles/paradox.html", "is_root": false},
-    {"id": "hofstadter", "title": "ダグラス・ホフスタッター", "summary": "GEB著者。認知科学者。", "url": "articles/hofstadter.html", "is_root": false},
-    {"id": "shisha-no-teikoku", "title": "屍者の帝国", "summary": "伊藤計劃と円城塔の共作SF。", "url": "articles/shisha-no-teikoku.html", "is_root": false},
-    {"id": "ai-philosophy", "title": "人工知能の哲学", "summary": "機械は考えられるかという問い。", "url": "articles/ai-philosophy.html", "is_root": false}
+    {
+      "id": "self-reference-engine",
+      "title": "Self-Reference ENGINE",
+      "summary": "『Self-Reference ENGINE』は 円城塔 による連作SF小説で、「 自己言及 」という仕掛けを軸に、 巨大知性体 や 入れ子構造 の世界を描いた作品である。",
+      "url": "articles/self-reference-engine.html",
+      "is_root": true
+    },
+    {
+      "id": "enjoe-toh",
+      "title": "円城塔",
+      "summary": "円城塔 （えんじょう・とう、1972年 - ）は、日本の小説家・SF作家。物理学の研究者としての経歴を持ち、科学や数学の考え方を小説に取り入れた実験的な作風で知られる。代表作に『 Self-Reference ENGINE 』『 道化師の蝶 』など。",
+      "url": "articles/enjoe-toh.html",
+      "is_root": false
+    },
+    {
+      "id": "jiko-genkyuu",
+      "title": "自己言及",
+      "summary": "自己言及 （じこげんきゅう、英: self-reference）とは、ある文章・物語・システムなどが「自分自身」について述べることを指す。『 Self-Reference ENGINE 』の中心的なテーマであり、 メタフィクション や パラドックス 、 入れ子構造 とも深く関わる考え方である。",
+      "url": "articles/jiko-genkyuu.html",
+      "is_root": false
+    },
+    {
+      "id": "kyodai-chisei-tai",
+      "title": "巨大知性体",
+      "summary": "巨大知性体 （きょだいちせいたい）は、 円城塔 の小説『 Self-Reference ENGINE 』に繰り返し登場する存在である。人間をはるかに超えた知的能力を持ち、現実の構造や時間の流れそのものを操作できる力を持つとされる。惑星規模、あるいはそれ以上の大きさを持つものもあり、作品世界の根幹をなす重要な概念である。",
+      "url": "articles/kyodai-chisei-tai.html",
+      "is_root": false
+    },
+    {
+      "id": "strange-loop",
+      "title": "ストレンジループ",
+      "summary": "ストレンジループ （英: strange loop、奇妙なループ）とは、あるシステムの階層を順に上がっていく（または下がっていく）と、いつのまにか出発点に戻ってきてしまう不思議な構造のことである。アメリカの認知科学者ダグラス・ホフスタッターが著書『 ゲーデル・エッシャー・バッハ 』（1979年）で提唱した概念であり、 自己言及 や 入れ子構造 と深く結びついている。",
+      "url": "articles/strange-loop.html",
+      "is_root": false
+    },
+    {
+      "id": "event-sre",
+      "title": "イベント（Self-Reference ENGINE）",
+      "summary": "イベント （Event）は、 円城塔 の小説『 Self-Reference ENGINE 』において、現実そのものの構造を根本から変えてしまう大規模な出来事を指す。日常的に使われる「イベント」という言葉とはまったく異なり、作中では世界の法則や 因果律 すらも書き換えてしまう、いわば「存在のルールチェンジ」とでも呼ぶべき現象として描かれる。多くの場合、 巨大知性体 の活動に起因し、あるいは深く関係している。",
+      "url": "articles/event-sre.html",
+      "is_root": false
+    },
+    {
+      "id": "doukeshi-no-chou",
+      "title": "道化師の蝶",
+      "summary": "『 道化師の蝶 』（どうけしのちょう）は、 円城塔 による短編小説で、2012年に第146回 芥川賞 を受賞した作品である。 翻訳 によって文章の意味が変わっていくという不思議な現象を軸に、言葉とは何か、書くとはどういうことかを問いかける物語である。",
+      "url": "articles/doukeshi-no-chou.html",
+      "is_root": false
+    },
+    {
+      "id": "goedel-escher-bach",
+      "title": "ゲーデル・エッシャー・バッハ",
+      "summary": "『 ゲーデル・エッシャー・バッハ――あるいは不思議の環 』（原題: Gödel, Escher, Bach: an Eternal Golden Braid 、略称 GEB ）は、アメリカの認知科学者・コンピュータ科学者である ダグラス・ホフスタッター が1979年に出版した書籍である。数学者クルト・ゲーデル、版画家 M.C.エッシャー 、作曲家J.S.バッハという一見まったく関係のない三人の仕事に、 ストレンジループ （奇妙なループ）と 自己言及 という共通の構造が潜んでいることを示した本であり、出版翌年の1980年にピューリッツァー賞（一般ノンフィクション部門）を受賞した。",
+      "url": "articles/goedel-escher-bach.html",
+      "is_root": false
+    },
+    {
+      "id": "mugen-koutai",
+      "title": "無限後退",
+      "summary": "無限後退 （むげんこうたい、英: infinite regress）とは、何かを説明しようとしたとき、その説明自体にまた説明が必要になり、さらにその説明にも説明が必要になり……と、終わりなく続いてしまう現象のことである。哲学や論理学における古典的な問題であり、 円城塔 の小説『 Self-Reference ENGINE 』では、 巨大知性体 の階層構造や 入れ子構造 を通じてこのテーマが繰り返し描かれている。",
+      "url": "articles/mugen-koutai.html",
+      "is_root": false
+    },
+    {
+      "id": "paradox",
+      "title": "パラドックス",
+      "summary": "パラドックス （英: paradox、逆説）とは、一見すると正しそうな前提や推論から、矛盾した結論や常識に反する結論が導かれてしまう問題のことである。単なる間違いではなく、その矛盾の中にこそ深い真実が隠されていることが多い。 自己言及 と密接に関わっており、『 Self-Reference ENGINE 』では物語世界そのものを動かす原動力として描かれている。",
+      "url": "articles/paradox.html",
+      "is_root": false
+    },
+    {
+      "id": "hofstadter",
+      "title": "ダグラス・ホフスタッター",
+      "summary": "ダグラス・リチャード・ホフスタッター （Douglas Richard Hofstadter、1945年 - ）は、アメリカの 認知科学 者・コンピュータ科学者・著述家。1979年に出版した『 ゲーデル・エッシャー・バッハ 』でピューリッツァー賞を受賞し、 ストレンジループ と 自己言及 をめぐる思想で広く知られる。 アナロジー （類推）を人間の思考の核心と位置づけ、意識や「私」という感覚が脳の中の自己言及的なループから生まれると主張した。",
+      "url": "articles/hofstadter.html",
+      "is_root": false
+    },
+    {
+      "id": "shisha-no-teikoku",
+      "title": "屍者の帝国",
+      "summary": "『 屍者の帝国 』（したいのていこく、英題: The Empire of Corpses ）は、 伊藤計劃 が構想し、 円城塔 が書き継いで完成させた長編SF小説である。死体を蘇らせて労働力として使う技術が実用化された、もうひとつの19世紀を舞台に、 意識とは何か 、生と死の境界はどこにあるのかを問いかける壮大な冒険物語である。",
+      "url": "articles/shisha-no-teikoku.html",
+      "is_root": false
+    },
+    {
+      "id": "ai-philosophy",
+      "title": "人工知能の哲学",
+      "summary": "人工知能の哲学 （じんこうちのうのてつがく）とは、「機械は本当に考えることができるのか」という根本的な問いをめぐる哲学的探究の総称である。1950年にアラン・チューリングが「機械は考えることができるか？」と問いかけて以来、 チューリングテスト 、 中国語の部屋 、 意識のハードプロブレム など、さまざまな思考実験や議論が展開されてきた。 ダグラス・ホフスタッター は『 ゲーデル・エッシャー・バッハ 』において、 ストレンジループ から意識が生まれるという独自の視点を提示した。 円城塔 の『 Self-Reference ENGINE 』に登場する 巨大知性体 は、こうした哲学的問いをSFの舞台で極限まで推し進めた存在として読むことができる。",
+      "url": "articles/ai-philosophy.html",
+      "is_root": false
+    },
+    {
+      "id": "cho-chisei",
+      "title": "超知性",
+      "summary": "超知性 （ちょうちせい、英: Superintelligence）とは、人間の認知能力をあらゆる領域において大幅に超える知性のことを指す。哲学者 ニック・ボストロム は著書『スーパーインテリジェンス』（2014年）において、速度型・集合型・質的超知性の三類型を提唱した。SFの分野では、『2001年宇宙の旅』のHAL 9000からイアン・バンクスの カルチャー・シリーズ のマインドまで、超知性はくり返し描かれてきたテーマである。 円城塔 の『 Self-Reference ENGINE 』に登場する 巨大知性体 は、こうした超知性の概念を 自己言及 や 無限後退 と結びつけ、文学として極限まで推し進めた存在と言える。",
+      "url": "articles/cho-chisei.html",
+      "is_root": false
+    },
+    {
+      "id": "itoh-keikaku",
+      "title": "伊藤計劃",
+      "summary": "伊藤計劃 （いとう・けいかく、1974年 - 2009年）は、日本のSF作家。本名は伊藤聡。2007年に『 虐殺器官 』でデビューし、続く『 ハーモニー 』（2008年）とあわせてわずか二作の長編で日本SF界に革命的な衝撃を与えた。言語による支配、意識と自由意志、テクノロジーが人間性に与える影響といったテーマを鮮烈に描き、フィリップ・K・ディック賞や 日本SF大賞 などを受賞。2009年に肺がんのため34歳で逝去した。未完の遺作『 屍者の帝国 』は盟友 円城塔 が書き継いで完成させた。",
+      "url": "articles/itoh-keikaku.html",
+      "is_root": false
+    },
+    {
+      "id": "sf-bungaku",
+      "title": "SF文学",
+      "summary": "SF文学 （Science Fiction、サイエンス・フィクション）とは、科学や技術をもとに「もしも〜だったら？」という想像をふくらませる文学のジャンルである。宇宙旅行、人工知能、時間旅行、未来社会など、現実にはまだ実現していない（あるいは実現しないかもしれない）状況を舞台にした物語が多い。日本では 円城塔 や 伊藤計劃 をはじめ、多くの作家がこのジャンルで独自の表現を追求してきた。",
+      "url": "articles/sf-bungaku.html",
+      "is_root": false
+    },
+    {
+      "id": "gyakusatsu-kikan",
+      "title": "虐殺器官",
+      "summary": "虐殺器官 は、 伊藤計劃 のデビュー長編であり、言語が人間の暴力を起動する「文法」として機能するという衝撃的な設定を持つ近未来SFである。戦争、監視、自由意志といった主題を、鋭い文体とサスペンスで描き出した。",
+      "url": "articles/gyakusatsu-kikan.html",
+      "is_root": false
+    },
+    {
+      "id": "keishiki-system",
+      "title": "形式システム",
+      "summary": "形式システム とは、記号と規則だけで定義された推論や操作の体系である。 ゲーデル・エッシャー・バッハ では、形式システムが 自己言及 や ゲーデルの不完全性定理 へどうつながるかが重要な主題として扱われる。",
+      "url": "articles/keishiki-system.html",
+      "is_root": false
+    },
+    {
+      "id": "usotsuki-no-paradox",
+      "title": "嘘つきのパラドックス",
+      "summary": "嘘つきのパラドックス とは、「この文は嘘である」のように、自分自身の真偽について語る文が引き起こす古典的な パラドックス である。 自己言及 と否定が組み合わさることで、真でも偽でも安定しないループが生まれる。",
+      "url": "articles/usotsuki-no-paradox.html",
+      "is_root": false
+    }
   ],
   "links": [
-    {"source":"self-reference-engine","target":"enjoe-toh"},{"source":"self-reference-engine","target":"jiko-genkyuu"},{"source":"self-reference-engine","target":"kyodai-chisei-tai"},
-    {"source":"enjoe-toh","target":"self-reference-engine"},{"source":"enjoe-toh","target":"doukeshi-no-chou"},{"source":"enjoe-toh","target":"shisha-no-teikoku"},
-    {"source":"jiko-genkyuu","target":"self-reference-engine"},{"source":"jiko-genkyuu","target":"enjoe-toh"},{"source":"jiko-genkyuu","target":"kyodai-chisei-tai"},{"source":"jiko-genkyuu","target":"strange-loop"},{"source":"jiko-genkyuu","target":"paradox"},
-    {"source":"kyodai-chisei-tai","target":"self-reference-engine"},{"source":"kyodai-chisei-tai","target":"enjoe-toh"},{"source":"kyodai-chisei-tai","target":"jiko-genkyuu"},{"source":"kyodai-chisei-tai","target":"event-sre"},{"source":"kyodai-chisei-tai","target":"mugen-koutai"},
-    {"source":"strange-loop","target":"jiko-genkyuu"},{"source":"strange-loop","target":"self-reference-engine"},{"source":"strange-loop","target":"enjoe-toh"},{"source":"strange-loop","target":"kyodai-chisei-tai"},{"source":"strange-loop","target":"goedel-escher-bach"},
-    {"source":"event-sre","target":"self-reference-engine"},{"source":"event-sre","target":"enjoe-toh"},{"source":"event-sre","target":"kyodai-chisei-tai"},{"source":"event-sre","target":"jiko-genkyuu"},{"source":"event-sre","target":"strange-loop"},
-    {"source":"doukeshi-no-chou","target":"enjoe-toh"},{"source":"doukeshi-no-chou","target":"self-reference-engine"},{"source":"doukeshi-no-chou","target":"jiko-genkyuu"},
-    {"source":"goedel-escher-bach","target":"strange-loop"},{"source":"goedel-escher-bach","target":"jiko-genkyuu"},{"source":"goedel-escher-bach","target":"self-reference-engine"},{"source":"goedel-escher-bach","target":"enjoe-toh"},{"source":"goedel-escher-bach","target":"kyodai-chisei-tai"},
-    {"source":"mugen-koutai","target":"self-reference-engine"},{"source":"mugen-koutai","target":"enjoe-toh"},{"source":"mugen-koutai","target":"kyodai-chisei-tai"},{"source":"mugen-koutai","target":"jiko-genkyuu"},{"source":"mugen-koutai","target":"strange-loop"},{"source":"mugen-koutai","target":"event-sre"},{"source":"mugen-koutai","target":"paradox"},
-    {"source":"paradox","target":"jiko-genkyuu"},{"source":"paradox","target":"self-reference-engine"},{"source":"paradox","target":"enjoe-toh"},{"source":"paradox","target":"strange-loop"},{"source":"paradox","target":"kyodai-chisei-tai"},{"source":"paradox","target":"event-sre"},{"source":"paradox","target":"goedel-escher-bach"},
-    {"source":"hofstadter","target":"goedel-escher-bach"},{"source":"hofstadter","target":"strange-loop"},{"source":"hofstadter","target":"jiko-genkyuu"},{"source":"hofstadter","target":"self-reference-engine"},{"source":"hofstadter","target":"enjoe-toh"},{"source":"hofstadter","target":"kyodai-chisei-tai"},{"source":"hofstadter","target":"paradox"},
-    {"source":"shisha-no-teikoku","target":"enjoe-toh"},{"source":"shisha-no-teikoku","target":"self-reference-engine"},{"source":"shisha-no-teikoku","target":"kyodai-chisei-tai"},{"source":"shisha-no-teikoku","target":"jiko-genkyuu"},{"source":"shisha-no-teikoku","target":"paradox"},
-    {"source":"ai-philosophy","target":"goedel-escher-bach"},{"source":"ai-philosophy","target":"self-reference-engine"},{"source":"ai-philosophy","target":"kyodai-chisei-tai"},{"source":"ai-philosophy","target":"strange-loop"},{"source":"ai-philosophy","target":"hofstadter"},{"source":"ai-philosophy","target":"jiko-genkyuu"},{"source":"ai-philosophy","target":"enjoe-toh"}
+    {
+      "source": "self-reference-engine",
+      "target": "enjoe-toh"
+    },
+    {
+      "source": "self-reference-engine",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "self-reference-engine",
+      "target": "kyodai-chisei-tai"
+    },
+    {
+      "source": "enjoe-toh",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "enjoe-toh",
+      "target": "doukeshi-no-chou"
+    },
+    {
+      "source": "enjoe-toh",
+      "target": "sf-bungaku"
+    },
+    {
+      "source": "enjoe-toh",
+      "target": "shisha-no-teikoku"
+    },
+    {
+      "source": "jiko-genkyuu",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "jiko-genkyuu",
+      "target": "paradox"
+    },
+    {
+      "source": "jiko-genkyuu",
+      "target": "usotsuki-no-paradox"
+    },
+    {
+      "source": "jiko-genkyuu",
+      "target": "strange-loop"
+    },
+    {
+      "source": "jiko-genkyuu",
+      "target": "enjoe-toh"
+    },
+    {
+      "source": "jiko-genkyuu",
+      "target": "kyodai-chisei-tai"
+    },
+    {
+      "source": "kyodai-chisei-tai",
+      "target": "enjoe-toh"
+    },
+    {
+      "source": "kyodai-chisei-tai",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "kyodai-chisei-tai",
+      "target": "event-sre"
+    },
+    {
+      "source": "kyodai-chisei-tai",
+      "target": "mugen-koutai"
+    },
+    {
+      "source": "kyodai-chisei-tai",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "kyodai-chisei-tai",
+      "target": "cho-chisei"
+    },
+    {
+      "source": "strange-loop",
+      "target": "goedel-escher-bach"
+    },
+    {
+      "source": "strange-loop",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "strange-loop",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "strange-loop",
+      "target": "enjoe-toh"
+    },
+    {
+      "source": "strange-loop",
+      "target": "kyodai-chisei-tai"
+    },
+    {
+      "source": "event-sre",
+      "target": "enjoe-toh"
+    },
+    {
+      "source": "event-sre",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "event-sre",
+      "target": "kyodai-chisei-tai"
+    },
+    {
+      "source": "event-sre",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "event-sre",
+      "target": "strange-loop"
+    },
+    {
+      "source": "doukeshi-no-chou",
+      "target": "enjoe-toh"
+    },
+    {
+      "source": "doukeshi-no-chou",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "doukeshi-no-chou",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "goedel-escher-bach",
+      "target": "hofstadter"
+    },
+    {
+      "source": "goedel-escher-bach",
+      "target": "strange-loop"
+    },
+    {
+      "source": "goedel-escher-bach",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "goedel-escher-bach",
+      "target": "keishiki-system"
+    },
+    {
+      "source": "goedel-escher-bach",
+      "target": "ai-philosophy"
+    },
+    {
+      "source": "goedel-escher-bach",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "goedel-escher-bach",
+      "target": "enjoe-toh"
+    },
+    {
+      "source": "goedel-escher-bach",
+      "target": "kyodai-chisei-tai"
+    },
+    {
+      "source": "mugen-koutai",
+      "target": "enjoe-toh"
+    },
+    {
+      "source": "mugen-koutai",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "mugen-koutai",
+      "target": "kyodai-chisei-tai"
+    },
+    {
+      "source": "mugen-koutai",
+      "target": "event-sre"
+    },
+    {
+      "source": "mugen-koutai",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "mugen-koutai",
+      "target": "paradox"
+    },
+    {
+      "source": "mugen-koutai",
+      "target": "strange-loop"
+    },
+    {
+      "source": "paradox",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "paradox",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "paradox",
+      "target": "usotsuki-no-paradox"
+    },
+    {
+      "source": "paradox",
+      "target": "enjoe-toh"
+    },
+    {
+      "source": "paradox",
+      "target": "event-sre"
+    },
+    {
+      "source": "paradox",
+      "target": "kyodai-chisei-tai"
+    },
+    {
+      "source": "paradox",
+      "target": "strange-loop"
+    },
+    {
+      "source": "paradox",
+      "target": "goedel-escher-bach"
+    },
+    {
+      "source": "hofstadter",
+      "target": "goedel-escher-bach"
+    },
+    {
+      "source": "hofstadter",
+      "target": "strange-loop"
+    },
+    {
+      "source": "hofstadter",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "hofstadter",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "hofstadter",
+      "target": "enjoe-toh"
+    },
+    {
+      "source": "hofstadter",
+      "target": "kyodai-chisei-tai"
+    },
+    {
+      "source": "hofstadter",
+      "target": "paradox"
+    },
+    {
+      "source": "shisha-no-teikoku",
+      "target": "itoh-keikaku"
+    },
+    {
+      "source": "shisha-no-teikoku",
+      "target": "enjoe-toh"
+    },
+    {
+      "source": "shisha-no-teikoku",
+      "target": "gyakusatsu-kikan"
+    },
+    {
+      "source": "shisha-no-teikoku",
+      "target": "kyodai-chisei-tai"
+    },
+    {
+      "source": "shisha-no-teikoku",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "shisha-no-teikoku",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "shisha-no-teikoku",
+      "target": "paradox"
+    },
+    {
+      "source": "ai-philosophy",
+      "target": "hofstadter"
+    },
+    {
+      "source": "ai-philosophy",
+      "target": "goedel-escher-bach"
+    },
+    {
+      "source": "ai-philosophy",
+      "target": "strange-loop"
+    },
+    {
+      "source": "ai-philosophy",
+      "target": "enjoe-toh"
+    },
+    {
+      "source": "ai-philosophy",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "ai-philosophy",
+      "target": "kyodai-chisei-tai"
+    },
+    {
+      "source": "ai-philosophy",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "ai-philosophy",
+      "target": "paradox"
+    },
+    {
+      "source": "cho-chisei",
+      "target": "enjoe-toh"
+    },
+    {
+      "source": "cho-chisei",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "cho-chisei",
+      "target": "kyodai-chisei-tai"
+    },
+    {
+      "source": "cho-chisei",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "cho-chisei",
+      "target": "mugen-koutai"
+    },
+    {
+      "source": "cho-chisei",
+      "target": "ai-philosophy"
+    },
+    {
+      "source": "cho-chisei",
+      "target": "strange-loop"
+    },
+    {
+      "source": "cho-chisei",
+      "target": "paradox"
+    },
+    {
+      "source": "itoh-keikaku",
+      "target": "gyakusatsu-kikan"
+    },
+    {
+      "source": "itoh-keikaku",
+      "target": "shisha-no-teikoku"
+    },
+    {
+      "source": "itoh-keikaku",
+      "target": "enjoe-toh"
+    },
+    {
+      "source": "itoh-keikaku",
+      "target": "ai-philosophy"
+    },
+    {
+      "source": "itoh-keikaku",
+      "target": "paradox"
+    },
+    {
+      "source": "itoh-keikaku",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "itoh-keikaku",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "itoh-keikaku",
+      "target": "strange-loop"
+    },
+    {
+      "source": "itoh-keikaku",
+      "target": "kyodai-chisei-tai"
+    },
+    {
+      "source": "sf-bungaku",
+      "target": "enjoe-toh"
+    },
+    {
+      "source": "sf-bungaku",
+      "target": "itoh-keikaku"
+    },
+    {
+      "source": "sf-bungaku",
+      "target": "ai-philosophy"
+    },
+    {
+      "source": "sf-bungaku",
+      "target": "shisha-no-teikoku"
+    },
+    {
+      "source": "sf-bungaku",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "sf-bungaku",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "sf-bungaku",
+      "target": "strange-loop"
+    },
+    {
+      "source": "sf-bungaku",
+      "target": "doukeshi-no-chou"
+    },
+    {
+      "source": "sf-bungaku",
+      "target": "kyodai-chisei-tai"
+    },
+    {
+      "source": "sf-bungaku",
+      "target": "paradox"
+    },
+    {
+      "source": "sf-bungaku",
+      "target": "goedel-escher-bach"
+    },
+    {
+      "source": "gyakusatsu-kikan",
+      "target": "itoh-keikaku"
+    },
+    {
+      "source": "gyakusatsu-kikan",
+      "target": "shisha-no-teikoku"
+    },
+    {
+      "source": "gyakusatsu-kikan",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "gyakusatsu-kikan",
+      "target": "sf-bungaku"
+    },
+    {
+      "source": "gyakusatsu-kikan",
+      "target": "enjoe-toh"
+    },
+    {
+      "source": "gyakusatsu-kikan",
+      "target": "ai-philosophy"
+    },
+    {
+      "source": "gyakusatsu-kikan",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "keishiki-system",
+      "target": "goedel-escher-bach"
+    },
+    {
+      "source": "keishiki-system",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "keishiki-system",
+      "target": "ai-philosophy"
+    },
+    {
+      "source": "keishiki-system",
+      "target": "usotsuki-no-paradox"
+    },
+    {
+      "source": "keishiki-system",
+      "target": "paradox"
+    },
+    {
+      "source": "keishiki-system",
+      "target": "strange-loop"
+    },
+    {
+      "source": "keishiki-system",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "keishiki-system",
+      "target": "kyodai-chisei-tai"
+    },
+    {
+      "source": "usotsuki-no-paradox",
+      "target": "paradox"
+    },
+    {
+      "source": "usotsuki-no-paradox",
+      "target": "jiko-genkyuu"
+    },
+    {
+      "source": "usotsuki-no-paradox",
+      "target": "strange-loop"
+    },
+    {
+      "source": "usotsuki-no-paradox",
+      "target": "self-reference-engine"
+    },
+    {
+      "source": "usotsuki-no-paradox",
+      "target": "kyodai-chisei-tai"
+    }
   ]
 }

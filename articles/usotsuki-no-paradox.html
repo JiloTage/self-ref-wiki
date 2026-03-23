@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>嘘つきのパラドックス - Auto-Wiki</title>
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+</head>
+<body>
+<div class="wiki-wrapper">
+  <header class="wiki-header">
+    <a href="../index.html" class="site-title">Auto-Wiki</a>
+    <nav>
+      <a href="../index.html">トップ</a>
+      <a href="../index.html#article-list">記事一覧</a>
+      <a href="../index.html#graph">サイトグラフ</a>
+    </nav>
+  </header>
+  <div class="breadcrumb">
+    <a href="../index.html">Auto-Wiki</a> &gt; 嘘つきのパラドックス
+  </div>
+  <div class="wiki-content">
+    <main class="wiki-main">
+      <h1 class="article-title">嘘つきのパラドックス</h1>
+      <div class="article-meta">最終更新: 2026-03-24</div>
+      <div class="article-summary"><b>嘘つきのパラドックス</b>とは、「この文は嘘である」のように、自分自身の真偽について語る文が引き起こす古典的な<a href="paradox.html">パラドックス</a>である。<a href="jiko-genkyuu.html">自己言及</a>と否定が組み合わさることで、真でも偽でも安定しないループが生まれる。</div>
+
+      <h2 id="overview">概要</h2>
+      <p><b>嘘つきのパラドックス</b>は、もっとも有名な自己言及的パラドックスのひとつである。典型例は「この文は嘘である」という短い文で、これが真なら偽になり、偽なら真になってしまう。</p>
+      <p>問題を難しくしているのは、この文が単に何かを説明しているのではなく、自分自身の状態を述べている点である。つまり文が自分自身を参照し、そのうえで自分自身を否定している。</p>
+      <p>この構造は、<a href="jiko-genkyuu.html">自己言及</a>がどのように<a href="paradox.html">パラドックス</a>へと転化するのかをもっとも凝縮した形で示している。</p>
+
+      <div class="diagram-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="560" height="300">
+          <defs>
+            <marker id="liar-arrow" viewBox="0 -5 10 10" refX="9" refY="0" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0,-5L10,0L0,5" fill="#36c"/>
+            </marker>
+          </defs>
+          <rect x="10" y="10" width="540" height="280" rx="8" fill="#f8f9fa" stroke="#a2a9b1" stroke-width="2"/>
+          <text x="280" y="38" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#202122" font-weight="bold">嘘つきのパラドックスの循環</text>
+          <rect x="170" y="60" width="220" height="42" rx="6" fill="#fff" stroke="#36c" stroke-width="2"/>
+          <text x="280" y="86" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#202122" font-weight="bold">「この文は嘘である」</text>
+          <rect x="60" y="150" width="170" height="55" rx="6" fill="#e8f0fe" stroke="#36c" stroke-width="1.5"/>
+          <text x="145" y="172" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122" font-weight="bold">真だと仮定</text>
+          <text x="145" y="191" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#36c">文の内容に従うと</text>
+          <text x="145" y="205" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#36c">偽にならなければならない</text>
+          <rect x="330" y="150" width="170" height="55" rx="6" fill="#fff3e0" stroke="#e68a00" stroke-width="1.5"/>
+          <text x="415" y="172" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#202122" font-weight="bold">偽だと仮定</text>
+          <text x="415" y="191" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e68a00">「嘘である」が嘘なので</text>
+          <text x="415" y="205" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e68a00">真にならなければならない</text>
+          <path d="M240,102 L165,148" fill="none" stroke="#36c" stroke-width="2" marker-end="url(#liar-arrow)"/>
+          <path d="M320,102 L395,148" fill="none" stroke="#36c" stroke-width="2" marker-end="url(#liar-arrow)"/>
+          <path d="M230,177 L330,177" fill="none" stroke="#a2a9b1" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#liar-arrow)"/>
+          <path d="M330,195 L230,195" fill="none" stroke="#a2a9b1" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#liar-arrow)"/>
+          <text x="280" y="248" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#54595d">真と偽のあいだを循環し、固定した値を取れない</text>
+        </svg>
+        <div class="diagram-caption">図：嘘つきのパラドックスでは、真と偽のどちらを仮定しても反対側へ押し戻される。</div>
+      </div>
+
+      <h2 id="structure">論理構造</h2>
+      <p>このパラドックスの核は二つの要素に分けられる。</p>
+      <p>第一に、文が自分自身を指していること。これは<a href="jiko-genkyuu.html">自己言及</a>である。第二に、自分自身の真偽を否定的に述べていること。つまり「自分は成り立たない」と言っている。</p>
+      <p>自己言及だけなら必ずしも問題は起きない。たとえば「この文は日本語で書かれている」は自己言及だが矛盾しない。問題を引き起こすのは、そこに否定が加わるときである。</p>
+
+      <h3 id="truth-value">真理値が定まらない理由</h3>
+      <p>古典的な二値論理では、文は真か偽のどちらかでなければならない。しかし嘘つきのパラドックスでは、そのどちらを選んでも破綻する。</p>
+      <p>このため、論理学では「真でも偽でもない値を導入する」「文の階層を分けて自己言及を禁止する」「真理概念そのものを再定義する」など、さまざまな解決法が提案されてきた。</p>
+
+      <h2 id="history">歴史と展開</h2>
+      <p>嘘つきのパラドックスは古代ギリシャにさかのぼる。しばしばメガラ派の哲学者エウブリデスに由来するとされ、西洋論理学の最古層から問題として意識されてきた。</p>
+      <p>中世の論理学者たちはこの種の文を「インソリュビリア（解けないもの）」と呼び、真理条件を精密に分析しようとした。近代以降もこの問題は消えず、20世紀には形式論理や数学基礎論の主要テーマと結びつく。</p>
+      <p>とくに<a href="goedel-incompleteness.html">ゲーデルの不完全性定理</a>は、嘘つきのパラドックスとよく比較される。ゲーデルは「この命題は証明できない」という形を数学の内部に構成し、矛盾ではなく「不完全性」という形で体系の限界を示した。</p>
+
+      <h2 id="related-paradoxes">関連するパラドックス</h2>
+      <p>嘘つきのパラドックスは、自己言及型パラドックスの入り口でもある。</p>
+
+      <h3 id="russell">ラッセルのパラドックス</h3>
+      <p><a href="russell-no-paradox.html">ラッセルのパラドックス</a>は、「自分自身を要素として含まない集合すべての集合」を考えると、その集合は自分自身を含むのかという問いが矛盾を生む問題である。表面上は集合の話だが、構造的には「自分自身をどう扱うか」という点で嘘つきのパラドックスとよく似ている。</p>
+
+      <h3 id="goedel">ゲーデルとの関係</h3>
+      <p><a href="goedel-incompleteness.html">ゲーデルの不完全性定理</a>は、直接に矛盾を起こすのではなく、証明不能な真を作り出す形で体系の限界を明かす。嘘つきのパラドックスが論理の危険地帯を示し、ゲーデルはその構造をより精密な形で数学へ接続したといえる。</p>
+
+      <h3 id="strange-loop">ストレンジループとの関係</h3>
+      <p>真から偽へ、偽から真へと戻される構造は、<a href="strange-loop.html">ストレンジループ</a>として理解することもできる。階層を一段上がったつもりが、結局は出発点に戻ってしまうからである。</p>
+
+      <h2 id="in-sre">『Self-Reference ENGINE』とのつながり</h2>
+      <p>『<a href="self-reference-engine.html">Self-Reference ENGINE</a>』は、嘘つきのパラドックスそのものを解説する小説ではないが、その発想を物語全体の構造へと拡張している。</p>
+      <p>物語が自分自身に触れ、エピソードが別のエピソードを参照し、世界の法則自体が揺らいでいくとき、読者は「何が本当の層なのか」を見失う。これは、真理値が安定しない嘘つきのパラドックスを、文学の形式で経験し直すことに近い。</p>
+      <p>また、<a href="kyodai-chisei-tai.html">巨大知性体</a>が世界の構造を書き換えるとき、観測者と被観測者の関係は固定されない。こうした視点の反転は、自己言及が持つ不安定さをSF的に増幅したものといえる。</p>
+
+      <h2 id="significance">なぜ重要なのか</h2>
+      <p>嘘つきのパラドックスは、短い一文でありながら、真理・言語・論理の基礎そのものを揺さぶる。単なる言葉遊びに見えて、実際には「真とは何か」「体系はどこまで自分自身を語れるか」という巨大な問いに接続している。</p>
+      <p>そのためこのパラドックスは、哲学、論理学、数学、コンピュータ科学、そして<a href="meta-fiction.html">メタフィクション</a>的な文学のすべてに影響を与えてきた。自己言及の危うさと創造性を同時に示す典型例なのである。</p>
+    </main>
+    <aside class="wiki-sidebar">
+      <div class="toc">
+        <div class="toc-title">目次</div>
+        <ul class="toc-list">
+          <li><a href="#overview">概要</a></li>
+          <li><a href="#structure">論理構造</a></li>
+          <li class="toc-h3"><a href="#truth-value">真理値が定まらない理由</a></li>
+          <li><a href="#history">歴史と展開</a></li>
+          <li><a href="#related-paradoxes">関連するパラドックス</a></li>
+          <li class="toc-h3"><a href="#russell">ラッセルのパラドックス</a></li>
+          <li class="toc-h3"><a href="#goedel">ゲーデルとの関係</a></li>
+          <li class="toc-h3"><a href="#strange-loop">ストレンジループとの関係</a></li>
+          <li><a href="#in-sre">『Self-Reference ENGINE』とのつながり</a></li>
+          <li><a href="#significance">なぜ重要なのか</a></li>
+        </ul>
+      </div>
+      <div class="related-articles">
+        <div class="related-title">関連記事</div>
+        <ul class="related-list">
+          <li><a href="paradox.html">パラドックス</a></li>
+          <li><a href="jiko-genkyuu.html">自己言及</a></li>
+          <li><a href="goedel-incompleteness.html">ゲーデルの不完全性定理</a></li>
+          <li><a href="russell-no-paradox.html">ラッセルのパラドックス</a></li>
+          <li><a href="strange-loop.html">ストレンジループ</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  <footer class="wiki-footer">
+    <div class="footer-links">
+      <h4>リンク先</h4>
+      <ul>
+        <li><a href="paradox.html">パラドックス</a></li>
+        <li><a href="jiko-genkyuu.html">自己言及</a></li>
+        <li><a href="goedel-incompleteness.html">ゲーデルの不完全性定理</a></li>
+        <li><a href="russell-no-paradox.html">ラッセルのパラドックス</a></li>
+        <li><a href="strange-loop.html">ストレンジループ</a></li>
+        <li><a href="self-reference-engine.html">Self-Reference ENGINE</a></li>
+        <li><a href="kyodai-chisei-tai.html">巨大知性体</a></li>
+        <li><a href="meta-fiction.html">メタフィクション</a></li>
+      </ul>
+      <h4>被リンク</h4>
+      <ul><li><a href="jiko-genkyuu.html">自己言及</a></li></ul>
+    </div>
+    <p style="margin-top:12px;">Auto-Wiki で自動生成</p>
+  </footer>
+</div>
+</body>
+</html>
